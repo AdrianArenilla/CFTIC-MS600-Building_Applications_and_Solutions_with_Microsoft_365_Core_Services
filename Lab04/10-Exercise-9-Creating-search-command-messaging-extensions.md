@@ -132,7 +132,7 @@ The next step is to update the bot's code.
 
 1. Using the app bar navigation menu, select the **More added apps** button. Then select **Browse all apps**, select the menu in the top-right corner of the **Planet Messaging** and select **Update**.
 
-    ![Screenshot of updating an installed Microsoft Teams app](../../Linked_Image_Files/Messaging_Extensions/05-test-01.png)
+    ![Screenshot of updating an installed Microsoft Teams app](../Linked_Image_Files/Messaging_Extensions/05-test-01.png)
 
 1. When prompted, select the updated package of the Microsoft Teams app. Microsoft Teams will update the app to the new version.
 
@@ -140,8 +140,13 @@ The next step is to update the bot's code.
 
 1. Enter the string **outer** in the search box and wait a few seconds. Microsoft Teams will execute the search and return the results:
 
-    ![Screenshot of a search messaging extension](../../Linked_Image_Files/Messaging_Extensions/05-test-02.png)
+    ![Screenshot of a search messaging extension](../Linked_Image_Files/Messaging_Extensions/05-test-02.png)
 
 ## Summary
 
 In this exercise, you learned how to execute a messaging extension search command from an existing message.
+
+
+### [Go to exercise 10 instructions -->](11-Exercise-10-Creating-conversational-bots.md)
+
+### [<-- Back to readme](../../../)

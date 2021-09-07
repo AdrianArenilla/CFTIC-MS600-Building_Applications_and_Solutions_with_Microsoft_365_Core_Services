@@ -139,3 +139,7 @@ Open **serve.json** file from **config** folder. Update the **pageUrl** attribut
 
 In this exercise, you learned how to create and deploy a command set extension.  Command set extensions are used for adding additional commands into the command bar at the top of a page.
 
+
+### [Go to exercise 05 instructions -->](06-Exercise-5-Creating-a-field-customizer-extension.md)
+
+### [<-- Back to readme](../../../)

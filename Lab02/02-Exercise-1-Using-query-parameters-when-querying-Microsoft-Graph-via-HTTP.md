@@ -279,3 +279,7 @@ In this exercise, you learned how to make use of query parameters:
 
 - Search for resources using **`$search`** query parameter.
 
+
+### [Go to exercise 02 instructions -->](03-Exercise-2-Retrieve-and-control-information-returned-from-Microsoft-Graph.md)
+
+### [<-- Back to readme](../../../)

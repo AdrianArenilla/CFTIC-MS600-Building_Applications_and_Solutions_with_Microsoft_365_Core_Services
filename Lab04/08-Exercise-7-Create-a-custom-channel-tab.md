@@ -46,21 +46,21 @@ Before you customize the tab, let's test the tab to see the experience for testi
 
 1. In the app bar on the left, select the **More added apps** button. Then select **Browse all apps** > **Upload for me or my teams**.
 
-    ![Screenshot of More added apps dialog box in Microsoft Teams](../../Linked_Image_Files/Tabs/03-yo-teams-05.png)
+    ![Screenshot of More added apps dialog box in Microsoft Teams](../Linked_Image_Files/Tabs/03-yo-teams-05.png)
 
 1. In the file dialog box that appears, select the Microsoft Teams package in your project. This app package is a zip file in the project's **./package** folder.
 
 1. After the package is uploaded, Microsoft Teams displays a summary of the app. Select the arrow next to the **Add** button, and select **Add to a team** to install the app:
 
-    ![Screenshot adding a channel tab](../../Linked_Image_Files/Tabs/05-channel-tab-01.png)
+    ![Screenshot adding a channel tab](../Linked_Image_Files/Tabs/05-channel-tab-01.png)
 
 1. In the **Select a channel to start using** dialog box, select an existing team. Then select **Set up a tab**:
 
-    ![Screenshot selecting a team to add the channel tab to](../../Linked_Image_Files/Tabs/05-channel-tab-02.png)
+    ![Screenshot selecting a team to add the channel tab to](../Linked_Image_Files/Tabs/05-channel-tab-02.png)
 
 1. Before the tab is added to the team, Microsoft Teams displays the tab's configuration page:
 
-    ![Screenshot of the tab configuration page](../../Linked_Image_Files/Tabs/05-channel-tab-03.png)
+    ![Screenshot of the tab configuration page](../Linked_Image_Files/Tabs/05-channel-tab-03.png)
 
 1. Enter anything in the text box, and select **Save**.
 
@@ -153,11 +153,11 @@ The configuration page displays a drop-down list of four math operators to selec
 
 1. If you didn't remove the tab, select the menu from the tab and then select **Settings**.
 
-    ![Screenshot selecting the tab settings menu](../../Linked_Image_Files/Tabs/05-channel-tab-05.png)
+    ![Screenshot selecting the tab settings menu](../Linked_Image_Files/Tabs/05-channel-tab-05.png)
 
 1. The configuration page opens with the updated component.
 
-    ![Screenshot showing how to update the settings](../../Linked_Image_Files/Tabs/05-channel-tab-04.png)
+    ![Screenshot showing how to update the settings](../Linked_Image_Files/Tabs/05-channel-tab-04.png)
 
 1. Select one of the math operators, and save your changes by selecting **Save**. The tab should display the selected operator with the **MathPage** suffix.
 
@@ -310,7 +310,7 @@ The last step is to implement the channel tab.
 
 1. Go to the team where the tab is installed, and select the channel tab. Enter two values, and select the **Calculate** button. The results of the calculation appear next to the button.
 
-    ![Screenshot of the working channel button](../../Linked_Image_Files/Tabs/05-channel-tab-06.png)
+    ![Screenshot of the working channel button](../Linked_Image_Files/Tabs/05-channel-tab-06.png)
 
 1. Use the **Settings** link on the tab to open the configuration tab, and change the math operation.
 
@@ -319,3 +319,8 @@ The last step is to implement the channel tab.
 ## Summary
 
 In this exercise, you created a channel tab with a configuration page in a Microsoft Teams app.
+
+
+### [Go to exercise 08 instructions -->](09-Exercise-8-Creating-action-command-messaging-extensions.md)
+
+### [<-- Back to readme](../../../)

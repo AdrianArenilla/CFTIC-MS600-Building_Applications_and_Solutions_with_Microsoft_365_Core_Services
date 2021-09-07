@@ -25,7 +25,7 @@ Let's start by adding and pre-consenting this permission for our existing Azure 
 
 1. Search for, and select the permission **TeamsActivity.Send**, then select the **Add permissions** button:
 
-    ![Screenshot adding a new permission to the app](../../Linked_Image_Files/07-azure-ad-add-api-permissions.png)
+    ![Screenshot adding a new permission to the app](../Linked_Image_Files/07-azure-ad-add-api-permissions.png)
 
 1. To simplify the testing process, select **Grant admin consent for Contoso** to consent this new permission for all users in your tenant.
 
@@ -45,13 +45,13 @@ Activity feed notifications can't be sent from a user to themselves. So for this
 
 1. While you're in the Azure Active Directory admin center, let's get the details on another user. Select **Manage > Users** from the left-hand menu and find a user in the list. For this exercise, we'll use Alex Wilber as an example. Select a user from the list:
 
-    ![Screenshot of selecting a user in Azure AD](../../Linked_Image_Files/07-azure-ad-users-01.png)
+    ![Screenshot of selecting a user in Azure AD](../Linked_Image_Files/07-azure-ad-users-01.png)
 
 1. When you use Microsoft Graph to send a notification to a user's activity feed, you specify the user by their unique object ID. To simplify the exercise code and to focus on the activity feed, we'll specify the exact user rather dynamically looking up the user.
 
     Copy the user's **Object ID** value as you'll need this when you update the tab's code.
 
-    ![Screenshot of selecting the user's Object ID](../../Linked_Image_Files/07-azure-ad-users-02.png)
+    ![Screenshot of selecting the user's Object ID](../Linked_Image_Files/07-azure-ad-users-02.png)
 
 ## Task 3: Update the Microsoft Teams app manifest
 
@@ -160,11 +160,11 @@ Before you can test the new activity feed code, the installed app must be update
 
 1. From the list of teams select the **...** menu for your team, then select **Manage Team**:
 
-    ![Screenshot of the Manage Team menu item](../../Linked_Image_Files/07-test-01.png)
+    ![Screenshot of the Manage Team menu item](../Linked_Image_Files/07-test-01.png)
 
 1. On the team management screen, select the **Apps** tab and then select **Upload a custom app**. Even though the app is already uploaded and installed, this will overwrite the existing app and effectively update the existing installation.
 
-    ![Screenshots of the team management page](../../Linked_Image_Files/07-test-02.png)
+    ![Screenshots of the team management page](../Linked_Image_Files/07-test-02.png)
 
 1. Select the ZIP file from the project's **./package** folder and install the app.
 
@@ -176,8 +176,13 @@ Activity feed notifications can't be sent from a user to themselves, so for this
 
     You'll notice after a moment, a notification will appear for Alex from the team owner (Megan):
 
-    ![Screenshots of the notification to Alex](../../Linked_Image_Files/07-test-03.png)
+    ![Screenshots of the notification to Alex](../Linked_Image_Files/07-test-03.png)
 
 1. Next, select the **Activity feed** from the activity bar to see the entry listed in Alex's Activity feed:
 
-    ![Screenshots of the activity feed](../../Linked_Image_Files/07-test-04.png)
+    ![Screenshots of the activity feed](../Linked_Image_Files/07-test-04.png)
+
+
+### [Go to exercise 16 instructions -->](17-Exercise-16-Implement-single-sign-on-for-Microsoft-Teams-apps.md)
+
+### [<-- Back to readme](../../../)

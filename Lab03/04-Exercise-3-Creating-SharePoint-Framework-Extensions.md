@@ -115,3 +115,7 @@ In this exercise, you will create a SPFx Application Customizer that will launch
 
 In this exercise, you learned how to create and deploy a custom header and footer extension that is applied to all sites in a SharePoint Online tenant.
 
+
+### [Go to exercise 04 instructions -->](05-Exercise-4-Creating-a-command-set-extension.md)
+
+### [<-- Back to readme](../../../)

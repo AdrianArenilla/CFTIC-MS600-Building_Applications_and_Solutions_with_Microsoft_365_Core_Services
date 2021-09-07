@@ -129,12 +129,17 @@ In this exercise, you’ll update the existing Teams app from the previous exerc
 
     The bot will reply to the message with the updated card that contains two buttons:
 
-    ![Screenshot of a message from the bot using cards - initial card display](../../Linked_Image_Files/Bots/07-test-01.png)
+    ![Screenshot of a message from the bot using cards - initial card display](../Linked_Image_Files/Bots/07-test-01.png)
 
 1. Select the second button, **Create new thread in this channel**. Within a few seconds, you should see a new conversation appear in the channel:
 
-    ![Screenshot of a message from the bot using cards - updating a card](../../Linked_Image_Files/Bots/07-test-02.png)
+    ![Screenshot of a message from the bot using cards - updating a card](../Linked_Image_Files/Bots/07-test-02.png)
 
 ## Summary
 
 In this exercise, you modified the existing Microsoft Teams app to send a proactive message from your bot.
+
+
+### [Go to exercise 13 instructions -->](14-Exercise-13-Getting-started-with-the-teamwork-endpoint.md)
+
+### [<-- Back to readme](../../../)

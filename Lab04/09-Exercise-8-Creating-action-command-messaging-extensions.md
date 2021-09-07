@@ -18,27 +18,27 @@ The first step is to create a new Microsoft Teams bot for your messaging extensi
 
 1. Select **Create a resource** in the left-hand navigation:
 
-    ![Screenshot of the primary Azure navigation](../../Linked_Image_Files/Messaging_Extensions/03-azure-portal-01.png)
+    ![Screenshot of the primary Azure navigation](../Linked_Image_Files/Messaging_Extensions/03-azure-portal-01.png)
 
 1. Enter **resource group** in the **Search the marketplace** input box, and select **Resource group**.
 
-    ![Screenshot of creating a resource group - create a resource menu item](../../Linked_Image_Files/Messaging_Extensions/03-azure-portal-02.png)
+    ![Screenshot of creating a resource group - create a resource menu item](../Linked_Image_Files/Messaging_Extensions/03-azure-portal-02.png)
 
 1. On the **Resource Group** page, select the **Create** button to create a new resource group.
 
 1. Select a valid subscription, enter a name for the resource group, and select the wanted region. *None of these choices will impact the bot registration and are up to you.*
 
-    ![Screenshot of creating a resource group - search for resource group](../../Linked_Image_Files/Messaging_Extensions/03-azure-portal-03.png)
+    ![Screenshot of creating a resource group - search for resource group](../Linked_Image_Files/Messaging_Extensions/03-azure-portal-03.png)
 
 1. Complete the wizard to create the resource group. Once Azure has completed the resource group creation process, navigate to the resource group.
 
 1. From the resource group, select the **Add** or **Create resources** button.
 
-    ![Screenshot of creating a new resource - create resource group](../../Linked_Image_Files/Messaging_Extensions/03-azure-bot-registration-01.png)
+    ![Screenshot of creating a new resource - create resource group](../Linked_Image_Files/Messaging_Extensions/03-azure-bot-registration-01.png)
 
 1. Enter **bot** in the **Search the marketplace** input box, and select **Bot Channels Registration** from the list of resources returned. Then select **Create** on the next page to start the process of registering a new bot resource:
 
-    ![Screenshot of searching for the bot registration resource](../../Linked_Image_Files/Messaging_Extensions/03-azure-bot-registration-02.png)
+    ![Screenshot of searching for the bot registration resource](../Linked_Image_Files/Messaging_Extensions/03-azure-bot-registration-02.png)
 
 1. In the **Bot Channels Registration** blade, enter the following values and then select **Create**:
 
@@ -56,7 +56,7 @@ The first step is to create a new Microsoft Teams bot for your messaging extensi
 
 1. Azure will start to provision the new resource. This will take a moment or two. Once it's finished, navigate to the bot resource in the resource group.
 
-    ![Screenshot of the created bot channel registration resource](../../Linked_Image_Files/Messaging_Extensions/03-azure-bot-registration-03.png)
+    ![Screenshot of the created bot channel registration resource](../Linked_Image_Files/Messaging_Extensions/03-azure-bot-registration-03.png)
 
 ### Enable the Microsoft Teams channel for the bot
 
@@ -66,11 +66,11 @@ In order for the bot to interact with Microsoft Teams, you must enable the Teams
 
 1. On the **Connect to channels** pane, select the Microsoft Teams channel, then select **Save** to confirm the action.
 
-    ![Screenshot enabling the Microsoft Teams channel](../../Linked_Image_Files/Messaging_Extensions/03-azure-bot-registration-04.png)
+    ![Screenshot enabling the Microsoft Teams channel](../Linked_Image_Files/Messaging_Extensions/03-azure-bot-registration-04.png)
 
 1. Once this process is complete, you should see both the **Web Chat** and **Microsoft Teams** listed in your enabled channels:
 
-    ![Screenshot of the enabled bot channels](../../Linked_Image_Files/Messaging_Extensions/03-azure-bot-registration-05.png)
+    ![Screenshot of the enabled bot channels](../Linked_Image_Files/Messaging_Extensions/03-azure-bot-registration-05.png)
 
 ### Retrieve the bot app ID and password
 
@@ -82,7 +82,7 @@ When Azure created the bot, it also registered a new Azure AD app for the bot. Y
 
 1. Select **Manage** to navigate to the Azure AD app blade:
 
-    ![Screenshot of the bot's settings page](../../Linked_Image_Files/Messaging_Extensions/03-azure-bot-registration-06.png)
+    ![Screenshot of the bot's settings page](../Linked_Image_Files/Messaging_Extensions/03-azure-bot-registration-06.png)
 
 ### Create a client secret for the app
 
@@ -92,13 +92,13 @@ In order for your code to connect to the bot framework service, it will sign in 
 
 1. Select the **New client secret** button:
 
-    ![Screenshot of the Certificates & Secrets page in the Azure AD admin center](../../Linked_Image_Files/Messaging_Extensions/03-azure-bot-registration-07.png)
+    ![Screenshot of the Certificates & Secrets page in the Azure AD admin center](../Linked_Image_Files/Messaging_Extensions/03-azure-bot-registration-07.png)
 
 1. When prompted, give the secret a description and select one of the expiration duration options provided and select **Add**. *What you enter and select doesn't matter for the exercise.*
 
 1. The **Certificate & Secrets** page will display the new secret. It's important you copy this value as it's only shown this one time; if you leave the page and come back, it will only show as a masked value.
 
-    ![Screenshot showing the new secret](../../Linked_Image_Files/Messaging_Extensions/03-azure-bot-registration-08.png)
+    ![Screenshot showing the new secret](../Linked_Image_Files/Messaging_Extensions/03-azure-bot-registration-08.png)
 
 1. Copy the value of the secret as you'll need it later.
 
@@ -667,7 +667,7 @@ At this point, the first part of the action command is complete that will prompt
 
 1. Using the app bar navigation menu, select the **More added apps** button. Then select **Browse all apps** followed by **Upload for me or my teams**.
 
-    ![Screenshot of More added apps dialog in Microsoft Teams](../../Linked_Image_Files/Messaging_Extensions/03-test-02.png)
+    ![Screenshot of More added apps dialog in Microsoft Teams](../Linked_Image_Files/Messaging_Extensions/03-test-02.png)
 
 1. In the file dialog that appears, select the Microsoft Teams package in your project. This app package is a ZIP file that can be found in the project's **./package** folder.
 
@@ -679,22 +679,27 @@ At this point, the first part of the action command is complete that will prompt
 
 1. After installing the app, Microsoft Teams will take you to the 1:1 chat with the Microsoft Teams app and show the first dialog:
 
-    ![Screenshot of the setting up the Microsoft Teams messaging extension](../../Linked_Image_Files/Messaging_Extensions/03-test-04.png)
+    ![Screenshot of the setting up the Microsoft Teams messaging extension](../Linked_Image_Files/Messaging_Extensions/03-test-04.png)
 
 1. Cancel this dialog by selecting the **X** close icon in the upper-right corner.
 
 1. Now, in the compose box in the chat, select either the **Planet Messaging** icon or the **...** icon below the chat box. If you select the **...** icon, enter **planet** in the search box and select the **Planet Messaging** extension:
 
-    ![Screenshot of the installed Microsoft Teams messaging extension](../../Linked_Image_Files/Messaging_Extensions/03-test-05.png)
+    ![Screenshot of the installed Microsoft Teams messaging extension](../Linked_Image_Files/Messaging_Extensions/03-test-05.png)
 
 1. When the messaging extension's task module is displayed, select a planet and then select the **Insert selected planet** button. The messaging extension's submit action handler is called which will add the updated Adaptive Card to the compose box:
 
-    ![Screenshot of messaging extension in the compose message box - step 1](../../Linked_Image_Files/Messaging_Extensions/03-test-06.png)
+    ![Screenshot of messaging extension in the compose message box - step 1](../Linked_Image_Files/Messaging_Extensions/03-test-06.png)
 
 1. You can also trigger the messaging extension from an existing message in the chat using the **...** menu in the upper-right corner of the message. Select **Mode actions** and then select the **Planet Expander** option.
 
-    ![Screenshot of messaging extension in the compose message box - step 2](../../Linked_Image_Files/Messaging_Extensions/03-test-07.png)
+    ![Screenshot of messaging extension in the compose message box - step 2](../Linked_Image_Files/Messaging_Extensions/03-test-07.png)
 
 ## Summary
 
 In this exercise, you created an action command messaging extension for a custom Microsoft Teams app.
+
+
+### [Go to exercise 09 instructions -->](10-Exercise-9-Creating-search-command-messaging-extensions.md)
+
+### [<-- Back to readme](../../../)

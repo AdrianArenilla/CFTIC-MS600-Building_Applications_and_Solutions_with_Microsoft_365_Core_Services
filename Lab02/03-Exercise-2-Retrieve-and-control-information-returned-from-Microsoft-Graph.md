@@ -362,7 +362,7 @@ The current console application isn't efficient because it retrieves all informa
     dotnet run
     ```
 
-    ![Screenshot of the console application with the $orderby query parameters](../../Linked_Image_Files/retrieve_and_control_information_returned_from_microsoft_graph_image_15.png)
+    ![Screenshot of the console application with the $orderby query parameters](../Linked_Image_Files/retrieve_and_control_information_returned_from_microsoft_graph_image_15.png)
 
 1. Further refine the results by selecting users whose surname starts with A, B, or C. You'll need to remove the **\$orderby** query parameter added previously as the Users endpoint doesn't support combining the **\$filter** and **\$orderby** parameters. Update the line that starts with `var results = graphRequest` in the **Main** method with the following:
 
@@ -389,3 +389,7 @@ The current console application isn't efficient because it retrieves all informa
 
 In this exercise, you created an Azure AD application and .NET console application that retrieved user data from Microsoft Graph. You then used query parameters to limit and manipulate the data returned by Microsoft Graph to optimize the query.
 
+
+### [Go to exercise 03 instructions -->](04-Exercise-3-Using-change-notifications-and-track-changes-with-Microsoft-Graph.md)
+
+### [<-- Back to readme](../../../)

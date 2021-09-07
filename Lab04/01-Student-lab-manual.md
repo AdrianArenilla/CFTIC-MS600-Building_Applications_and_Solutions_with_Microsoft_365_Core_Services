@@ -69,3 +69,6 @@ The exercises in this module assume you have the following tools installed on yo
 - [Visual Studio Code](https://code.visualstudio.com)
 
 
+### [Go to exercise 01 instructions -->](02-Exercise-1-Collecting-user-input-with-task-modules.md)
+
+### [<-- Back to readme](../../../)

@@ -19,7 +19,8 @@ Download the zip file from [https://github.com/OfficeDev/PowerPoint-Add-in-Micro
     - **API PERMISSIONS:** Files.Read.All and User.Read
 
         **Note**:
-        After you register your application, copy the Application (client) ID and the Directory (tenant) ID on the Overview blade of the App Registration in the Azure Management Portal. When you create the client secret on the Certificates and secrets blade, copy it too.
+        After you register your application, copy the Application (client) ID and the Directory (tenant) ID on the Overview blade of the App Registration in the Azure Management Portal. When you create the client secret on the Certificates and secrets blade, copy it too.
+
 1. In `web.config`, use the values that you copied in the previous step. Set `AAD:ClientID` to your client ID, set `AAD:ClientSecret` to your client secret, and set `"AAD:O365TenantID"` to your tenant ID.
 
 1. Open the solution in Visual Studio, and open Solution Explorer and then choose the **PowerPoint-Add-in-Microsoft-Graph-ASPNET-InsertChartWeb** project. In **Properties**, ensure **SSL Enabled** is **True**. Verify that the **SSL URLproperty** uses the same domain name and port number as those listed previously.
@@ -52,3 +53,7 @@ Download the zip file from [https://github.com/OfficeDev/PowerPoint-Add-in-Micro
 
 **Resolution:** Unzip your files to a folder directly under the root (e.g. **c:\sample**).
 
+
+### [Go to exercise 04 instructions -->](05-Exercise-4-Understanding-actionable-messages.md)
+
+### [<-- Back to readme](../../../)

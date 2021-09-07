@@ -140,3 +140,7 @@ Field customizers, when deployed to production, are implemented by creating a ne
 
 In this exercise, you learned how to create and deploy a command set extension.  Command set extensions are used for adding additional commands into the command bar at the top of a page.
 
+
+### [Go to exercise 06 instructions -->](07-Exercise-6-Deploying-a-SharePoint-Framework-solution.md)
+
+### [<-- Back to readme](../../../)

@@ -10,31 +10,31 @@ Now let's add an incoming webhook to a team in Microsoft Teams.
 
 1. Once you're signed in, select a channel in a team you want to add the webhook to. From the channel's page, select the **+** in the top navigation:
 
-    ![Screencast of the channel home page](../../Linked_Image_Files/Webhooks/05-test-01.png)
+    ![Screencast of the channel home page](../Linked_Image_Files/Webhooks/05-test-01.png)
 
 1. On the **Add a tab** dialog, select **Manage apps** in the lower right corner:
 
-    ![Screenshot of the Add a tab dialog](../../Linked_Image_Files/Webhooks/03-test-03.png)
+    ![Screenshot of the Add a tab dialog](../Linked_Image_Files/Webhooks/03-test-03.png)
 
 1. This will take you to the **Manage Channel** page. Select the **More apps** button:
 
-    ![Screenshot of the Manage channel page](../../Linked_Image_Files/Webhooks/05-test-02.png)
+    ![Screenshot of the Manage channel page](../Linked_Image_Files/Webhooks/05-test-02.png)
 
 1. On the **Apps** page, search for the **incoming webhook** app and select it.
 
-    ![Screenshot of the incoming webhook app](../../Linked_Image_Files/Webhooks/05-test-03.png)
+    ![Screenshot of the incoming webhook app](../Linked_Image_Files/Webhooks/05-test-03.png)
 
 1. Select the **Add to a team** button. On the next page, enter the name of a channel to add the webhook to, and select the **Set up a connector**:
 
-    ![Screenshot of the incoming webhook configuration screen - step 1 - set up a connector](../../Linked_Image_Files/Webhooks/05-test-04.png)
+    ![Screenshot of the incoming webhook configuration screen - step 1 - set up a connector](../Linked_Image_Files/Webhooks/05-test-04.png)
 
 1. On the **Incoming Webhook** configuration screen, enter the name **Dwarf Planet Details** and select the **Create** button (*you may need to scroll down in the dialog as the **Create** button isn't visible by default, as in the following screenshot*):
 
-    ![Screenshot of the incoming webhook configuration screen - step 2 - name the connector](../../Linked_Image_Files/Webhooks/05-test-05.png)
+    ![Screenshot of the incoming webhook configuration screen - step 2 - name the connector](../Linked_Image_Files/Webhooks/05-test-05.png)
 
 1. After creating the incoming webhook, the dialog will add a new input box that contains the endpoint for you should post to. Copy this value:
 
-    ![Screenshot of the incoming webhook configuration screen - step 3 - obtain connector endpoint](../../Linked_Image_Files/Webhooks/05-test-06.png)
+    ![Screenshot of the incoming webhook configuration screen - step 3 - obtain connector endpoint](../Linked_Image_Files/Webhooks/05-test-06.png)
 
 ## Task 2: Test the incoming webhook
 
@@ -103,8 +103,13 @@ Now let's add an incoming webhook to a team in Microsoft Teams.
 
 1. In the browser, navigate back to the **Conversations** tab in the channel where you installed the incoming webhook. You should see a message containing your card:
 
-    ![Screenshot of the incoming webhook message](../../Linked_Image_Files/Webhooks/05-test-09.png)
+    ![Screenshot of the incoming webhook message](../Linked_Image_Files/Webhooks/05-test-09.png)
 
 ## Summary
 
 In this exercise, you learned how to register an incoming webhook in a Microsoft Teams channel and post a message to it.
+
+
+### [Go to exercise 06 instructions -->](07-Exercise-6-Create-a-custom-personal-tab.md)
+
+### [<-- Back to readme](../../../)

@@ -42,7 +42,7 @@ In this exercise, you'll add a custom tab to a Microsoft Teams app and use singl
 
 Let's explore a few parts of the project created by the Yeoman Generator for Microsoft Teams in Visual Studio Code.
 
-![Screenshot of the custom Teams app project](../../Linked_Image_Files/05-vs-code-create-project-01.png)
+![Screenshot of the custom Teams app project](../Linked_Image_Files/05-vs-code-create-project-01.png)
 
 ### Client-side web app
 
@@ -125,7 +125,7 @@ Before customizing the tab, let's test the tab to see the initial developer expe
     > [!IMPORTANT]
     > Each time ngrok starts, it generates a new dynamic subdomain for the URL. If you have to restart ngrok, you will need to repackage and and update the app in Microsoft Teams to make the installed app aware of the new URL. The optional licensed version of ngrok allows you to define and reuse the same subdomain.
 
-    ![Screenshot of gulp ngrok-serve](../../Linked_Image_Files/05-ngrok-dynamic-url.png)
+    ![Screenshot of gulp ngrok-serve](../Linked_Image_Files/05-ngrok-dynamic-url.png)
 
 1. Before testing the Microsoft Teams app, you need to update all locations where you entered the URL `REPLACE.ngrok.io` in both your project and the Azure AD app you registered. For example:
 
@@ -141,7 +141,7 @@ Before customizing the tab, let's test the tab to see the initial developer expe
 
 1. Next, select the plus icon to the right of the existing tabs to add a new tab:
 
-    ![Screenshot selecting a team and channel](../../Linked_Image_Files/05-add-tab-01.png)
+    ![Screenshot selecting a team and channel](../Linked_Image_Files/05-add-tab-01.png)
 
 1. The app containing our new tab isn't installed yet, so in the **Add a tab** dialog, select **Manage apps** in the lower-right corner.
 
@@ -151,17 +151,17 @@ Before customizing the tab, let's test the tab to see the initial developer expe
 
 1. Microsoft Teams will display the details of the app in a dialog. Select the **Add** button to install the app into the current team:
 
-    ![Screenshot installing a new tab, step 2](../../Linked_Image_Files/05-add-tab-03.png)
+    ![Screenshot installing a new tab, step 2](../Linked_Image_Files/05-add-tab-03.png)
 
 1. After installing the app, select the team's **General** channel, and then the plus icon to the right of the existing tabs in the channel. When prompted to select the tab, select the **SSO Teams Tab**:
 
-    ![Screenshot installing a new tab, step 3](../../Linked_Image_Files/05-add-tab-04.png)
+    ![Screenshot installing a new tab, step 3](../Linked_Image_Files/05-add-tab-04.png)
 
 1. When you select the tab to add to the channel, Microsoft Teams will present the tab's configuration screen. Enter anything into the provided input box and select **Save** to add the tab.
 
     When the tab loads, it will initiate the SSO process with Azure AD and obtain an ID token. This token contains the basic identification information about the current user. The current user's display name is included in this token and is displayed in the tab:
 
-    ![Screenshot installing a new tab, step 5](../../Linked_Image_Files/05-add-tab-05.png)
+    ![Screenshot installing a new tab, step 5](../Linked_Image_Files/05-add-tab-05.png)
 
 ## Task 4: Add support to submit requests to Microsoft Graph
 
@@ -348,7 +348,7 @@ The registered Azure AD app must be granted permissions to the app.
 
 1. On the **Select an API** screen, select **Microsoft Graph**, then select **Delegated permissions**. Search for and select permission **Mail.Read** and select **Add permissions**.
 
-    ![Screenshot adding the Mail.Read permission](../../Linked_Image_Files/05-azure-ad-add-permission-01.png)
+    ![Screenshot adding the Mail.Read permission](../Linked_Image_Files/05-azure-ad-add-permission-01.png)
 
 1. Next, select the **Grant admin consent for Contoso** followed by accepting the confirmation prompt by selecting **Yes**.
 
@@ -451,4 +451,9 @@ Go back to the browser and navigate back to the tab you added earlier in this ex
   >
   > In addition, you'll need to reinstall your app package because the Microsoft Teams app manifest contains the URL. To do this, you'll first need to increment the `version` property in the app's **./manifest/manifest.json** file. This value is dynamically set using the `version` property from the **./package.json** file. When you repeat the installation process of the app, it will update the existing installation.
 
-  ![Screenshot displaying the list emails the user recently received](../../Linked_Image_Files/05-test-recent-emails.png)
+  ![Screenshot displaying the list emails the user recently received](../Linked_Image_Files/05-test-recent-emails.png)
+  
+  
+### [Go to exercise 18 instructions -->](19-Exercise-18-Implement-single-sign-on-with-Microsoft-Teams-bots.md)
+
+### [<-- Back to readme](../../../)

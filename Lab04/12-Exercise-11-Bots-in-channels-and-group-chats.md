@@ -100,31 +100,31 @@ While there are multiple ways to address this, let's check the type of conversat
 
 1. Using the app bar navigation menu, select the **More added apps** button. Then right-click on the **Conversational Bot** application. Select **Uninstall**. Select **Uninstall** again to confirm.
 
-    ![Screenshot of updating an installed Microsoft Teams app](../../Linked_Image_Files/Bots/05-test-01.png)
+    ![Screenshot of updating an installed Microsoft Teams app](../Linked_Image_Files/Bots/05-test-01.png)
 
 1. Using the app bar navigation menu, select the **More added apps** button. Then select **Browse all apps** followed by **Upload for me or my teams**.
 
-    ![Screenshot of More added apps dialog in Microsoft Teams](../../Linked_Image_Files/Bots/03-test-02.png)
+    ![Screenshot of More added apps dialog in Microsoft Teams](../Linked_Image_Files/Bots/03-test-02.png)
 
 1. In the file dialog that appears, select the Microsoft Teams package in your project. This app package is a ZIP file that can be found in the project's **./package** folder.
 
 1. After the package is uploaded, Microsoft Teams displays a summary of the app. Select the arrow next to the **Add** button, and select **Add to a team** to install the app:
 
-    ![Screenshot adding a channel tab](../../Linked_Image_Files/Bots/05-channel-tab-01.png)
+    ![Screenshot adding a channel tab](../Linked_Image_Files/Bots/05-channel-tab-01.png)
 
 1. In the **Select a channel to start using** dialog box, select an existing team. Then select **Set up a tab**:
 
-    ![Screenshot selecting a team to add the channel tab to](../../Linked_Image_Files/Bots/05-channel-tab-02.png)
+    ![Screenshot selecting a team to add the channel tab to](../Linked_Image_Files/Bots/05-channel-tab-02.png)
 
 1. Navigate to an existing channel in a team.
 
 1. From the channel's **Conversations** tab, @mention the bot. The first time you @mention the bot, you'll be prompted to install it into the team.
 
-    ![Screenshot installing bot into a channel](../../Linked_Image_Files/Bots/05-test-02.png)
+    ![Screenshot installing bot into a channel](../Linked_Image_Files/Bots/05-test-02.png)
 
 1. After installing the bot, when you @mention it and include the message `mentionme`, the bot will reply to your message:
 
-    ![Screenshot of the bot replying to a channel conversation](../../Linked_Image_Files/Bots/05-test-03.png)
+    ![Screenshot of the bot replying to a channel conversation](../Linked_Image_Files/Bots/05-test-03.png)
 
 ## Task 2: Reply to messages with Adaptive cards
 
@@ -377,11 +377,11 @@ In this section, you'll update the bot to respond to unknown messages using an A
 
     The bot will reply to the message with a card:
 
-    ![Screenshot of a message from the bot using cards](../../Linked_Image_Files/Bots/05-test-04.png)
+    ![Screenshot of a message from the bot using cards](../Linked_Image_Files/Bots/05-test-04.png)
 
 1. Select the button **Update card**. After a few seconds, the card should be updated with a new card containing an incremented counter value and a new button:
 
-    ![Screenshot of an updated message from the bot using cards](../../Linked_Image_Files/Bots/05-test-05.png)
+    ![Screenshot of an updated message from the bot using cards](../Linked_Image_Files/Bots/05-test-05.png)
 
 1. Select the **Update card** button a few more times to see the counter get updated.
 
@@ -422,12 +422,17 @@ In this section, you'll update the bot to respond when someone likes a message f
 
 1. From the **Conversations** tab, find a message from the bot and apply a *like* reaction to it:
 
-    ![Screenshot of a user reacting to a bot's message](../../Linked_Image_Files/Bots/05-test-06.png)
+    ![Screenshot of a user reacting to a bot's message](../Linked_Image_Files/Bots/05-test-06.png)
 
     After a few seconds, the bot will reply with a message, thanking them for liking the reaction:
 
-    ![Screenshot of a bot replying to a reaction](../../Linked_Image_Files/Bots/05-test-07.png)
+    ![Screenshot of a bot replying to a reaction](../Linked_Image_Files/Bots/05-test-07.png)
 
 ## Summary
 
 In this exercise, you modified the existing Microsoft Teams app to update your bot to respond to message reactions, and update or delete messages capabilities.
+
+
+### [Go to exercise 12 instructions -->](13-Exercise-12-Sending-proactive-messages-from-bots.md)
+
+### [<-- Back to readme](../../../)

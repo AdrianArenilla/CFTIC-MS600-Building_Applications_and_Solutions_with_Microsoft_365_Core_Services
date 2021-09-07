@@ -105,3 +105,7 @@ In this exercise you will work with two different versions of the SharePoint Wor
 
 In this exercise, you learned how to create a SharePoint Framework web part and test the web part using the SharePoint Framework Workbench and SharePoint site.
 
+
+### [Go to exercise 02 instructions -->](03-Exercise-2-Working-with-the-web-part-property-pane.md)
+
+### [<-- Back to readme](../../../)

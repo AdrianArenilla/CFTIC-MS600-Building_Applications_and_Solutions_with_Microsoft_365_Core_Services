@@ -6,19 +6,19 @@
 
 1. Choose a predefined design such as Expense Approval.
 
-    ![Choose a pre-defined design](../../Linked_Image_Files/understanding_actionable_messages_image_1.png)
+    ![Choose a pre-defined design](../Linked_Image_Files/understanding_actionable_messages_image_1.png)
 
 1. Select each control to get familiar with the properties and then update some of the properties such as the text displayed. Update the card’s design as desired and then preview the card by selecting **Preview**.
 
-    ![Update card design](../../Linked_Image_Files/understanding_actionable_messages_image_2.png)
+    ![Update card design](../Linked_Image_Files/understanding_actionable_messages_image_2.png)
 
 1. Test the button to see the HTTP request by selecting the **Accept** button.
 
-    ![Accept button](../../Linked_Image_Files/understanding_actionable_messages_image_3.png)
+    ![Accept button](../Linked_Image_Files/understanding_actionable_messages_image_3.png)
 
 1. To exit the preview, select **Edit Preview**.
 
-![Edit Preview button](../../Linked_Image_Files/understanding_actionable_messages_image_4.png)
+![Edit Preview button](../Linked_Image_Files/understanding_actionable_messages_image_4.png)
 
 ### Send updated adaptive card
 
@@ -279,3 +279,5 @@ Let's start by creating an actionable message card. We'll start with a basic car
 
 1. Feel free to experiment with this simple example in the playground. You can see the message card reference ([https://docs.microsoft.com/en-us/outlook/actionable-messages/message-card-reference](https://docs.microsoft.com/en-us/outlook/actionable-messages/message-card-reference)) for details on the available fields. Once you have a card you're happy with, you can move on to sending it.
 
+
+### [<-- Back to readme](../../../)

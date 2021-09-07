@@ -662,3 +662,7 @@ Using this combination of notifications with delta query you can be assured you 
 
 You've now completed this exercise. In this exercise, you created.NET Core app that used the Microsoft Graph API to receive notifications (webhooks) when a user account changes in Azure AD and perform queries using the delta query API to receive all changes to user accounts since the last query was made.
 
+
+### [Go to exercise 04 instructions -->](05-Exercise-4-Reduce-traffic-with-batched-requests.md)
+
+### [<-- Back to readme](../../../)

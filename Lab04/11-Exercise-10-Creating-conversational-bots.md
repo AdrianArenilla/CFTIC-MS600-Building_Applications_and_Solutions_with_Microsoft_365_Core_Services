@@ -19,27 +19,27 @@ The first step is to create a new Microsoft Teams bot. Adding a bot to the Teams
 
 1. Select **Create a resource** in the left-hand navigation:
 
-    ![Screenshot of the primary Azure navigation](../../Linked_Image_Files/Bots/03-azure-portal-01.png)
+    ![Screenshot of the primary Azure navigation](../Linked_Image_Files/Bots/03-azure-portal-01.png)
 
 1. Enter **resource group** in the **Search the marketplace** input box, and select **Resource group**.
 
-    ![Screenshot of creating a resource group - create a resource menu item](../../Linked_Image_Files/Bots/03-azure-portal-02.png)
+    ![Screenshot of creating a resource group - create a resource menu item](../Linked_Image_Files/Bots/03-azure-portal-02.png)
 
 1. On the **Resource Group** page, select the **Create** button to create a new resource group.
 
 1. Select a valid subscription, enter a name for the resource group, and select the wanted region. _None of these choices will impact the bot registration and are up to you._
 
-    ![Screenshot of creating a resource group - search for the resource group option](../../Linked_Image_Files/Bots/03-azure-portal-03.png)
+    ![Screenshot of creating a resource group - search for the resource group option](../Linked_Image_Files/Bots/03-azure-portal-03.png)
 
 1. Complete the wizard to create the resource group. Once Azure has completed the resource group creation process, navigate to the resource group.
 
 1. From the resource group, select the **Add** or **Create resources** button.
 
-    ![Screenshot of creating a new resource](../../Linked_Image_Files/Bots/03-azure-bot-registration-01.png)
+    ![Screenshot of creating a new resource](../Linked_Image_Files/Bots/03-azure-bot-registration-01.png)
 
 1. Enter **bot** in the **Search the marketplace** input box, and select **Bot Channels Registration** from the list of resources returned. Then select **Create** on the next page to start the process of registering a new bot resource:
 
-    ![Screenshot of searching for the bot registration resource](../../Linked_Image_Files/Bots/03-azure-bot-registration-02.png)
+    ![Screenshot of searching for the bot registration resource](../Linked_Image_Files/Bots/03-azure-bot-registration-02.png)
 
 1. In the **Bot Channels Registration** blade, enter the following values and then select **Create**:
 
@@ -67,11 +67,11 @@ The first step is to create a new Microsoft Teams bot. Adding a bot to the Teams
 
 1. On the **Connect to channels** pane, select the Microsoft Teams channel, then select **Save** to confirm the action.
 
-    ![Screenshot enabling the Microsoft Teams channel](../../Linked_Image_Files/Bots/03-azure-bot-registration-04.png)
+    ![Screenshot enabling the Microsoft Teams channel](../Linked_Image_Files/Bots/03-azure-bot-registration-04.png)
 
 1. Once this process is complete, you should see both the **Web Chat** and **Microsoft Teams** listed in your enabled channels:
 
-    ![Screenshot of the enabled bot channels](../../Linked_Image_Files/Bots/03-azure-bot-registration-05.png)
+    ![Screenshot of the enabled bot channels](../Linked_Image_Files/Bots/03-azure-bot-registration-05.png)
 
 ### Retrieve the bot app ID and password
 
@@ -81,7 +81,7 @@ When Azure created the bot, it also registered a new Azure AD app for the bot. G
 
 1. Select **Manage** to navigate to the Azure AD app blade:
 
-    ![Screenshot of the bot's settings page](../../Linked_Image_Files/Bots/03-azure-bot-registration-06.png)
+    ![Screenshot of the bot's settings page](../Linked_Image_Files/Bots/03-azure-bot-registration-06.png)
 
 ### Create a client secret for the app
 
@@ -91,13 +91,13 @@ In order for the daemon app to run without user involvement, it will sign in to 
 
 1. Select the **New client secret** button:
 
-    ![Screenshot of the Certificates & Secrets page in the Azure AD admin center](../../Linked_Image_Files/Bots/03-azure-bot-registration-07.png)
+    ![Screenshot of the Certificates & Secrets page in the Azure AD admin center](../Linked_Image_Files/Bots/03-azure-bot-registration-07.png)
 
 1. When prompted, give the secret a description and select one of the expiration duration options provided and select **Add**. _What you enter and select doesn't matter for the exercise._
 
 1. The **Certificate & Secrets** page will display the new secret. It's important you copy this value as it's only shown this one time; if you leave the page and come back, it will only show as a masked value.
 
-    ![Screenshot showing the new secret](../../Linked_Image_Files/Bots/03-azure-bot-registration-08.png)
+    ![Screenshot showing the new secret](../Linked_Image_Files/Bots/03-azure-bot-registration-08.png)
 
 1. Copy the value of the secret as you'll need it later.
 
@@ -218,11 +218,11 @@ The last step before you can test bot is to add it to the Microsoft Teams app ma
 
 1. Using the app bar navigation menu, select the **More added apps** button. Then select **App Studio**:
 
-    ![Screenshot of the More added apps dialog with App Studio](../../Linked_Image_Files/Bots/03-app-studio-02.png)
+    ![Screenshot of the More added apps dialog with App Studio](../Linked_Image_Files/Bots/03-app-studio-02.png)
 
 1. Select the **Manifest editor** tab and then the **Create a new app** button:
 
-    ![Screenshot of App studio manifest editor screen - create new app](../../Linked_Image_Files/Bots/03-app-studio-03.png)
+    ![Screenshot of App studio manifest editor screen - create new app](../Linked_Image_Files/Bots/03-app-studio-03.png)
 
 1. Provide a short name.
 
@@ -232,7 +232,7 @@ The last step before you can test bot is to add it to the Microsoft Teams app ma
 
 1. Provide a Short Description and Full Description.
 
-    ![Screenshot of App studio - app details screen](../../Linked_Image_Files/Bots/03-app-studio-04.png)
+    ![Screenshot of App studio - app details screen](../Linked_Image_Files/Bots/03-app-studio-04.png)
 
 1. From the **(2) Capabilities** > **Bots** page, select **Set up** to add a bot to the manifest.
 
@@ -244,7 +244,7 @@ The last step before you can test bot is to add it to the Microsoft Teams app ma
 
 1. Select **Save**.
 
-    ![Screenshot of setting up a bot](../../Linked_Image_Files/Bots/03-app-studio-05.png)
+    ![Screenshot of setting up a bot](../Linked_Image_Files/Bots/03-app-studio-05.png)
 
 1. Within the **Commands** section, select **Add** to add a new command to the bot.
 
@@ -308,7 +308,7 @@ The last step before you can test bot is to add it to the Microsoft Teams app ma
     > **NOTE:**
     > Microsoft Teams requires all content displayed within a tab be loaded from an HTTPS request. In development, can be done using the tool [ngrok](https://www.ngrok.com) that creates a secure rotatable URL to your local HTTP webserver. Ngrok is included as a dependency within the project so there is nothing to setup or configure.
 
-    ![Screenshot of gulp ngrok-serve](../../Linked_Image_Files/Bots/03-test-01.png)
+    ![Screenshot of gulp ngrok-serve](../Linked_Image_Files/Bots/03-test-01.png)
 
     Note the URL of the Ngrok URL displayed in the console. In the previous screenshot, NGrok has created the temporary URL **5f1f02998d18.ngrok.io** that will map to our locally running web server. In order for the Bot Framework to route messages from Microsoft Teams to our locally running bot, you need to update the bot's messaging endpoint in the Azure portal.
 
@@ -320,7 +320,7 @@ The last step before you can test bot is to add it to the Microsoft Teams app ma
 
 1. Locate the property **Configuration** > **Messaging endpoint** and set the domain to the NGrok domain, pointing to the `/api/messages` endpoint. Using the example above, the endpoint will be `https://5f1f02998d18.ngrok.io/api/messages`
 
-    ![The messaging endpoint set to https://5f1f02998d18.ngrok.io/api/messages](../../Linked_Image_Files/Bots/03-test-07.png)
+    ![The messaging endpoint set to https://5f1f02998d18.ngrok.io/api/messages](../Linked_Image_Files/Bots/03-test-07.png)
 
 1. Finally, save your changes to the bot configuration using the **Save** button at the top of the page.
 
@@ -336,21 +336,21 @@ The last step before you can test bot is to add it to the Microsoft Teams app ma
 
 1. Using the app bar navigation menu, select the **More added apps** button. Then select **Browse all apps** followed by **Upload for me or my teams**.
 
-    ![Screenshot of More added apps dialog in Microsoft Teams](../../Linked_Image_Files/Bots/03-test-02.png)
+    ![Screenshot of More added apps dialog in Microsoft Teams](../Linked_Image_Files/Bots/03-test-02.png)
 
 1. In the file dialog that appears, select the Microsoft Teams package in your project. This app package is a ZIP file that can be found in the project's **./package** folder.
 
 1. Once the package is uploaded, Microsoft Teams will display a summary of the app. Here you can see some "todo" items to address. _None of these "todo" items are important to this exercise, so you'll leave them as is._
 
-    ![Screenshot of Microsoft Teams app](../../Linked_Image_Files/Bots/03-test-03.png)
+    ![Screenshot of Microsoft Teams app](../Linked_Image_Files/Bots/03-test-03.png)
 
 1. Select the **Add** button to install the app, adding a new personal tab to your **More added apps** dialog:
 
-    ![Screenshot of the installed Microsoft Teams app in the More added apps dialog](../../Linked_Image_Files/Bots/03-test-04.png)
+    ![Screenshot of the installed Microsoft Teams app in the More added apps dialog](../Linked_Image_Files/Bots/03-test-04.png)
 
 1. Select the app to navigate to chat with the bot:
 
-    ![Screenshot of the installed Microsoft Teams app](../../Linked_Image_Files/Bots/03-test-05.png)
+    ![Screenshot of the installed Microsoft Teams app](../Linked_Image_Files/Bots/03-test-05.png)
 
 1. Notice the commands that the bot supports are shown in the compose box when the app loads. Let's test the bot!
 
@@ -358,10 +358,15 @@ The last step before you can test bot is to add it to the Microsoft Teams app ma
 
 1. After a few seconds, you should see the bot respond mentioning the user you are signed in with:
 
-    ![Screenshot of the working Microsoft Teams app](../../Linked_Image_Files/Bots/03-test-06.png)
+    ![Screenshot of the working Microsoft Teams app](../Linked_Image_Files/Bots/03-test-06.png)
 
     At this point, we have a working bot that is responding when it's mentioned.
 
 ## Summary
 
 In this exercise, you learned how to create and add a new bot to a Microsoft Teams app and interact with it from the Microsoft Teams client.
+
+
+### [Go to exercise 11 instructions -->](12-Exercise-11-Bots-in-channels-and-group-chats.md)
+
+### [<-- Back to readme](../../../)

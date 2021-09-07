@@ -89,3 +89,7 @@ SharePoint will start to install the application. At first it will appear dimmed
 
 In this exercise, you learned how to package and deploy your SharePoint Framework solutions.
 
+
+### [Go to exercise 07 instructions -->](08-Exercise-7-Deploying-SPFx-solutions-to-Microsoft-Teams.md)
+
+### [<-- Back to readme](../../../)

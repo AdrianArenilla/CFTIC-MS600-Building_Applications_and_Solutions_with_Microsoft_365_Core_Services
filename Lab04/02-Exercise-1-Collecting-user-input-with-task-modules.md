@@ -4,11 +4,11 @@ In this exercise, you'll learn the basics of task modules in Microsoft Teams and
 
 One is a standard HTML page that accepts the ID of a video on YouTube. When the task module is invoked, it will display the video using the YouTube embedded player. This task module will get the video ID from the query string, but it will not need to return any information back to the tab.
 
-![Screenshot of the YouTube Player task module loading a web page](../../Linked_Image_Files/Task_Modules/03-yo-teams-10.png)
+![Screenshot of the YouTube Player task module loading a web page](../Linked_Image_Files/Task_Modules/03-yo-teams-10.png)
 
 The other task module is implemented using React, the same way custom tabs are implemented using the Yeoman Generator for Microsoft Teams. This task module enables the user to specify the ID of the YouTube video to display. Once changed, when the user saves their changes, it will use the callback to close submit the new ID back to the tab.
 
-![Screenshot of the YouTube Selector task module](../../Linked_Image_Files/Task_Modules/03-yo-teams-11.png)
+![Screenshot of the YouTube Selector task module](../Linked_Image_Files/Task_Modules/03-yo-teams-11.png)
 
 
 ## Task 1: Create Microsoft Teams app
@@ -21,7 +21,7 @@ The other task module is implemented using React, the same way custom tabs are i
     yo teams
     ```
 
-    ![Screenshot of the Yeoman Generator for Microsoft Teams](../../Linked_Image_Files/Task_Modules/03-yo-teams-01.png)
+    ![Screenshot of the Yeoman Generator for Microsoft Teams](../Linked_Image_Files/Task_Modules/03-yo-teams-01.png)
 
 1. Yeoman will launch and ask you a series of questions. Answer the questions with the following values:
 
@@ -61,15 +61,15 @@ The other task module is implemented using React, the same way custom tabs are i
     > [!IMPORTANT]
     > Each time ngrok is started, it will generate a new dynamic subdomain for the URL. If you have to restart ngrok, you will need to repackage and and update the app in Microsoft Teams to make the installed app aware of the new URL. The optional licensed version of ngrok allows you to define and reuse the same subdomain.
 
-    ![Screenshot of gulp ngrok-serve](../../Linked_Image_Files/Task_Modules/03-yo-teams-02.png)
+    ![Screenshot of gulp ngrok-serve](../Linked_Image_Files/Task_Modules/03-yo-teams-02.png)
 
 1. Open a browser and navigate to the ngrok URL displayed in the console:
 
-    ![Screenshot of the local web app hosting the Teams tab project with the homepage loaded](../../Linked_Image_Files/Task_Modules/03-yo-teams-03.png)
+    ![Screenshot of the local web app hosting the Teams tab project with the homepage loaded](../Linked_Image_Files/Task_Modules/03-yo-teams-03.png)
 
 1. Update the URL in the browser to load the tab created by the scaffolding process. Here you can see the page can determine that it isn't running within the Microsoft Teams client.
 
-    ![Screenshot of the local web app hosting the Teams tab project with the tab loaded](../../Linked_Image_Files/Task_Modules/03-yo-teams-04.png)
+    ![Screenshot of the local web app hosting the Teams tab project with the tab loaded](../Linked_Image_Files/Task_Modules/03-yo-teams-04.png)
 
 1. Now let's load the tab in Microsoft Teams. In the browser, navigate to **https://teams.microsoft.com** and sign in with the credentials of a Work and School account.
 
@@ -78,7 +78,7 @@ The other task module is implemented using React, the same way custom tabs are i
 
 1. Using the app bar navigation menu, select the **More added apps** button. Then select **More apps**.
 
-    ![Screenshot of More added apps dialog in Microsoft Teams](../../Linked_Image_Files/Task_Modules/03-yo-teams-05.png)
+    ![Screenshot of More added apps dialog in Microsoft Teams](../Linked_Image_Files/Task_Modules/03-yo-teams-05.png)
 
 1. On the **Browse available apps and services** page, select **Upload a custom app** > **Upload for me or my teams**.
 
@@ -86,15 +86,15 @@ The other task module is implemented using React, the same way custom tabs are i
 
 1. Once the package is uploaded, Microsoft Teams will display a summary of the app. Here you can see some "todo" items to address. *None of these "todo" items are important to this exercise, so you will leave them as is.*
 
-    ![Screenshot of Microsoft Teams app](../../Linked_Image_Files/Task_Modules/03-yo-teams-06.png)
+    ![Screenshot of Microsoft Teams app](../Linked_Image_Files/Task_Modules/03-yo-teams-06.png)
 
 1. Select the **Add** button to install the app, adding a new personal tab to your **More added apps** dialog:
 
-    ![Screenshot of the installed Microsoft Teams app in the More added apps dialog](../../Linked_Image_Files/Task_Modules/03-yo-teams-07.png)
+    ![Screenshot of the installed Microsoft Teams app in the More added apps dialog](../Linked_Image_Files/Task_Modules/03-yo-teams-07.png)
 
 1. Select the app to navigate to the new tab:
 
-    ![Screenshot of the installed Microsoft Teams app personal tab](../../Linked_Image_Files/Task_Modules/03-yo-teams-08.png)
+    ![Screenshot of the installed Microsoft Teams app personal tab](../Linked_Image_Files/Task_Modules/03-yo-teams-08.png)
 
     Notice that when the content page is loaded in a tab within the Microsoft Teams client, it's displaying the value of the `entityId` property of the tab, not the message "This isn't hosted in Microsoft Teams" as you saw when viewing the content page in the browser. The tab can detect if it's loaded within the Microsoft Teams client using the Microsoft Teams JavaScript SDK.
 
@@ -187,7 +187,7 @@ At this point, our Microsoft Teams app, implemented as a custom person tab is se
 
 1. In the browser, navigate back to the tab and notice the new UI you've implemented for the tab:
 
-    ![Screenshot of the updated YouTube Player tab](../../Linked_Image_Files/Task_Modules/03-yo-teams-09.png)
+    ![Screenshot of the updated YouTube Player tab](../Linked_Image_Files/Task_Modules/03-yo-teams-09.png)
 
     Now you can update the project and add task modules to the custom Microsoft Teams app.
 
@@ -299,7 +299,7 @@ At this point, our Microsoft Teams app, implemented as a custom person tab is se
 
 1. In the browser, navigate back to the tab in the Microsoft Teams interface. Select the **Show video** button. Microsoft Teams will load the video player task module with the specified video loaded in the embedded player:
 
-    ![Screenshot of the YouTube Player task module with a video loaded in the web page](../../Linked_Image_Files/Task_Modules/03-yo-teams-10.png)
+    ![Screenshot of the YouTube Player task module with a video loaded in the web page](../Linked_Image_Files/Task_Modules/03-yo-teams-10.png)
 
 1. Stop the local web server by pressing <kbd>CTRL</kbd>+<kbd>C</kbd> in the console to stop the running process.
 
@@ -481,14 +481,19 @@ With the selector's page created and registered, the next step is to implement t
 
 1. Select the **Change Video ID** button. Microsoft Teams will load the video selector task module with the ID of the currently selected video in the text control.
 
-    ![Screenshot of the YouTube Selector task module](../../Linked_Image_Files/Task_Modules/03-yo-teams-11.png)
+    ![Screenshot of the YouTube Selector task module](../Linked_Image_Files/Task_Modules/03-yo-teams-11.png)
 
 1. Enter the ID of another YouTube video and select the **Update** button. Notice the ID of the video has changed. Now when you select the **Show video** button, the player task module loads with the new video.
 
-    ![Screenshot of the YouTube Player task module](../../Linked_Image_Files/Task_Modules/03-yo-teams-12.png)
+    ![Screenshot of the YouTube Player task module](../Linked_Image_Files/Task_Modules/03-yo-teams-12.png)
 
 1. Stop the local web server by pressing <kbd>CTRL</kbd>+<kbd>C</kbd> in the console to stop the running process.
 
 ## Summary
 
 In this exercise, you learned the basics of task modules in Microsoft Teams and how to collect input from users in a custom Teams tab. After creating a new Microsoft Teams personal tab, you added two task modules to it.
+
+
+### [Go to exercise 02 instructions -->](03-Exercise-2-Using-adaptive-cards-and-deep-links-in-task-modules.md)
+
+### [<-- Back to readme](../../../)

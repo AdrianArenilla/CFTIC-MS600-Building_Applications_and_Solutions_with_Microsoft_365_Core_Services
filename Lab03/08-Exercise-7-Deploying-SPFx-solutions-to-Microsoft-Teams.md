@@ -206,3 +206,5 @@ Test the SPFx web part in SharePoint:
 
 In this exercise, you learned how to create a SharePoint Framework (SPFx) solution that will work in both SharePoint and as a tab in Microsoft Teams.
 
+
+### [<-- Back to readme](../../../)

@@ -41,7 +41,7 @@ The next step is to update an Azure AD app you created in a previous exercise of
 
     Notice that the values of the **Scopes defined by this API** and **Authorized client applications** will now reflect this change as well:
 
-    ![Screenshot of updated expose API settings](../../Linked_Image_Files/07-azure-ad-app-expose-api-01.png)
+    ![Screenshot of updated expose API settings](../Linked_Image_Files/07-azure-ad-app-expose-api-01.png)
 
     With the Azure AD app configuration updated, the next step is to register the bot with Azure Bot Framework.
 
@@ -60,27 +60,27 @@ For now, we'll assume the subdomain is `REPLACE.ngrok.io`.
 
 1. Select **Create a resource** in the left-hand navigation:
 
-    ![Screenshot of the primary Azure navigation](../../Linked_Image_Files/07-azure-portal-01.png)
+    ![Screenshot of the primary Azure navigation](../Linked_Image_Files/07-azure-portal-01.png)
 
 1. Enter **resource group** in the **Search the marketplace** input box, and select **Resource group**.
 
-    ![Screenshot of creating a resource group - create a resource menu item](../../Linked_Image_Files/07-azure-portal-02.png)
+    ![Screenshot of creating a resource group - create a resource menu item](../Linked_Image_Files/07-azure-portal-02.png)
 
 1. On the **Resource Group** page, select the **Create** button to create a new resource group.
 
 1. Select a valid subscription, enter a name for the resource group, and select your preferred region. *None of these choices will affect the bot registration and are up to you.*
 
-    ![Screenshot of creating a resource group - search for the resource group option](../../Linked_Image_Files/07-azure-portal-03.png)
+    ![Screenshot of creating a resource group - search for the resource group option](../Linked_Image_Files/07-azure-portal-03.png)
 
 1. Complete the wizard to create the resource group. Once Azure has completed the resource group creation process, navigate to the resource group.
 
 1. From the resource group, select the **Add** or **Create resources** button.
 
-    ![Screenshot of creating a new resource](../../Linked_Image_Files/07-azure-bot-registration-01.png)
+    ![Screenshot of creating a new resource](../Linked_Image_Files/07-azure-bot-registration-01.png)
 
 1. Enter **bot** in the **Search the marketplace** input box, and select **Bot Channels Registration** from the list of resources returned. Then select **Create** on the next page to start the process of registering a new bot resource:
 
-    ![Screenshot of searching for the bot registration resource](../../Linked_Image_Files/07-azure-bot-registration-02.png)
+    ![Screenshot of searching for the bot registration resource](../Linked_Image_Files/07-azure-bot-registration-02.png)
 
 1. In the **Bot Channels Registration** screen, enter the following values, but don't select **Create**:
 
@@ -95,7 +95,7 @@ For now, we'll assume the subdomain is `REPLACE.ngrok.io`.
 
     - **Application Insights**: Off
 
-    ![Screenshot of the created bot channels registration resource form](../../Linked_Image_Files/07-azure-bot-registration-03.png)
+    ![Screenshot of the created bot channels registration resource form](../Linked_Image_Files/07-azure-bot-registration-03.png)
 
 1. Select the **Microsoft App ID and password** option to change it from its default setting. By default, the registration process will register a new Azure AD app. We want to use the Azure AD app created in a previous exercise and updated in this exercise.
 
@@ -107,7 +107,7 @@ For now, we'll assume the subdomain is `REPLACE.ngrok.io`.
 
 1. Select **Create** to start the bot provisioning process.
 
-    ![Screenshot of the created bot channels registration resource after updating the Azure AD app](../../Linked_Image_Files/07-azure-bot-registration-04.png)
+    ![Screenshot of the created bot channels registration resource after updating the Azure AD app](../Linked_Image_Files/07-azure-bot-registration-04.png)
 
 1. Azure will start to provision the new resource. This will take a moment or two. Once it's finished, navigate to the bot resource in the resource group.
 
@@ -121,7 +121,7 @@ For now, we'll assume the subdomain is `REPLACE.ngrok.io`.
 
 1. Select the **Add OAuth Connection Settings** button on the **Configuration** screen.
 
-    ![Screenshot of the bot configuration page](../../Linked_Image_Files/07-azure-bot-registration-05.png)
+    ![Screenshot of the bot configuration page](../Linked_Image_Files/07-azure-bot-registration-05.png)
 
 1. Use the following values to create a new connection setting, and then select **Save**:
 
@@ -134,7 +134,7 @@ For now, we'll assume the subdomain is `REPLACE.ngrok.io`.
     - **Scopes**: Mail.Read openid profile User.Read
       - *This is a space-delimited list of all permissions the bot needs that have also been added to the Azure AD app you previously. The list contains a subset of the permissions listed in the Azure AD app from the exercises in this module that the bot will use.*
 
-    ![Screenshot of the connection setting form](../../Linked_Image_Files/07-azure-bot-registration-06.png)
+    ![Screenshot of the connection setting form](../Linked_Image_Files/07-azure-bot-registration-06.png)
 
 ### Enable the Microsoft Teams channel for the bot
 
@@ -144,11 +144,11 @@ In order for the bot to interact with Microsoft Teams, you must enable the Teams
 
 1. On the **Connect to channels** pane, select the Microsoft Teams channel, then select **Save** to confirm the action.
 
-    ![Screenshot enabling the Microsoft Teams channel](../../Linked_Image_Files/07-azure-bot-registration-07.png)
+    ![Screenshot enabling the Microsoft Teams channel](../Linked_Image_Files/07-azure-bot-registration-07.png)
 
 1. Once this process is complete, you should see both the **Web Chat** and **Microsoft Teams** listed in your enabled channels:
 
-    ![Screenshot of the enabled bot channels](../../Linked_Image_Files/07-azure-bot-registration-08.png)
+    ![Screenshot of the enabled bot channels](../Linked_Image_Files/07-azure-bot-registration-08.png)
 
 ## Task 3: Create your Microsoft Teams app project
 
@@ -784,11 +784,11 @@ The last step is to add the bot to the web server when it starts.
     > [!NOTE]
     > Microsoft Teams requires all content displayed within a tab be loaded from an HTTPS request. In development, can be done using the tool [ngrok](https://www.ngrok.com) that creates a secure rotatable URL to your local HTTP webserver. Ngrok is included as a dependency within the project so there is nothing to setup or configure.
 
-    ![Screenshot of gulp ngrok-serve](../../Linked_Image_Files/07-test-01.png)
+    ![Screenshot of gulp ngrok-serve](../Linked_Image_Files/07-test-01.png)
 
 1. Note the URL of the ngrok URL displayed in the console. In the previous screenshot, ngrok has created the temporary URL `5f1f02998d18.ngrok.io` that will map to our locally running web server. In order for the Bot Framework to route messages from Microsoft Teams to our locally running bot, you need to the bot's **messaging endpoint** URL in the bot's registration. This property can be found on the **Configuration** screen:
 
-    ![Screenshot of the bot configuration page](../../Linked_Image_Files/07-azure-bot-registration-05.png)
+    ![Screenshot of the bot configuration page](../Linked_Image_Files/07-azure-bot-registration-05.png)
 
 ### Install the custom app in Microsoft Teams
 
@@ -799,7 +799,7 @@ The last step is to add the bot to the web server when it starts.
 
 1. Using the app bar navigation menu, select the **More added apps** button. Then select **Browse all apps** followed by **Upload for me or my teams**.
 
-    ![Screenshot of More added apps dialog in Microsoft Teams](../../Linked_Image_Files/07-test-02.png)
+    ![Screenshot of More added apps dialog in Microsoft Teams](../Linked_Image_Files/07-test-02.png)
 
 1. In the file dialog that appears, select the Microsoft Teams package in your project. This app package is a ZIP file that can be found in the project's **./package** folder.
 
@@ -809,20 +809,23 @@ The last step is to add the bot to the web server when it starts.
 
 1. After a few seconds, you should see the bot post its introductory message
 
-    ![Screenshot of the working Microsoft Teams app](../../Linked_Image_Files/07-test-05.png)
+    ![Screenshot of the working Microsoft Teams app](../Linked_Image_Files/07-test-05.png)
 
 1. Start the sign in process by entering any message, such as **hello**. The bot will prompt you to sign in:
 
-    ![Screenshot of the signin prompt](../../Linked_Image_Files/07-test-06.png)
+    ![Screenshot of the signin prompt](../Linked_Image_Files/07-test-06.png)
 
 1. Select the **Continue** button to accept the sign in process. After a moment, you should see the bot display information about the currently signed in user. This information was retrieved using the SSO support in Microsoft Teams to obtain an ID token for the currently signed in user, exchanging this ID token for an access token, and using that to submit requests to Microsoft Graph:
 
-    ![Screenshot of the bot displaying user details from Microsoft Graph](../../Linked_Image_Files/07-test-07.png)
+    ![Screenshot of the bot displaying user details from Microsoft Graph](../Linked_Image_Files/07-test-07.png)
 
 1. Finally, enter **logout** to start the sign-out process:
 
-    ![Screenshot of the bot displaying the logout process](../../Linked_Image_Files/07-test-08.png)
+    ![Screenshot of the bot displaying the logout process](../Linked_Image_Files/07-test-08.png)
 
 ## Summary
 
 In this exercise, you learned how to create and add a new bot to a Microsoft Teams app and interact with it from the Microsoft Teams client while using the support for SSO.
+
+
+### [<-- Back to readme](../../../)

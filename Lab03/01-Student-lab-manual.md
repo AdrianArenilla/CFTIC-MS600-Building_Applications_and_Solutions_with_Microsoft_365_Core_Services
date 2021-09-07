@@ -55,3 +55,7 @@ Also, ensure that the following necessary utilities are installed:
 
 - NodeJS v10.x
 
+
+### [Go to exercise 01 instructions -->](02-Exercise-1-Introduction-to-SharePoint-Framework-(SPFx).md)
+
+### [<-- Back to readme](../../../)

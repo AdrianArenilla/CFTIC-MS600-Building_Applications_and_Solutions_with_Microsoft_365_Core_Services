@@ -1,4 +1,8 @@
-# Microsoft Ms-600 (Adrián Arenilla Seco)
+# Microsoft Ms-600 (Adrián Arenilla Seco) - LAB 01
+
+
+### [Go to Student manual -->](01-Student-lab-manual.md)
+
 
 ## Exercise 01: Registering an application in Azure Active Directory
 ### [Go to exercise 01 instructions -->](02-Exercise-1-Registering-an-application-in-Azure-Active-Directory.md)

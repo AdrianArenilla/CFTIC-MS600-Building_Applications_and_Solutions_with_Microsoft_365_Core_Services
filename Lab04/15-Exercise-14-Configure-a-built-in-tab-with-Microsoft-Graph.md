@@ -25,7 +25,7 @@ Let's start by adding and pre-consenting this permission for our existing Azure 
 
 1. Search for, and select the permission **TeamsTab.ReadWriteForTeam**, then select the **Add permissions** button:
 
-    ![Screenshot adding a new permission to the app](../../Linked_Image_Files/05-azure-ad-add-api-permissions.png)
+    ![Screenshot adding a new permission to the app](../Linked_Image_Files/05-azure-ad-add-api-permissions.png)
 
 1. To simplify the testing process, select **Grant admin consent for Contoso** to consent this new permission for all users in your tenant.
 
@@ -45,7 +45,7 @@ Before adding the tabs that will load the Word and Excel files, you need a Word 
 
 1. In the browser, navigate back the channel where you installed the team in the previous exercise. Select the **Files** tab and then use the **New** button to add a new Word and Excel file to the library:
 
-    ![Screenshot adding Office files to the library](../../Linked_Image_Files/05-add-office-files.png)
+    ![Screenshot adding Office files to the library](../Linked_Image_Files/05-add-office-files.png)
 
   Keep track of the names of these files. For the purposes of this exercise, we'll assume they're called **document.docx** and **workbook.docx**.
 
@@ -58,7 +58,7 @@ When creating a new tab as one of the Office built-in tabs, you'll need to know 
 
 1. Both of these values can be retrieved via the Microsoft Graph API, but you can also get them from the URL. Select one of the files, such as **document.docx**, in the **Files** tab and select **Open in SharePoint**.
 
-    ![Screenshot opening the Word document in SharePoint](../../Linked_Image_Files/05-open-office-files.png)
+    ![Screenshot opening the Word document in SharePoint](../Linked_Image_Files/05-open-office-files.png)
 
     This file is located in the **Documents** library that's named **Shared Documents** inside SharePoint. Its also located in the **General** subfolder within the library that matches the name of the Microsoft Teams channel you were just in. Look at the URL of the **General** folder in the **Documents library**... it should look similar to the following:
 
@@ -203,10 +203,15 @@ Now let's test the new functionality added in this exercise.
 
 1. Once the app starts, go back to the browser and navigate back to your tab that you previously installed. You'll now see the two buttons appear below the list of joined teams:
 
-    ![Screenshot of the two Office tab buttons](../../Linked_Image_Files/05-test-01.png)
+    ![Screenshot of the two Office tab buttons](../Linked_Image_Files/05-test-01.png)
 
 1. Select each of the two tabs and wait a few seconds. After a few seconds, you should see two new tabs appear in the channel:
 
-   ![Screenshot of the two new Office tabs](../../Linked_Image_Files/05-test-02.png)
+   ![Screenshot of the two new Office tabs](../Linked_Image_Files/05-test-02.png)
 
 1. Select each of the tabs to see them load the specified Office file in each one respectively.
+
+
+### [Go to exercise 15 instructions -->](16-Exercise-15-Use-Microsoft-Graph-to-post-to-the-activity-feed.md)
+
+### [<-- Back to readme](../../../)

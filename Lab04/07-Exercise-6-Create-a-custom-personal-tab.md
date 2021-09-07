@@ -12,7 +12,7 @@ In this exercise, you'll create a new Microsoft Teams personal tab by using the 
     yo teams
     ```
 
-    ![Screenshot of the Yeoman generator for Microsoft Teams](../../Linked_Image_Files/Tabs/03-yo-teams-01.png)
+    ![Screenshot of the Yeoman generator for Microsoft Teams](../Linked_Image_Files/Tabs/03-yo-teams-01.png)
 
 1. Yeoman starts and asks you a series of questions. Answer the questions with the following values:
 
@@ -49,15 +49,15 @@ Before you customize the tab, let's test the tab to see the initial developer ex
     > **NOTE:**
     > Microsoft Teams requires all content displayed within a tab to be loaded from an HTTPS request. In development, this can be done by using the tool [ngrok](https://www.ngrok.com) that creates a secure rotatable URL to your local HTTP web server. Ngrok is included as a dependency within the project, so there's nothing to set up or configure.
 
-    ![Screenshot of gulp ngrok-serve](../../Linked_Image_Files/Tabs/03-yo-teams-02.png)
+    ![Screenshot of gulp ngrok-serve](../Linked_Image_Files/Tabs/03-yo-teams-02.png)
 
 1. Open a browser, and go to the ngrok URL displayed in the console.
 
-    ![Screenshot of the local web app hosting the Teams tab project - project homepage](../../Linked_Image_Files/Tabs/03-yo-teams-03.png)
+    ![Screenshot of the local web app hosting the Teams tab project - project homepage](../Linked_Image_Files/Tabs/03-yo-teams-03.png)
 
 1. Update the URL in the browser to load the tab created by the scaffolding process. Here you can see the page can determine that it isn't running within the Microsoft Teams client.
 
-    ![Screenshot of the local web app hosting the Teams tab project - displaying the tab](../../Linked_Image_Files/Tabs/03-yo-teams-04.png)
+    ![Screenshot of the local web app hosting the Teams tab project - displaying the tab](../Linked_Image_Files/Tabs/03-yo-teams-04.png)
 
 1. Now let's load the tab in Microsoft Teams. In the browser, go to [Microsoft Teams](https://teams.microsoft.com). Sign in with the credentials of a Work and School account.
 
@@ -66,25 +66,25 @@ Before you customize the tab, let's test the tab to see the initial developer ex
 
 1. In the app bar on the left, select the **More added apps** button. Then select **More apps**.
 
-    ![Screenshot of More added apps dialog box in Microsoft Teams](../../Linked_Image_Files/Tabs/03-yo-teams-05.png)
+    ![Screenshot of More added apps dialog box in Microsoft Teams](../Linked_Image_Files/Tabs/03-yo-teams-05.png)
 
 1. On the **Get more done with apps!** page, select **Upload a custom app** > **Upload for me or my teams**.
 
-    ![Screenshot of available apps and services page in Microsoft Teams](../../Linked_Image_Files/Tabs/03-yo-teams-05a.png)
+    ![Screenshot of available apps and services page in Microsoft Teams](../Linked_Image_Files/Tabs/03-yo-teams-05a.png)
 
 1. In the file dialog box that appears, select the Microsoft Teams package in your project. This app package is a zip file in the project's **./package** folder.
 
 1. After the package is uploaded, select it to display a summary of the app. Here you can see some todo items to address. You'll update the todo items later in the exercise.
 
-    ![Screenshot of Microsoft Teams app](../../Linked_Image_Files/Tabs/03-yo-teams-06.png)
+    ![Screenshot of Microsoft Teams app](../Linked_Image_Files/Tabs/03-yo-teams-06.png)
 
 1. Select the **Add** button to install the app, which adds a new personal tab to your **More added apps** dialog box.
 
-    ![Screenshot of the installed Microsoft Teams app in the More added apps dialog box](../../Linked_Image_Files/Tabs/03-yo-teams-07.png)
+    ![Screenshot of the installed Microsoft Teams app in the More added apps dialog box](../Linked_Image_Files/Tabs/03-yo-teams-07.png)
 
 1. Select the app to go to the new tab.
 
-    ![Screenshot of the installed Microsoft Teams app personal tab](../../Linked_Image_Files/Tabs/03-yo-teams-08.png)
+    ![Screenshot of the installed Microsoft Teams app personal tab](../Linked_Image_Files/Tabs/03-yo-teams-08.png)
 
     Notice that when the content page is loaded in a tab within the Microsoft Teams client, it displays the `entityId` property of the tab, not the message "This isn't hosted in Microsoft Teams" as you saw when you viewed the content page in the browser. The tab can detect if it's loaded within the Microsoft Teams client by using the Microsoft Teams JavaScript SDK.
 
@@ -92,9 +92,9 @@ Before you customize the tab, let's test the tab to see the initial developer ex
 
 1. Uninstall the app by right-clicking the app in the **More added apps** dialog box and select **Uninstall**. Then select **Uninstall** in the confirmation dialog box that appears.
 
-    ![Screenshot uninstalling the Microsoft Teams app](../../Linked_Image_Files/Tabs/03-yo-teams-09.png)
+    ![Screenshot uninstalling the Microsoft Teams app](../Linked_Image_Files/Tabs/03-yo-teams-09.png)
 
-    ![Screenshot of the Uninstall dialog box for the Microsoft Teams app](../../Linked_Image_Files/Tabs/03-yo-teams-10.png)
+    ![Screenshot of the Uninstall dialog box for the Microsoft Teams app](../Linked_Image_Files/Tabs/03-yo-teams-10.png)
 
 1. Next, stop the local web server by selecting <kbd>Ctrl</kbd>+<kbd>C</kbd> in the console to stop the running process.
 
@@ -154,11 +154,11 @@ Now you can implement the user interface for the tab. The simple tab has a basic
     > **TIP:**
     > At this point, you can test your tab without loading it in Microsoft Teams. Run the command **gulp ngrok-serve** from the command line, and go to **https://`{your-ngrok-subdomain}`.ngrok.io/learnPersonalTab/index.html** in the browser.
     >
-    > ![Screenshot of the update tab page in the default theme](../../Linked_Image_Files/Tabs/03-yo-teams-11.png)
+    > ![Screenshot of the update tab page in the default theme](../Linked_Image_Files/Tabs/03-yo-teams-11.png)
     >
     > Add the query string value `?theme=dark` to the URL to see the theme change:
     >
-    > ![Screenshot of the update tab page in the dark theme](../../Linked_Image_Files/Tabs/03-yo-teams-12.png)
+    > ![Screenshot of the update tab page in the dark theme](../Linked_Image_Files/Tabs/03-yo-teams-12.png)
 
 1. The next step is to add some interactivity to the tab. Add the following methods to the `LearnPersonalTab` class. These methods handle updating the state when specific events happen on the form that you'll add to the component.
 
@@ -209,11 +209,11 @@ At this point, the app is complete. Recall from our initial test that when the a
 
 1. Using the **More added apps** link in the app bar on the left, select **App Studio**.
 
-    ![Screenshot of the More added apps dialog box with App Studio highlighted](../../Linked_Image_Files/Tabs/03-yo-teams-13.png)
+    ![Screenshot of the More added apps dialog box with App Studio highlighted](../Linked_Image_Files/Tabs/03-yo-teams-13.png)
 
 1. Select the **Manifest editor** tab in App Studio, and then select **Import an existing app**. Locate the zip file that can be found in the project's **./package** folder and open it.
 
-    ![Screenshot of the Microsoft Teams app in App Studio](../../Linked_Image_Files/Tabs/03-yo-teams-14.png)
+    ![Screenshot of the Microsoft Teams app in App Studio](../Linked_Image_Files/Tabs/03-yo-teams-14.png)
 
 1. Edit the app by selecting its tile, or use the menu in the upper-right corner for more options and select **Edit**.
 
@@ -226,7 +226,7 @@ At this point, the app is complete. Recall from our initial test that when the a
     - **Short description**: My first custom Teams app
     - **Full description**: *enter a long description*
 
-    ![Screenshot of app details App Studio](../../Linked_Image_Files/Tabs/03-yo-teams-15.png)
+    ![Screenshot of app details App Studio](../Linked_Image_Files/Tabs/03-yo-teams-15.png)
 
 1. Update the name of the tab by selecting **Capabilities** > **Tabs** in the left pane in App Studio.
 
@@ -249,12 +249,17 @@ At this point, the app is complete. Recall from our initial test that when the a
 
 1. In App Studio, select **Finish** > **Test and distribute** in the left pane in App Studio. Then select **Install**. Notice that the new names and descriptions are shown before installing the app.
 
-    ![Screenshot of installing the updated app](../../Linked_Image_Files/Tabs/03-yo-teams-16.png)
+    ![Screenshot of installing the updated app](../Linked_Image_Files/Tabs/03-yo-teams-16.png)
 
 1. Select **Add** to install the app. This action adds a new personal tab to your **More added apps** dialog box. Select the app to see the updated working version.
 
-    ![Screenshot of the updated and working tab](../../Linked_Image_Files/Tabs/03-yo-teams-17.png)
+    ![Screenshot of the updated and working tab](../Linked_Image_Files/Tabs/03-yo-teams-17.png)
 
 ## Summary
 
 In this exercise, you created a new Microsoft Teams personal tab by using the Microsoft Teams Yeoman generator, Visual Studio Code, and App Studio.
+
+
+### [Go to exercise 07 instructions -->](08-Exercise-7-Create-a-custom-channel-tab.md)
+
+### [<-- Back to readme](../../../)

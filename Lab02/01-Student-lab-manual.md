@@ -42,3 +42,7 @@ Also, ensure that the following necessary utilities are installed:
 
 - ngrok
 
+
+### [Go to exercise 01 instructions -->](02-Exercise-1-Using-query-parameters-when-querying-Microsoft-Graph-via-HTTP.md)
+
+### [<-- Back to readme](../../../)

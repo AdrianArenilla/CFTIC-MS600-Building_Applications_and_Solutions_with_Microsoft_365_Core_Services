@@ -3,7 +3,8 @@
 This exercise leads the user through a series of tasks utilizing Microsoft Graph Explorer. For this exercise you will use the default sample account and will not sign in.
 
 **Note**:
-The trainer should confirm users are not signed on in a browser with a Microsoft 365 account. You may also direct them to open an InPrivate window session.
+The trainer should confirm users are not signed on in a browser with a Microsoft 365 account. You may also direct them to open an InPrivate window session.
+
 By the end of this exercise you will be able to:
 
 - Get the signed-in user’s profile.
@@ -25,7 +26,8 @@ By the end of this exercise you will be able to:
 This page allows users to interact with the Microsoft Graph without needing to write any code. The Microsoft Graph Explorer provides sample data to use for read operations.
 
 **Note**:
-Some organizations may not allow users to sign in or consent to specific scopes required for some operations.
+Some organizations may not allow users to sign in or consent to specific scopes required for some operations.
+
 ## Task 2: Get the signed in user's profile
 
 1. The page loads with a request of **/v1.0/me** entered in the **request URL** box.
@@ -92,3 +94,5 @@ In this exercise, you learned how to:
 
 - Get the user’s manager profile.
 
+
+### [<-- Back to readme](../../../)

@@ -117,3 +117,7 @@ In this example, you'll submit a request that creates a new folder in the curren
 
 In this exercise, you used Microsoft Graph to demonstrate how you can combine multiple requests using a single request. This capability of submitting batch requests using the $batch query parameter enables you to optimize your applications to minimize the number of requests to Microsoft Graph.
 
+
+### [Go to exercise 05 instructions -->](06-Exercise-5-Understand-throttling-in-Microsoft-Graph.md)
+
+### [<-- Back to readme](../../../)

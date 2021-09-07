@@ -728,3 +728,7 @@ The application will do the same thing as the **HttpClient** version of the appl
 
 In this exercise, you used the Azure AD application and .NET console application you previously created and modified them to demonstrate two strategies to account for throttling in your application. One strategy used the **HttpClient** object but required you to implement the detect, delay, and retry logic yourself when requests were throttled. The other strategy used the Microsoft Graph SDK's included support for handling this same scenario.
 
+
+### [Go to exercise 06 instructions -->](07-Exercise-6-Querying-user-data-from-Microsoft-Graph.md)
+
+### [<-- Back to readme](../../../)

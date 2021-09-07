@@ -134,11 +134,11 @@ Finally, it ensures that the width of the columns and height of the rows is big 
 
 1. In Excel, choose the **Home** tab, and then choose the **Show Taskpane** button in the ribbon to open the add-in task pane.
 
-    ![Show Taskpane button](../../Linked_Image_Files/understanding_fundamental_components_and_types_of_office_add-ins_image_2.png)
+    ![Show Taskpane button](../Linked_Image_Files/understanding_fundamental_components_and_types_of_office_add-ins_image_2.png)
 
 1. In the task pane, choose the **Create Table** button.
 
-![Create Table button](../../Linked_Image_Files/understanding_fundamental_components_and_types_of_office_add-ins_image_3.png)
+![Create Table button](../Linked_Image_Files/understanding_fundamental_components_and_types_of_office_add-ins_image_3.png)
 
 ### Filter and sort a table
 
@@ -252,7 +252,7 @@ The sort member of a `Table` is a `TableSort` object, not a method. The `SortFie
 
 1. Choose the **Filter Table** button and the **Sort Table** button, in either order.
 
-![Filter Table button](../../Linked_Image_Files/understanding_fundamental_components_and_types_of_office_add-ins_image_4.png)
+![Filter Table button](../Linked_Image_Files/understanding_fundamental_components_and_types_of_office_add-ins_image_4.png)
 
 ### Create a chart
 
@@ -349,5 +349,9 @@ A "series" is a set of data points from a column of the table. Since there is on
 
 1. Choose the **Create Chart** button. A chart is created and only the data from the rows that have been filtered are included. The labels on the data points across the bottom are in the sort order of the chart; that is, merchant names in reverse alphabetical order.
 
-![Create Chart button](../../Linked_Image_Files/understanding_fundamental_components_and_types_of_office_add-ins_image_5.png)
+![Create Chart button](../Linked_Image_Files/understanding_fundamental_components_and_types_of_office_add-ins_image_5.png)
 
+
+### [Go to exercise 03 instructions -->](04-Exercise-3-Understanding-customization-of-add-ins.md)
+
+### [<-- Back to readme](../../../)
