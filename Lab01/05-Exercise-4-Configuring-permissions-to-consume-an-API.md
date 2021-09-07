@@ -112,4 +112,4 @@ In this exercise, you learned how to define scope and how to authorize applicati
 
 ### [Go to exercise 05 instructions -->](06-Exercise-5-Implementing-authorization-to-consume-an-API.md)
 
-### [<-- Back to readme](../README.md)
+### [<-- Back to readme](README.md)

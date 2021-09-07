@@ -152,4 +152,4 @@ In this exercise, you learned how to create a new Active Directory organization,
 
 ### [Go to exercise 02 instructions -->](03-Exercise-2-Implementing-authentication.md)
 
-### [<-- Back to readme](../README.md)
+### [<-- Back to readme](README.md)

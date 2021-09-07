@@ -44,4 +44,4 @@ Observe the taskbar located at the bottom of your Windows 10 desktop. The taskba
 
 ### [Go to exercise 01 instructions -->](02-Exercise-1-Registering-an-application-in-Azure-Active-Directory.md)
 
-### [<-- Back to readme](../README.md)
+### [<-- Back to readme](README.md)
