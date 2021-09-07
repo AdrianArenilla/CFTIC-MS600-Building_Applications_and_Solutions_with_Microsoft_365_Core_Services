@@ -189,4 +189,4 @@ In this exercise, you created an ASP.NET Core web application and Azure AD appli
 
 ### [Go to exercise 04 instructions -->](05-Exercise-4-Configuring-permissions-to-consume-an-API.md)
 
-### [<-- Back to readme](README.md)
+### [<-- Back to readme](../../../)

@@ -206,4 +206,4 @@ In this exercise, you implemented authorization and incremental consent using th
 
 ### [Go to exercise 06 instructions -->](07-Exercise-6-Creating-a-service-to-access-Microsoft-Graph.md)
 
-### [<-- Back to readme](README.md)
+### [<-- Back to readme](../../../)

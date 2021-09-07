@@ -326,4 +326,4 @@ The last task is to configure the web page to use the Azure AD application.
 In this exercise, you created an Azure AD application and single page application for a user to sign in and display their information on the page.
 
 
-### [<-- Back to readme](README.md)
+### [<-- Back to readme](../../../)
