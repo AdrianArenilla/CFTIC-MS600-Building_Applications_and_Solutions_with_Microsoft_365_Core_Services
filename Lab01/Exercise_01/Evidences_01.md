@@ -43,3 +43,5 @@ Register a new application.
 
 Branding of the application.
 ![](Evidences/Image02j.png)
+
+### [<-- Back to readme](../../../../)
