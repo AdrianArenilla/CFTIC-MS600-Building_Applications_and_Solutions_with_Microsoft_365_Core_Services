@@ -1,4 +1,4 @@
-﻿# Student lab manual 05
+# Student lab manual 05
 
 ## Lab scenario
 
@@ -41,6 +41,6 @@ Office 2019
 Visual Studio 2019 
 
 
-### [Go to exercise 01 instructions -->](02-Exercise-1-Understanding-fundamental-components-and-types-of-Office-Add-ins.md)
+### [Go to exercise 01 instructions -->](Exercise_01/02-Exercise-1-Understanding-fundamental-components-and-types-of-Office-Add-ins.md)
 
 ### [<-- Back to readme](../../../)

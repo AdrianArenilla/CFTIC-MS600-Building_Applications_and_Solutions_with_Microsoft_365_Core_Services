@@ -1,4 +1,4 @@
-﻿# Student lab manual 02
+# Student lab manual 02
 
 ## Lab scenario
 
@@ -43,6 +43,6 @@ Also, ensure that the following necessary utilities are installed:
 - ngrok
 
 
-### [Go to exercise 01 instructions -->](02-Exercise-1-Using-query-parameters-when-querying-Microsoft-Graph-via-HTTP.md)
+### [Go to exercise 01 instructions -->](Exercise_01/02-Exercise-1-Using-query-parameters-when-querying-Microsoft-Graph-via-HTTP.md)
 
 ### [<-- Back to readme](../../../)

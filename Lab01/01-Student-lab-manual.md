@@ -42,6 +42,6 @@ Observe the taskbar located at the bottom of your Windows 10 desktop. The taskba
 - Windows PowerShell
 
 
-### [Go to exercise 01 instructions -->](02-Exercise-1-Registering-an-application-in-Azure-Active-Directory.md)
+### [Go to exercise 01 instructions -->](Exercise_01/02-Exercise-1-Registering-an-application-in-Azure-Active-Directory.md)
 
 ### [<-- Back to readme](../../../)
