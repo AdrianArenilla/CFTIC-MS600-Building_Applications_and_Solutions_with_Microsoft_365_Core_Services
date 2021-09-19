@@ -277,4 +277,6 @@ In this exercise, you learned how to create different types of Azure AD applicat
 
 ### [Go to exercise 03 instructions -->](../Exercise_03/04-Exercise-3-Implementing-application-that-supports-B2B.md)
 
+### [<-- Back to exercise 01 instructions ](Exercise_01/02-Exercise-1-Registering-an-application-in-Azure-Active-Directory.md)
+
 ### [<-- Back to readme](../../../)
