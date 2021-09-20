@@ -214,4 +214,6 @@ Now let's test the new functionality added in this exercise.
 
 ### [Go to exercise 15 instructions -->](../Exercise_15/16-Exercise-15-Use-Microsoft-Graph-to-post-to-the-activity-feed.md)
 
+### [<-- Back to exercise 13 instructions](../Exercise_13/14-Exercise-13-Getting-started-with-the-teamwork-endpoint.md)
+
 ### [<-- Back to readme](../../../)

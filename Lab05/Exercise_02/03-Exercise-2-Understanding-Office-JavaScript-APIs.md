@@ -354,4 +354,6 @@ A "series" is a set of data points from a column of the table. Since there is on
 
 ### [Go to exercise 03 instructions -->](../Exercise_03/04-Exercise-3-Understanding-customization-of-add-ins.md)
 
+### [<-- Back to exercise 01 instructions](Exercise_01/02-Exercise-1-Understanding-fundamental-components-and-types-of-Office-Add-ins.md)
+
 ### [<-- Back to readme](../../../)

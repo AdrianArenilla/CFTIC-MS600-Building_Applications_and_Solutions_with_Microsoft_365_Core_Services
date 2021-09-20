@@ -142,4 +142,6 @@ In this exercise, you modified the existing Microsoft Teams app to send a proact
 
 ### [Go to exercise 13 instructions -->](../Exercise_13/14-Exercise-13-Getting-started-with-the-teamwork-endpoint.md)
 
+### [<-- Back to exercise 11 instructions](../Exercise_11/12-Exercise-11-Bots-in-channels-and-group-chats.md)
+
 ### [<-- Back to readme](../../../)

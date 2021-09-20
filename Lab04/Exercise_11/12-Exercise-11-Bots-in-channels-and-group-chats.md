@@ -435,4 +435,6 @@ In this exercise, you modified the existing Microsoft Teams app to update your b
 
 ### [Go to exercise 12 instructions -->](../Exercise_12/13-Exercise-12-Sending-proactive-messages-from-bots.md)
 
+### [<-- Back to exercise 10 instructions](../Exercise_10/11-Exercise-10-Creating-conversational-bots.md)
+
 ### [<-- Back to readme](../../../)

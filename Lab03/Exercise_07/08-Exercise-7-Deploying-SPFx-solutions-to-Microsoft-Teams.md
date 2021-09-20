@@ -1,4 +1,4 @@
-﻿# Exercise 7: Deploying SPFx solutions to Microsoft Teams
+# Exercise 7: Deploying SPFx solutions to Microsoft Teams
 
 ## Task 1: Create your project
 
@@ -206,5 +206,7 @@ Test the SPFx web part in SharePoint:
 
 In this exercise, you learned how to create a SharePoint Framework (SPFx) solution that will work in both SharePoint and as a tab in Microsoft Teams.
 
+
+### [<-- Back to exercise 06 instructions](../Exercise_06/07-Exercise-6-Deploying-a-SharePoint-Framework-solution.md)
 
 ### [<-- Back to readme](../../../)

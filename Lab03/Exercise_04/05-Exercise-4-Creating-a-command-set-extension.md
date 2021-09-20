@@ -142,4 +142,6 @@ In this exercise, you learned how to create and deploy a command set extension. 
 
 ### [Go to exercise 05 instructions -->](../Exercise_05/06-Exercise-5-Creating-a-field-customizer-extension.md)
 
+### [<-- Back to exercise 03 instructions](../Exercise_03/04-Exercise-3-Creating-SharePoint-Framework-Extensions.md)
+
 ### [<-- Back to readme](../../../)

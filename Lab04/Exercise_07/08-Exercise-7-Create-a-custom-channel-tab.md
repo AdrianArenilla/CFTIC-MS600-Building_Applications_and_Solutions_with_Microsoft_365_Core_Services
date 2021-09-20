@@ -323,4 +323,6 @@ In this exercise, you created a channel tab with a configuration page in a Micro
 
 ### [Go to exercise 08 instructions -->](../Exercise_08/09-Exercise-8-Creating-action-command-messaging-extensions.md)
 
+### [<-- Back to exercise 06 instructions](../Exercise_06/07-Exercise-6-Create-a-custom-personal-tab.md)
+
 ### [<-- Back to readme](../../../)

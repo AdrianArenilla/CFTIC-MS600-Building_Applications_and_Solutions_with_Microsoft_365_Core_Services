@@ -185,4 +185,6 @@ Activity feed notifications can't be sent from a user to themselves, so for this
     
 ### [Go to exercise 16 instructions -->](../Exercise_16/17-Exercise-16-Implement-single-sign-on-for-Microsoft-Teams-apps.md)
 
+### [<-- Back to exercise 14 instructions](../Exercise_14/15-Exercise-14-Configure-a-built-in-tab-with-Microsoft-Graph.md)
+
 ### [<-- Back to readme](../../../)

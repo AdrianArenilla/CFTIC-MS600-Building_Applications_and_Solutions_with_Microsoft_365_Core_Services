@@ -190,4 +190,6 @@ In this exercise, you created an ASP.NET Core web application and Azure AD appli
 
 ### [Go to exercise 04 instructions -->](../Exercise_04/05-Exercise-4-Configuring-permissions-to-consume-an-API.md)
 
+### [<-- Back to exercise 02 instructions](../Exercise_02/03-Exercise-2-Implementing-authentication.md)
+
 ### [<-- Back to readme](../../../)

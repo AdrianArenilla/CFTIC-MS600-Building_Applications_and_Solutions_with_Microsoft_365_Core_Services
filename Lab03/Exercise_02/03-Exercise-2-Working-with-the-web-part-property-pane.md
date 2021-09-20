@@ -150,3 +150,7 @@ In this exercise, you learned how to change custom properties that exist in the 
 
 
 ### [Go to exercise 03 instructions -->](../Exercise_03/04-Exercise-3-Creating-SharePoint-Framework-Extensions.md)
+
+### [<-- Back to exercise 01 instructions](Exercise_01/02-Exercise-1-Introduction-to-SharePoint-Framework-(SPFx).md)
+
+### [<-- Back to readme](../../../)

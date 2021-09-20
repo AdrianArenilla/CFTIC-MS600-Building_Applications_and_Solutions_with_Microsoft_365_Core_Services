@@ -505,4 +505,6 @@ In this exercise, you learned how to use task modules with bots in Microsoft Tea
 
 ### [Go to exercise 04 instructions -->](../Exercise_04/05-Exercise-4-Creating-outgoing-webhooks.md)
 
+### [<-- Back to exercise 02 instructions](../Exercise_02/03-Exercise-2-Using-adaptive-cards-and-deep-links-in-task-modules.md)
+
 ### [<-- Back to readme](../../../)

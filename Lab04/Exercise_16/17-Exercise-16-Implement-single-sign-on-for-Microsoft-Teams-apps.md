@@ -119,4 +119,6 @@ It also contains the Microsoft Graph **User.Read** permission to obtain basic in
 
 ### [Go to exercise 17 instructions -->](../Exercise_17/18-Exercise-17-Implement-single-sign-on-with-Microsoft-Teams-tabs.md)
 
+### [<-- Back to exercise 15 instructions](../Exercise_15/16-Exercise-15-Use-Microsoft-Graph-to-post-to-the-activity-feed.md)
+
 ### [<-- Back to readme](../../../)

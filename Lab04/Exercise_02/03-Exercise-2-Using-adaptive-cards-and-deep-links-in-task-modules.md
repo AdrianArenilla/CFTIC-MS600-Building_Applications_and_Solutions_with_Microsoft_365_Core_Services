@@ -207,4 +207,6 @@ In this exercise, you learned how to use adaptive cards in a custom task module 
 
 ### [Go to exercise 03 instructions -->](../Exercise_03/04-Exercise-3-Using-task-modules-with-bots.md)
 
+### [<-- Back to exercise 01 instructions](Exercise_01/02-Exercise-1-Collecting-user-input-with-task-modules.md)
+
 ### [<-- Back to readme](../../../)

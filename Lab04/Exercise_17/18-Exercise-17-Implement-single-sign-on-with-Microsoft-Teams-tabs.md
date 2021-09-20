@@ -456,4 +456,6 @@ Go back to the browser and navigate back to the tab you added earlier in this ex
   
 ### [Go to exercise 18 instructions -->](../Exercise_18/19-Exercise-18-Implement-single-sign-on-with-Microsoft-Teams-bots.md)
 
+### [<-- Back to exercise 16 instructions](../Exercise_16/17-Exercise-16-Implement-single-sign-on-for-Microsoft-Teams-apps.md)
+
 ### [<-- Back to readme](../../../)

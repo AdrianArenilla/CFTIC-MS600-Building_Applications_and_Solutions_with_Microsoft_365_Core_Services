@@ -418,4 +418,7 @@ In this exercise, you learned how to create a web service and register it as an 
 
 ### [Go to exercise 05 instructions -->](../Exercise_05/06-Exercise-5-Creating-incoming-webhooks.md)
 
+### [<-- Back to exercise 03 instructions](../Exercise_03/04-Exercise-3-Using-task-modules-with-bots.md)
+
+
 ### [<-- Back to readme](../../../)

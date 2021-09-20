@@ -149,4 +149,6 @@ In this exercise, you learned how to execute a messaging extension search comman
 
 ### [Go to exercise 10 instructions -->](../Exercise_10/11-Exercise-10-Creating-conversational-bots.md)
 
+### [<-- Back to exercise 08 instructions](../Exercise_08/09-Exercise-8-Creating-action-command-messaging-extensions.md)
+
 ### [<-- Back to readme](../../../)

@@ -627,4 +627,6 @@ You can now stop the web project and web API projects in their respective consol
 
 ### [Go to exercise 14 instructions -->](../Exercise_14/15-Exercise-14-Configure-a-built-in-tab-with-Microsoft-Graph.md)
 
+### [<-- Back to exercise 12 instructions](../Exercise_12/13-Exercise-12-Sending-proactive-messages-from-bots.md)
+
 ### [<-- Back to readme](../../../)

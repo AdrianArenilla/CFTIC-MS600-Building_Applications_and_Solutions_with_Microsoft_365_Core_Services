@@ -828,4 +828,6 @@ The last step is to add the bot to the web server when it starts.
 In this exercise, you learned how to create and add a new bot to a Microsoft Teams app and interact with it from the Microsoft Teams client while using the support for SSO.
 
 
+### [<-- Back to exercise 17 instructions](../Exercise_17/18-Exercise-17-Implement-single-sign-on-with-Microsoft-Teams-tabs.md)
+
 ### [<-- Back to readme](../../../)

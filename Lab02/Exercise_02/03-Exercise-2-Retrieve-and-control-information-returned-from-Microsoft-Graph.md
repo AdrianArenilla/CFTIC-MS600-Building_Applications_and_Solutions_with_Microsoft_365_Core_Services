@@ -392,4 +392,6 @@ In this exercise, you created an Azure AD application and .NET console applicati
 
 ### [Go to exercise 03 instructions -->](../Exercise_03/04-Exercise-3-Using-change-notifications-and-track-changes-with-Microsoft-Graph.md)
 
+### [<-- Back to exercise 01 instructions](Exercise_01/02-Exercise-1-Using-query-parameters-when-querying-Microsoft-Graph-via-HTTP.md)
+
 ### [<-- Back to readme](../../../)

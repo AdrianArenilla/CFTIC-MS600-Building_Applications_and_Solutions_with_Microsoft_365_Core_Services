@@ -143,4 +143,6 @@ In this exercise, you learned how to create and deploy a command set extension. 
 
 ### [Go to exercise 06 instructions -->](../Exercise_06/07-Exercise-6-Deploying-a-SharePoint-Framework-solution.md)
 
+### [<-- Back to exercise 04 instructions](../Exercise_04/05-Exercise-4-Creating-a-command-set-extension.md)
+
 ### [<-- Back to readme](../../../)

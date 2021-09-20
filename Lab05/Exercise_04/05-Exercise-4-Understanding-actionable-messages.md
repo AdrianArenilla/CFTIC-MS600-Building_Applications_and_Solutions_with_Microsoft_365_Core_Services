@@ -280,4 +280,6 @@ Let's start by creating an actionable message card. We'll start with a basic car
 1. Feel free to experiment with this simple example in the playground. You can see the message card reference ([https://docs.microsoft.com/en-us/outlook/actionable-messages/message-card-reference](https://docs.microsoft.com/en-us/outlook/actionable-messages/message-card-reference)) for details on the available fields. Once you have a card you're happy with, you can move on to sending it.
 
 
+### [<-- Back to exercise 03 instructions](../Exercise_03/04-Exercise-3-Understanding-customization-of-add-ins.md)
+
 ### [<-- Back to readme](../../../)

@@ -262,4 +262,6 @@ In this exercise, you created a new Microsoft Teams personal tab by using the Mi
 
 ### [Go to exercise 07 instructions -->](../Exercise_07/08-Exercise-7-Create-a-custom-channel-tab.md)
 
+### [<-- Back to exercise 05 instructions](../Exercise_05/06-Exercise-5-Creating-incoming-webhooks.md)
+
 ### [<-- Back to readme](../../../)

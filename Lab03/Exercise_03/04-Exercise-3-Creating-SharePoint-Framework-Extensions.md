@@ -118,4 +118,6 @@ In this exercise, you learned how to create and deploy a custom header and foote
 
 ### [Go to exercise 04 instructions -->](../Exercise_04/05-Exercise-4-Creating-a-command-set-extension.md)
 
+### [<-- Back to exercise 02 instructions](../Exercise_02/03-Exercise-2-Working-with-the-web-part-property-pane.md)
+
 ### [<-- Back to readme](../../../)

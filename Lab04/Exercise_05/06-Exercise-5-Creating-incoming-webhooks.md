@@ -112,4 +112,6 @@ In this exercise, you learned how to register an incoming webhook in a Microsoft
 
 ### [Go to exercise 06 instructions -->](../Exercise_06/07-Exercise-6-Create-a-custom-personal-tab.md)
 
+### [<-- Back to exercise 04 instructions](../Exercise_04/05-Exercise-4-Creating-outgoing-webhooks.md)
+
 ### [<-- Back to readme](../../../)

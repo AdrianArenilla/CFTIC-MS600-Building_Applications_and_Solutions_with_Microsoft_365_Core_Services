@@ -702,4 +702,6 @@ In this exercise, you created an action command messaging extension for a custom
 
 ### [Go to exercise 09 instructions -->](../Exercise_09/10-Exercise-9-Creating-search-command-messaging-extensions.md)
 
+### [<-- Back to exercise 07 instructions](../Exercise_07/08-Exercise-7-Create-a-custom-channel-tab.md)
+
 ### [<-- Back to readme](../../../)

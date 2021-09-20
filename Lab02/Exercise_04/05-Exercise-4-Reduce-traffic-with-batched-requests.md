@@ -120,4 +120,6 @@ In this exercise, you used Microsoft Graph to demonstrate how you can combine mu
 
 ### [Go to exercise 05 instructions -->](../Exercise_05/06-Exercise-5-Understand-throttling-in-Microsoft-Graph.md)
 
+### [<-- Back to exercise 03 instructions](../Exercise_03/04-Exercise-3-Using-change-notifications-and-track-changes-with-Microsoft-Graph.md)
+
 ### [<-- Back to readme](../../../)

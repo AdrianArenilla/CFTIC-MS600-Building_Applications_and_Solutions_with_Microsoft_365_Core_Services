@@ -731,4 +731,6 @@ In this exercise, you used the Azure AD application and .NET console application
 
 ### [Go to exercise 06 instructions -->](../Exercise_06/07-Exercise-6-Querying-user-data-from-Microsoft-Graph.md)
 
+### [<-- Back to exercise 04 instructions](../Exercise_04/05-Exercise-4-Reduce-traffic-with-batched-requests.md)
+
 ### [<-- Back to readme](../../../)

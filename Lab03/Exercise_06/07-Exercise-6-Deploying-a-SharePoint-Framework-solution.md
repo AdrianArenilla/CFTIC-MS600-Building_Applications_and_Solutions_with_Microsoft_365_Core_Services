@@ -92,4 +92,6 @@ In this exercise, you learned how to package and deploy your SharePoint Framewor
 
 ### [Go to exercise 07 instructions -->](../Exercise_07/08-Exercise-7-Deploying-SPFx-solutions-to-Microsoft-Teams.md)
 
+### [<-- Back to exercise 05 instructions](../Exercise_05/06-Exercise-5-Creating-a-field-customizer-extension.md)
+
 ### [<-- Back to readme](../../../)

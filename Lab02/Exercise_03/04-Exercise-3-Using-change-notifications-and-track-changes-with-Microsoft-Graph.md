@@ -665,4 +665,7 @@ You've now completed this exercise. In this exercise, you created.NET Core app t
 
 ### [Go to exercise 04 instructions -->](../Exercise_04/05-Exercise-4-Reduce-traffic-with-batched-requests.md)
 
+### [<-- Back to exercise 02 instructions](../Exercise_02/03-Exercise-2-Retrieve-and-control-information-returned-from-Microsoft-Graph.md)
+
+
 ### [<-- Back to readme](../../../)

@@ -1,4 +1,4 @@
-﻿# Exercise 6: Querying user data from Microsoft Graph
+# Exercise 6: Querying user data from Microsoft Graph
 
 This exercise leads the user through a series of tasks utilizing Microsoft Graph Explorer. For this exercise you will use the default sample account and will not sign in.
 
@@ -94,5 +94,7 @@ In this exercise, you learned how to:
 
 - Get the user’s manager profile.
 
+
+### [<-- Back to exercise 05 instructions](../Exercise_05/06-Exercise-5-Understand-throttling-in-Microsoft-Graph.md)
 
 ### [<-- Back to readme](../../../)

@@ -56,4 +56,6 @@ Download the zip file from [https://github.com/OfficeDev/PowerPoint-Add-in-Micro
 
 ### [Go to exercise 04 instructions -->](../Exercise_04/05-Exercise-4-Understanding-actionable-messages.md)
 
+### [<-- Back to exercise 02 instructions](../Exercise_02/03-Exercise-2-Understanding-Office-JavaScript-APIs.md)
+
 ### [<-- Back to readme](../../../)

@@ -112,4 +112,6 @@ In this exercise, you learned how to define scope and how to authorize applicati
 
 ### [Go to exercise 05 instructions -->](../Exercise_05/06-Exercise-5-Implementing-authorization-to-consume-an-API.md)
 
+### [<-- Back to exercise 03 instructions](../Exercise_03/04-Exercise-3-Implementing-application-that-supports-B2B.md)
+
 ### [<-- Back to readme](../../../)

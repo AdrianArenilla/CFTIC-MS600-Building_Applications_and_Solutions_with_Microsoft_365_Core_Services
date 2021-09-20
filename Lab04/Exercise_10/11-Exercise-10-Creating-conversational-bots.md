@@ -369,4 +369,7 @@ In this exercise, you learned how to create and add a new bot to a Microsoft Tea
 
 ### [Go to exercise 11 instructions -->](../Exercise_11/12-Exercise-11-Bots-in-channels-and-group-chats.md)
 
+### [<-- Back to exercise 09 instructions](../Exercise_09/10-Exercise-9-Creating-search-command-messaging-extensions.md)
+
+
 ### [<-- Back to readme](../../../)
