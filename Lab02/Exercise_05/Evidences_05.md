@@ -33,4 +33,25 @@ Update the helpers classes, the JSON file and the Program class.
 ![](Evidences/Image06g.png)
 
 
+
+Build and test the application.
+![](Evidences/Image06h.png)
+
+
+Create a new class (Messages) and update the Program class.
+![](Evidences/Image06i.png)
+
+
+Build and test the application.
+![](Evidences/Image06j.png)
+
+
+Update the Program class.
+![](Evidences/Image06k.png)
+
+
+Build and test the application.
+![](Evidences/Image06l.png)
+
+
 ### [<-- Back to readme](../../../../)
