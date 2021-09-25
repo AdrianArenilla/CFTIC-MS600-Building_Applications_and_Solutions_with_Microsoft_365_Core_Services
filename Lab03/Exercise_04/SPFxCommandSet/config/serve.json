@@ -1,0 +1,31 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/core-build/serve.schema.json",
+  "port": 4321,
+  "https": true,
+  "serveConfigurations": {
+    "default": {
+      "pageUrl": "https://devsare21.sharepoint.com/Lists/Issue%20tracker/AllItems.aspx",
+      "customActions": {
+        "988f3210-a42a-4ab0-b34c-8480cc8195f4": {
+          "location": "ClientSideExtension.ListViewCommandSet.CommandBar",
+          "properties": {
+            "sampleTextOne": "One item is selected in the list",
+            "sampleTextTwo": "This command is always visible."
+          }
+        }
+      }
+    },
+    "commandSetDemo": {
+      "pageUrl": "https://devsare21.sharepoint.com/Lists/Issue%20tracker/AllItems.aspx",
+      "customActions": {
+        "988f3210-a42a-4ab0-b34c-8480cc8195f4": {
+          "location": "ClientSideExtension.ListViewCommandSet.CommandBar",
+          "properties": {
+            "sampleTextOne": "One item is selected in the list",
+            "sampleTextTwo": "This command is always visible."
+          }
+        }
+      }
+    }
+  }
+}
