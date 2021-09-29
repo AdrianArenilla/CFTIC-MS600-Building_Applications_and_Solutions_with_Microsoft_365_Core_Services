@@ -1,0 +1,81 @@
+{
+  "$schema": "https://developer.microsoft.com/en-us/json-schemas/teams/v1.9/MicrosoftTeams.schema.json",
+  "manifestVersion": "1.9",
+  "version": "1.0.0",
+  "id": "d5b86206-c9a1-4bed-9599-21172300f7e6",
+  "packageName": "com.devsare21.conversationalbot",
+  "developer": {
+    "name": "AdrianArenilla",
+    "websiteUrl": "https://492b-83-51-149-162.ngrok.io",
+    "privacyUrl": "https://492b-83-51-149-162.ngrok.io/privacy.html",
+    "termsOfUseUrl": "https://492b-83-51-149-162.ngrok.io/tou.html"
+  },
+  "name": {
+    "short": "Conversational Bot",
+    "full": ""
+  },
+  "description": {
+    "short": "Conversational Bot",
+    "full": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc sed tristique ipsum. Mauris accumsan odio vitae rhoncus mollis. Aliquam urna ex, vehicula nec sodales et, vulputate vel felis. Pellentesque sit amet tortor sed mi dictum posuere a sit amet libero. Nunc porttitor blandit dui eget hendrerit. Proin vel interdum quam, sed tincidunt mauris. Proin luctus, erat a convallis tincidunt, sapien augue congue est, eu semper leo magna non urna."
+  },
+  "icons": {
+    "outline": "icon-outline.png",
+    "color": "icon-color.png"
+  },
+  "accentColor": "#D85028",
+  "configurableTabs": [],
+  "staticTabs": [
+    {
+      "entityId": "conversations",
+      "scopes": [
+        "personal"
+      ]
+    },
+    {
+      "entityId": "about",
+      "scopes": [
+        "personal"
+      ]
+    }
+  ],
+  "bots": [
+    {
+      "botId": "61fd1d6e-5fa3-4d89-b76d-55567b513486",
+      "supportsFiles": false,
+      "needsChannelSelector": true,
+      "isNotificationOnly": false,
+      "scopes": [
+        "team",
+        "personal"
+      ],
+      "commandLists": [
+        {
+          "scopes": [
+            "team",
+            "personal"
+          ],
+          "commands": [
+            {
+              "title": "Help",
+              "description": "Shows help information"
+            },
+            {
+              "title": "MentionMe",
+              "description": "Sends message with @mention of the sender"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "connectors": [],
+  "composeExtensions": [],
+  "permissions": [
+    "identity",
+    "messageTeamMembers"
+  ],
+  "validDomains": [
+    "492b-83-51-149-162.ngrok.io"
+  ],
+  "showLoadingIndicator": false
+}

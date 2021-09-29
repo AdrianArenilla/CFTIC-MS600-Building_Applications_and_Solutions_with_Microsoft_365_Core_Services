@@ -12,7 +12,7 @@ In this exercise, you’ll learn how to create a web service and register it as 
     yo teams
     ```
 
-    ![Screenshot of the Yeoman Generator for Microsoft Teams](../../Linked_Image_Files/Webhooks/03-yo-teams-01.png)
+   ![Screenshot of the Yeoman Generator for Microsoft Teams](../../Linked_Image_Files/Webhooks/03-yo-teams-01.png)
 
 1. Yeoman will launch and ask you a series of questions. Answer the questions with the following values:
 
@@ -27,8 +27,8 @@ In this exercise, you’ll learn how to create a web service and register it as 
     - **Would you like show a loading indicator when your app/tab loads?**: No
     - **Name of your outgoing webhook?**: Teams Webhooks Outgoing Webhook
 
-    > **Note:**
-    > Most of the answers to these questions can be changed after creating the project. For example, the URL where the project will be hosted isn't important at the time of creating or testing the project.
+> **Note:**
+> Most of the answers to these questions can be changed after creating the project. For example, the URL where the project will be hosted isn't important at the time of creating or testing the project.
 
 1. After answering the generator's questions, the generator will create the scaffolding for the project and then execute `npm install` that downloads all the dependencies required by the project.
 
@@ -60,7 +60,7 @@ In this exercise, you’ll learn how to create a web service and register it as 
 
     Create a new file **planets.json** in the **./src/server/teamsWebhooksOutgoingWebhook** folder and add the following JSON to it. This file will contain an array of planet details:
 
-    ```json
+   ```json
     [
       {
         "id": "1",
@@ -151,7 +151,7 @@ In this exercise, you’ll learn how to create a web service and register it as 
         "imageAlt": "Justin Cowart [CC BY (https://creativecommons.org/licenses/by/2.0)]"
       }
     ]
-    ```
+   ```
 
 1. Next, create a new file **planetDisplayCard.json** in the **./src/server/teamsWebhooksOutgoingWebhook** folder and add the following JSON to it. This file will contain a template of the adaptive card the web service will respond with:
 
@@ -281,7 +281,7 @@ In this exercise, you’ll learn how to create a web service and register it as 
     
     The `processAuthenticatedRequest()` method takes the incoming text uses it to find a planet in the **planets.json** file. If it finds one, it calls the `getPlanetDetailCard()` method to get an adaptive card and returns it as an `Activity` that will be sent back to Microsoft Teams. If a planet isn't found, it just echoes the text back in a reply to the request:
 
-    ```typescript
+   ```typescript
     private static processAuthenticatedRequest(incomingText: string): Partial<builder.Activity> {
       const message: Partial<builder.Activity> = {
         type: builder.ActivityTypes.Message
@@ -303,7 +303,7 @@ In this exercise, you’ll learn how to create a web service and register it as 
 
       return message;
     }
-    ```
+   ```
 
 1. Add the following `scrubMessage()` method to the `TeamsWebhooksOutgoingWebhook` class. A user must @mention an outgoing webhook to send a message to it. This method will remove the `<at></at>` text and any spaces to extract the planet name:
 
@@ -318,26 +318,26 @@ In this exercise, you’ll learn how to create a web service and register it as 
 
 1. Finally, update the `requestHandler()` method:
 
-    - Locate the following code and change the `message` declaration from a `const` to `let` as you'll change this value.
+- Locate the following code and change the `message` declaration from a `const` to `let` as you'll change this value.
 
-        ```typescript
+   ```typescript
         const message: Partial<builder.Activity> = {
           type: builder.ActivityTypes.Message
         };
-        ```
+   ```
 
-    - Locate and replace the following code:
+- Locate and replace the following code:
 
-        ```typescript
+   ```typescript
         message.text = `Echo ${incoming.text}`;
-        ```
+   ```
 
-      with the following code:
+    with the following code:
 
-        ```typescript
+   ```typescript
         const scrubbedText = TeamsWebhooksOutgoingWebhook.scrubMessage(incoming.text);
         message = TeamsWebhooksOutgoingWebhook.processAuthenticatedRequest(scrubbedText);
-        ```
+   ```
 
 ## Task 3: Test the outgoing webhook
 
@@ -357,10 +357,10 @@ In this exercise, you’ll learn how to create a web service and register it as 
 
     ![Screenshot of the console with ngrok URL](../../Linked_Image_Files/Webhooks/03-ngrok-01.png)
 
-    > [!IMPORTANT]
-    > Be careful to not stop and restart ngrok. Each time you start ngrok, it will create a new unique URL. This will require you to reconfigure your webhooks each time you restart it.
-    >
-    > However, you can restart the web server you started with **gulp serve** without impacting ngrok.
+> [!IMPORTANT]
+> Be careful to not stop and restart ngrok. Each time you start ngrok, it will create a new unique URL. This will require you to reconfigure your webhooks each time you restart it.
+>
+> However, you can restart the web server you started with **gulp serve** without impacting ngrok.
 
 1. Now let's add the outgoing webhook to a team in Microsoft Teams. In the browser, navigate to **https://teams.microsoft.com** and sign in with the credentials of a Work and School account.
 
@@ -381,10 +381,10 @@ In this exercise, you’ll learn how to create a web service and register it as 
     - **Name**: Planet Details
     - **Callback URL**: https://{{REPLACE_NGROK_SUBDOMAIN}}.ngrok.io/api/webhook
 
-        > **Important:**
-        > Replace the `{{REPLACE_NGROK_SUBDOMAIN}}` with the value of your dynamically created Ngrok URL displayed in the console when you ran `gulp ngrok-serve`.
+> **Important:**
+> Replace the `{{REPLACE_NGROK_SUBDOMAIN}}` with the value of your dynamically created Ngrok URL displayed in the console when you ran `gulp ngrok-serve`.
 
-    - **Description**: View details about the planet entered in the message.
+- **Description**: View details about the planet entered in the message.
 
 1. After creating the outgoing webhook, Microsoft Teams will display a security token.
 
@@ -398,8 +398,8 @@ In this exercise, you’ll learn how to create a web service and register it as 
     gulp serve
     ```
 
-    > **CAUTION:**
-    > Be careful to only stop the web server. Don't stop the ngrok process. If you do, you'll need to update the outgoing webhook registration with a new URL after restarting ngrok.
+> **CAUTION:**
+> Be careful to only stop the web server. Don't stop the ngrok process. If you do, you'll need to update the outgoing webhook registration with a new URL after restarting ngrok.
 
 1. Now you can test the webhook. Go to a channel's **Conversation** tab within the team and enter the message **@Planet Details Venus**. Notice that as you're typing the message, Microsoft Teams detects the name of the webhook:
 
@@ -413,7 +413,7 @@ In this exercise, you’ll learn how to create a web service and register it as 
 
 ## Summary
 
-In this exercise, you learned how to create a web service and register it as an outgoing webhook in Microsoft Teams.
+  In this exercise, you learned how to create a web service and register it as an outgoing webhook in Microsoft Teams.
 
 
 ### [Go to exercise 05 instructions -->](../Exercise_05/06-Exercise-5-Creating-incoming-webhooks.md)

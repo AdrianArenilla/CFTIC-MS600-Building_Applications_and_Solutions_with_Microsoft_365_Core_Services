@@ -1,0 +1,9 @@
+{
+  "generator-teams": {
+    "promptValues": {
+      "developer": "AdrianArenilla"
+    },
+    "libraryName": "messagingExt",
+    "generator-version": "3.2.0"
+  }
+}

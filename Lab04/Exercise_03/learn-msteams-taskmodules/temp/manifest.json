@@ -1,0 +1,70 @@
+{
+  "$schema": "https://developer.microsoft.com/en-us/json-schemas/teams/v1.9/MicrosoftTeams.schema.json",
+  "manifestVersion": "1.9",
+  "id": "d4f0f90e-d878-4ef5-af84-8cad6a6b6355",
+  "version": "6.0",
+  "packageName": "youtubeplayer",
+  "developer": {
+    "name": "AdrianArenilla",
+    "websiteUrl": "https://07bb-83-51-149-162.ngrok.io",
+    "privacyUrl": "https://07bb-83-51-149-162.ngrok.io/privacy.html",
+    "termsOfUseUrl": "https://07bb-83-51-149-162.ngrok.io/tou.html"
+  },
+  "name": {
+    "short": "YouTube Player",
+    "full": "YouTube Player"
+  },
+  "description": {
+    "short": "TODO: add short description here",
+    "full": "TODO: add full description here"
+  },
+  "icons": {
+    "outline": "icon-outline.png",
+    "color": "icon-color.png"
+  },
+  "accentColor": "#D85028",
+  "configurableTabs": [],
+  "staticTabs": [
+    {
+      "entityId": "121c1d56-33c5-46b0-8115-5c69bd1a350c",
+      "name": "YouTube Player 1",
+      "contentUrl": "https://07bb-83-51-149-162.ngrok.io/youTubePlayer1Tab/?name={loginHint}&tenant={tid}&theme={theme}",
+      "scopes": [
+        "personal"
+      ]
+    }
+  ],
+  "bots": [
+    {
+      "botId": "d4f0f90e-d878-4ef5-af84-8cad6a6b6355",
+      "scopes": [
+        "personal"
+      ],
+      "supportsFiles": false,
+      "isNotificationOnly": false,
+      "commandLists": [
+        {
+          "scopes": [
+            "personal"
+          ],
+          "commands": [
+            {
+              "title": "MentionMe",
+              "description": "Sends message with @mention of the sender"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "connectors": [],
+  "composeExtensions": [],
+  "permissions": [
+    "identity",
+    "messageTeamMembers"
+  ],
+  "validDomains": [
+    "07bb-83-51-149-162.ngrok.io"
+  ],
+  "showLoadingIndicator": false
+}

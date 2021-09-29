@@ -33,16 +33,16 @@ In this exercise, you'll add a custom tab to a Microsoft Teams app and use singl
     - **What is the Application ID to associate with the SSO Tab?**: *Enter the **Application (Client) ID** for the Azure AD application you registered in the previous exercise*
     - **What is the Application ID URI to associate with the SSO Tab?**: (Accept the default)
 
-    > [!NOTE]
-    > Most of the answers to these questions can be changed after creating the project. For example, the URL where the project will be hosted and Application ID URI must be changed when you start debugging your project using the ngrok utility.
+> [!NOTE]
+> Most of the answers to these questions can be changed after creating the project. For example, the URL where the project will be hosted and Application ID URI must be changed when you start debugging your project using the ngrok utility.
 
-  After answering the generator's questions, the generator will create the scaffolding for the project and then execute `npm install` that downloads all the dependencies required by the project.
+After answering the generator's questions, the generator will create the scaffolding for the project and then execute `npm install` that downloads all the dependencies required by the project.
 
 ## Task 2: Explore the initial project
 
 Let's explore a few parts of the project created by the Yeoman Generator for Microsoft Teams in Visual Studio Code.
 
-![Screenshot of the custom Teams app project](../../Linked_Image_Files/05-vs-code-create-project-01.png)
+   ![Screenshot of the custom Teams app project](../../Linked_Image_Files/05-vs-code-create-project-01.png)
 
 ### Client-side web app
 
@@ -55,11 +55,11 @@ Let's explore a few parts of the project created by the Yeoman Generator for Mic
     - **SSOTAB_APP_ID**: This is the Azure AD application (client) ID that you specified.
     - **SSOTAB_APP_URI** This is the Azure AD application ID URI you specified.
 
-    > [!NOTE]
-    > The prefix of the last two items in the above list is generated using the name of the tab you specified during the project creation process.
+> [!NOTE]
+> The prefix of the last two items in the above list is generated using the name of the tab you specified during the project creation process.
 
-    > [!IMPORTANT]
-    > Each time ngrok starts, it generates a new dynamic subdomain for the URL. If you have to restart ngrok, you will need to repackage and and update the app in Microsoft Teams to make the installed app aware of the new URL. The optional licensed version of ngrok allows you to define and reuse the same subdomain.
+> [!IMPORTANT]
+> Each time ngrok starts, it generates a new dynamic subdomain for the URL. If you have to restart ngrok, you will need to repackage and and update the app in Microsoft Teams to make the installed app aware of the new URL. The optional licensed version of ngrok allows you to define and reuse the same subdomain.
 
 1. The web application in the project consists of static and dynamic assets. All the static assets such as images, HTML, and CSS files are found in the **./src/public** folder while the dynamic assets such as TypeScript and React controls are found in the **./src/client** folder.
 
@@ -69,11 +69,11 @@ Let's explore a few parts of the project created by the Yeoman Generator for Mic
 
     This file exports a single functional component that returns the React component's UX. This can be found near the bottom of the file in the `return` statement.
 
-    The default tab is implemented using [React hooks](https://reactjs.org/docs/hooks-intro.html). The `useEffect()` hook performs side effects when a component mounts or when React changes the DOM. The default tab contains two of these hooks.
+   The default tab is implemented using [React hooks](https://reactjs.org/docs/hooks-intro.html). The `useEffect()` hook performs side effects when a component mounts or when React changes the DOM. The default tab contains two of these hooks.
 
-    The job of the first hook runs after the component has rendered and first checks to see if it is running within Microsoft Teams. If it is, it calls the `getAuthToken()` method on the Microsoft Teams JavaScript SDK to obtain an ID token from Microsoft Teams.
+   The job of the first hook runs after the component has rendered and first checks to see if it is running within Microsoft Teams. If it is, it calls the `getAuthToken()` method on the Microsoft Teams JavaScript SDK to obtain an ID token from Microsoft Teams.
 
-    When this method is called, it triggers Microsoft Teams to obtain an ID token from Azure AD's token endpoint for the currently signed in user. Once received, the success callback decodes the token to extract the current user's name. It then sets the React component's state property `name` to the name in the ID token using the `setName()` method.
+   When this method is called, it triggers Microsoft Teams to obtain an ID token from Azure AD's token endpoint for the currently signed in user. Once received, the success callback decodes the token to extract the current user's name. It then sets the React component's state property `name` to the name in the ID token using the `setName()` method.
 
     ```typescript
     useEffect(() => {
@@ -99,7 +99,7 @@ Let's explore a few parts of the project created by the Yeoman Generator for Mic
     }, [inTeams]);
     ```
 
-    Notice the `getAuthToken()` method accepts an object with three properties. in addition to the two callbacks, you also set the Application ID URL of the Azure AD application you registered and associated with this Microsoft Teams app. Azure AD will automatically trust the Microsoft Teams client to act on the current user's behalf because in a previous exercise you granted it the `access_as_user` scope.
+   Notice the `getAuthToken()` method accepts an object with three properties. in addition to the two callbacks, you also set the Application ID URL of the Azure AD application you registered and associated with this Microsoft Teams app. Azure AD will automatically trust the Microsoft Teams client to act on the current user's behalf because in a previous exercise you granted it the `access_as_user` scope.
 
 ### Server-side web app
 
@@ -119,13 +119,13 @@ Before customizing the tab, let's test the tab to see the initial developer expe
 
 1. This gulp task will run many other tasks all displayed within the command-line console. The **ngrok-serve** task builds your project and starts a local web server (http://localhost:3007). It then starts ngrok with a random subdomain that creates a secure URL to your local webserver.
 
-    > [!NOTE]
-    > Microsoft Teams requires all content displayed within a tab be loaded from an HTTPS request. In development, can be done using the tool [ngrok](https://www.ngrok.com) that creates a secure rotatable URL to your local HTTP webserver. Ngrok is included as a dependency within the project so there is nothing to setup or configure.
+> [!NOTE]
+> Microsoft Teams requires all content displayed within a tab be loaded from an HTTPS request. In development, can be done using the tool [ngrok](https://www.ngrok.com) that creates a secure rotatable URL to your local HTTP webserver. Ngrok is included as a dependency within the project so there is nothing to setup or configure.
 
-    > [!IMPORTANT]
-    > Each time ngrok starts, it generates a new dynamic subdomain for the URL. If you have to restart ngrok, you will need to repackage and and update the app in Microsoft Teams to make the installed app aware of the new URL. The optional licensed version of ngrok allows you to define and reuse the same subdomain.
+> [!IMPORTANT]
+> Each time ngrok starts, it generates a new dynamic subdomain for the URL. If you have to restart ngrok, you will need to repackage and and update the app in Microsoft Teams to make the installed app aware of the new URL. The optional licensed version of ngrok allows you to define and reuse the same subdomain.
 
-    ![Screenshot of gulp ngrok-serve](../../Linked_Image_Files/05-ngrok-dynamic-url.png)
+   ![Screenshot of gulp ngrok-serve](../../Linked_Image_Files/05-ngrok-dynamic-url.png)
 
 1. Before testing the Microsoft Teams app, you need to update all locations where you entered the URL `REPLACE.ngrok.io` in both your project and the Azure AD app you registered. For example:
 
@@ -161,7 +161,7 @@ Before customizing the tab, let's test the tab to see the initial developer expe
 
     When the tab loads, it will initiate the SSO process with Azure AD and obtain an ID token. This token contains the basic identification information about the current user. The current user's display name is included in this token and is displayed in the tab:
 
-    ![Screenshot installing a new tab, step 5](../../Linked_Image_Files/05-add-tab-05.png)
+   ![Screenshot installing a new tab, step 5](../../Linked_Image_Files/05-add-tab-05.png)
 
 ## Task 4: Add support to submit requests to Microsoft Graph
 
@@ -178,21 +178,21 @@ To submit requests to Microsoft Graph, you must include an access token with the
     SSOTAB_APP_URI=...
     ```
 
-    Add the following two properties after these two existing properties. Set the first to the Azure AD app's client secret you created in the previous exercise, and the second to the permissions defined by the app, separated by spaces:
+   Add the following two properties after these two existing properties. Set the first to the Azure AD app's client secret you created in the previous exercise, and the second to the permissions defined by the app, separated by spaces:
 
     ```text
     SSOTAB_APP_SECRET=jFD.Od8qh3vNs-8OkN78ROGw_ovIT6rEh~
     SSOTAB_APP_SCOPES=https://graph.microsoft.com/User.Read email openid profile offline_access
     ```
 
-    > [!TIP]
-    > The list of scopes, also known as permissions, can be found from the registered Azure AD app's **API Permissions** page in the Azure AD admin portal.
+> [!TIP]
+> The list of scopes, also known as permissions, can be found from the registered Azure AD app's **API Permissions** page in the Azure AD admin portal.
 
 1. The next step is to update the server-side API to add support for using the ID token, obtained by Microsoft Teams, for an OBO access token that can be used to submit requests to Microsoft Graph.
 
     Locate, and open the **./src/server/server.ts** file.
 
-    Add the following two `import` statements after the existing `import` statements:
+   Add the following two `import` statements after the existing `import` statements:
 
     ```typescript
     import jwtDecode from "jwt-decode";
@@ -208,7 +208,7 @@ To submit requests to Microsoft Graph, you must include an access token with the
     express.set("port", port);
     ```
 
-    Add the following code before the lines you just found that set the listening port on the solution. The comments within the code explain the relevant parts:
+   Add the following code before the lines you just found that set the listening port on the solution. The comments within the code explain the relevant parts:
 
     ```typescript
     express.get("/exchangeSsoTokenForOboToken", async (req, res) => {
@@ -280,7 +280,7 @@ With the server-side API updated, we can now update the SSO tab to exchange the 
 
 1. This file contains a single functional component exported to the caller. Near the top of this component's declaration, locate a collection of `const` declarations that configure the initial state of the React component.
 
-    Add the following to add a few more properties to the component's state. These will be used to store the ID token and access token
+   Add the following to add a few more properties to the component's state. These will be used to store the ID token and access token
 
     ```typescript
     const [ssoToken, setSsoToken] = useState<string>();
@@ -289,7 +289,7 @@ With the server-side API updated, we can now update the SSO tab to exchange the 
 
 1. Now locate the `useEffect()` hook (*the first one in the file*) that the tab is using to obtain the ID token from Microsoft Teams. When the request to authenticate with the Microsoft Teams SDK is successful, it parses the returned ID token to obtain the signed in user's name and sets it to the component's state property `name`. This triggers React to re-render the component and display the user's name.
 
-    Let's update this to save the ID token to the component's `ssoToken` state property. Locate the following line in the success callback:
+   Let's update this to save the ID token to the component's `ssoToken` state property. Locate the following line in the success callback:
 
     ```typescript
     microsoftTeams.appInitialization.notifySuccess();
@@ -330,7 +330,7 @@ With the server-side API updated, we can now update the SSO tab to exchange the 
     }, [exchangeSsoTokenForOboToken, ssoToken]);
     ```
 
-  At this point, the tab has an access token that will authenticate requests to Microsoft Graph, so the next step is to submit a request to Microsoft Graph.
+At this point, the tab has an access token that will authenticate requests to Microsoft Graph, so the next step is to submit a request to Microsoft Graph.
 
 ### Display a list of upcoming meetings
 
@@ -418,7 +418,7 @@ The next step is to update the tab project to call Microsoft Graph to obtain a l
 
 1. We want to get the list recent emails once we have an access token that can be used to authenticate with Microsoft Graph. Because we've already added that code, we just need to add a new `useEffect()` hook that runs when the `msGraphOboToken` state property is updated.
 
-    Add the following code immediately before the existing `return` statement.
+   Add the following code immediately before the existing `return` statement.
 
     ```typescript
     useEffect(() => {
@@ -428,15 +428,15 @@ The next step is to update the tab project to call Microsoft Graph to obtain a l
 
 1. The last step is to update the rendering in the component's `return` statement to include the list of recent emails. Locate following code in the `return` statement:
 
-    ```tsx
+    ```typescript
     <div>
       <Text content={`Hello ${name}`} />
     </div>
     ```
 
-    Add the following code immediately after the above code:
+   Add the following code immediately after the above code:
 
-    ```tsx
+    ```typescript
     {recentMail && <div><h3>Your recent emails:</h3><List items={recentMail} /></div>}
     ```
 
@@ -444,12 +444,12 @@ The next step is to update the tab project to call Microsoft Graph to obtain a l
 
 Go back to the browser and navigate back to the tab you added earlier in this exercise. Notice how it's now displaying all your recent emails:
 
-  > [!IMPORTANT]
-  > If the **ngrok-serve** stopped for any reason, remember when you start/restart the **gulp ngrok-serve** task, the dynamic ngrok URL will change.
-  >
-  > You'll need to update all the locations where you set the URL in your project as well as in the Azure AD app registration as previously explained.
-  >
-  > In addition, you'll need to reinstall your app package because the Microsoft Teams app manifest contains the URL. To do this, you'll first need to increment the `version` property in the app's **./manifest/manifest.json** file. This value is dynamically set using the `version` property from the **./package.json** file. When you repeat the installation process of the app, it will update the existing installation.
+> [!IMPORTANT]
+> If the **ngrok-serve** stopped for any reason, remember when you start/restart the **gulp ngrok-serve** task, the dynamic ngrok URL will change.
+>
+> You'll need to update all the locations where you set the URL in your project as well as in the Azure AD app registration as previously explained.
+>
+> In addition, you'll need to reinstall your app package because the Microsoft Teams app manifest contains the URL. To do this, you'll first need to increment the `version` property in the app's **./manifest/manifest.json** file. This value is dynamically set using the `version` property from the **./package.json** file. When you repeat the installation process of the app, it will update the existing installation.
 
   ![Screenshot displaying the list emails the user recently received](../../Linked_Image_Files/05-test-recent-emails.png) 
    

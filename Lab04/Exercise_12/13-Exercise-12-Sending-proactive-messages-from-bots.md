@@ -122,14 +122,14 @@ In this exercise, you’ll update the existing Teams app from the previous exerc
     gulp ngrok-serve
     ```
 
-    > [!IMPORTANT]
-    > Recall from a previous exercise, Ngrok will create a new subdomain. You need to update your bot registration's **Messaging endpoint** in the Azure portal (*shown in a previous exercise*) with this new domain before testing it.
+> [!IMPORTANT]
+> Recall from a previous exercise, Ngrok will create a new subdomain. You need to update your bot registration's **Messaging endpoint** in the Azure portal (*shown in a previous exercise*) with this new domain before testing it.
 
 1. In the Microsoft Teams client, go to the channel you installed the bot in the previous section. From the **Conversations** tab, @mention the bot with a random string to trigger the `else` condition.
 
     The bot will reply to the message with the updated card that contains two buttons:
 
-    ![Screenshot of a message from the bot using cards - initial card display](../../Linked_Image_Files/Bots/07-test-01.png)
+   ![Screenshot of a message from the bot using cards - initial card display](../../Linked_Image_Files/Bots/07-test-01.png)
 
 1. Select the second button, **Create new thread in this channel**. Within a few seconds, you should see a new conversation appear in the channel:
 

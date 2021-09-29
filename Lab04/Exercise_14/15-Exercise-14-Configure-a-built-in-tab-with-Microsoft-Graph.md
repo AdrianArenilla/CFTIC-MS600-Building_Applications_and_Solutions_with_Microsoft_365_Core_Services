@@ -47,7 +47,7 @@ Before adding the tabs that will load the Word and Excel files, you need a Word 
 
     ![Screenshot adding Office files to the library](../../Linked_Image_Files/05-add-office-files.png)
 
-  Keep track of the names of these files. For the purposes of this exercise, we'll assume they're called **document.docx** and **workbook.docx**.
+  Keep track of the names of these files. For the purposes of this exercise, we'll assume they're called **document.docx** and **workbook.xlsx**.
 
 ### Get document IDs and URLs
 
@@ -60,7 +60,7 @@ When creating a new tab as one of the Office built-in tabs, you'll need to know 
 
     ![Screenshot opening the Word document in SharePoint](../../Linked_Image_Files/05-open-office-files.png)
 
-    This file is located in the **Documents** library that's named **Shared Documents** inside SharePoint. Its also located in the **General** subfolder within the library that matches the name of the Microsoft Teams channel you were just in. Look at the URL of the **General** folder in the **Documents library**... it should look similar to the following:
+   This file is located in the **Documents** library that's named **Shared Documents** inside SharePoint. Its also located in the **General** subfolder within the library that matches the name of the Microsoft Teams channel you were just in. Look at the URL of the **General** folder in the **Documents library**... it should look similar to the following:
 
     ```text
     https://m365x285179.sharepoint.com/sites/TestTeam/Shared%20Documents/Forms/AllItems.aspx
@@ -68,8 +68,8 @@ When creating a new tab as one of the Office built-in tabs, you'll need to know 
         &FolderCTID=0x012000A794675CEBE1A542BFB9E3500689BAEE
     ```
 
-    > [!NOTE]
-    > Line breaks have been added for readability.
+> [!NOTE]
+> Line breaks have been added for readability.
 
 1. From this, you get the URL of the document library: `https://m365x285179.sharepoint.com/sites/TestTeam/Shared%20Documents`. From this, you can also see the folder is **General**, so the URL to this folder is: `https://m365x285179.sharepoint.com/sites/TestTeam/Shared%20Documents`.
 
@@ -83,15 +83,15 @@ When creating a new tab as one of the Office built-in tabs, you'll need to know 
         &mobileredirect=true
     ```
 
-    > [!NOTE]
-    > Line breaks have been added for readability.
+> [!NOTE]
+> Line breaks have been added for readability.
 
-    From this, you can get the ID of the document from the `sourcedoc` URL parameter. In this case that's `5E12B0DE-AD44-43D3-BD00-53C9BDD5609D` after you remove the escaped `{` and `}` characters (*respectively: `%7B` and `%7D`*).
+   From this, you can get the ID of the document from the `sourcedoc` URL parameter. In this case that's `5E12B0DE-AD44-43D3-BD00-53C9BDD5609D` after you remove the escaped `{` and `}` characters (*respectively: `%7B` and `%7D`*).
 
-    Now you have what you need to create the Word tab:
+   Now you have what you need to create the Word tab:
 
-    - **document ID:** `5E12B0DE-AD44-43D3-BD00-53C9BDD5609D`
-    - **document URL:** `https://m365x285179.sharepoint.com/sites/TestTeam/Shared%20Documents/document.docx`
+   - **document ID:** `5E12B0DE-AD44-43D3-BD00-53C9BDD5609D`
+   - **document URL:** `https://m365x285179.sharepoint.com/sites/TestTeam/Shared%20Documents/document.docx`
 
 1. Repeat this process to get the same values for the Excel file.
 
@@ -111,11 +111,11 @@ Now, let's update the project's existing tab. This button will create a new tab 
 
     Notice each one uses a specific `teamsApp@odata.bind` string for each tab type.
 
-    Also notice how each one's `configuration` property sets the file's document ID to the `entityId` property of the tab, and the `contentUrl` property is set to the document's fully qualified URL.
+   Also notice how each one's `configuration` property sets the file's document ID to the `entityId` property of the tab, and the `contentUrl` property is set to the document's fully qualified URL.
 
-    Add the following `useCallback()` hook that will be used to submit a request to Microsoft Graph for all the teams the current user has joined:
+   Add the following `useCallback()` hook that will be used to submit a request to Microsoft Graph for all the teams the current user has joined:
 
-    Locate the `return` statement and add the following code immediately before it:
+   Locate the `return` statement and add the following code immediately before it:
 
     ```typescript
     const handleWordOnClick = useCallback(async() => {
@@ -171,13 +171,13 @@ Now, let's update the project's existing tab. This button will create a new tab 
 
 1. Now add the buttons to the user interface that will execute these methods. Locate the following line in the `return` statement:
 
-    ```tsx
+    ```typescript
     {joinedTeams && <div><h3>You belong to the following teams:</h3><List items={joinedTeams} /></div>}
     ```
 
 1. Add the following lines to add two buttons after the list of teams the current user has joined:
 
-    ```tsx
+    ```typescript
     <Button icon={<WordIcon />} content="Add Word tab" onClick={handleWordOnClick} />
     <Button icon={<ExcelIcon />} content="Add Excel tab" onClick={handleExcelOnClick} />
     ```
@@ -194,12 +194,12 @@ Now let's test the new functionality added in this exercise.
     gulp ngrok-serve
     ```
 
-    > [!IMPORTANT]
-    > If the **ngrok-serve** stopped for any reason, remember when you start/restart the **gulp ngrok-serve** task, the dynamic ngrok URL will change.
-    >
-    > You'll need to update all the locations where you set the URL in your project as well as in the Azure AD app registration as previously explained.
-    >
-    > In addition, you'll need to reinstall your app package because the Microsoft Teams app manifest contains the URL. To do this, you'll first need to increment the `version` property in the app's **./manifest/manifest.json** file. This value is dynamically set using the `version` property from the **./package.json** file. When you repeat the installation process of the app, it will update the existing installation.
+> [!IMPORTANT]
+> If the **ngrok-serve** stopped for any reason, remember when you start/restart the **gulp ngrok-serve** task, the dynamic ngrok URL will change.
+>
+> You'll need to update all the locations where you set the URL in your project as well as in the Azure AD app registration as previously explained.
+>
+> In addition, you'll need to reinstall your app package because the Microsoft Teams app manifest contains the URL. To do this, you'll first need to increment the `version` property in the app's **./manifest/manifest.json** file. This value is dynamically set using the `version` property from the **./package.json** file. When you repeat the installation process of the app, it will update the existing installation.
 
 1. Once the app starts, go back to the browser and navigate back to your tab that you previously installed. You'll now see the two buttons appear below the list of joined teams:
 

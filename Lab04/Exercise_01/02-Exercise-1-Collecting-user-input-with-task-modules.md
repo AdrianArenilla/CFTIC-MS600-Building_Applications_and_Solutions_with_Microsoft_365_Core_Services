@@ -4,11 +4,11 @@ In this exercise, you'll learn the basics of task modules in Microsoft Teams and
 
 One is a standard HTML page that accepts the ID of a video on YouTube. When the task module is invoked, it will display the video using the YouTube embedded player. This task module will get the video ID from the query string, but it will not need to return any information back to the tab.
 
-![Screenshot of the YouTube Player task module loading a web page](../../Linked_Image_Files/Task_Modules/03-yo-teams-10.png)
+   ![Screenshot of the YouTube Player task module loading a web page](../../Linked_Image_Files/Task_Modules/03-yo-teams-10.png)
 
 The other task module is implemented using React, the same way custom tabs are implemented using the Yeoman Generator for Microsoft Teams. This task module enables the user to specify the ID of the YouTube video to display. Once changed, when the user saves their changes, it will use the callback to close submit the new ID back to the tab.
 
-![Screenshot of the YouTube Selector task module](../../Linked_Image_Files/Task_Modules/03-yo-teams-11.png)
+   ![Screenshot of the YouTube Selector task module](../../Linked_Image_Files/Task_Modules/03-yo-teams-11.png)
 
 
 ## Task 1: Create Microsoft Teams app
@@ -21,7 +21,7 @@ The other task module is implemented using React, the same way custom tabs are i
     yo teams
     ```
 
-    ![Screenshot of the Yeoman Generator for Microsoft Teams](../../Linked_Image_Files/Task_Modules/03-yo-teams-01.png)
+   ![Screenshot of the Yeoman Generator for Microsoft Teams](../../Linked_Image_Files/Task_Modules/03-yo-teams-01.png)
 
 1. Yeoman will launch and ask you a series of questions. Answer the questions with the following values:
 
@@ -38,10 +38,10 @@ The other task module is implemented using React, the same way custom tabs are i
     - **What kind of Tab would you like to create?**: Personal (static)
     - **Do you require Azure AD Single-Sign-On support for the tab?** No
 
-    > [!NOTE]
-    > Most of the answers to these questions can be changed after creating the project. For example, the URL where the project will be hosted isn't important at the time of creating or testing the project.
+> [!NOTE]
+> Most of the answers to these questions can be changed after creating the project. For example, the URL where the project will be hosted isn't important at the time of creating or testing the project.
 
-    After answering the generator's questions, the generator will create the scaffolding for the project and then execute `npm install` that downloads all the dependencies required by the project.
+After answering the generator's questions, the generator will create the scaffolding for the project and then execute `npm install` that downloads all the dependencies required by the project.
 
 ### Test the personal tab
 
@@ -53,32 +53,32 @@ The other task module is implemented using React, the same way custom tabs are i
     gulp ngrok-serve
     ```
 
-    This gulp task will run many other tasks all displayed within the command-line console. The **ngrok-serve** task builds your project and starts a local web server (http://localhost:3007). It then starts ngrok with a random subdomain that creates a secure URL to your local webserver.
+This gulp task will run many other tasks all displayed within the command-line console. The **ngrok-serve** task builds your project and starts a local web server (http://localhost:3007). It then starts ngrok with a random subdomain that creates a secure URL to your local webserver.
 
-    > [!NOTE]
-    > Microsoft Teams requires all content displayed within a tab be loaded from an HTTPS request. In development, can be done using the tool [ngrok](https://www.ngrok.com) that creates a secure rotatable URL to your local HTTP webserver. Ngrok is included as a dependency within the project so there is nothing to setup or configure.
+> [!NOTE]
+> Microsoft Teams requires all content displayed within a tab be loaded from an HTTPS request. In development, can be done using the tool [ngrok](https://www.ngrok.com) that creates a secure rotatable URL to your local HTTP webserver. Ngrok is included as a dependency within the project so there is nothing to setup or configure.
 
-    > [!IMPORTANT]
-    > Each time ngrok is started, it will generate a new dynamic subdomain for the URL. If you have to restart ngrok, you will need to repackage and and update the app in Microsoft Teams to make the installed app aware of the new URL. The optional licensed version of ngrok allows you to define and reuse the same subdomain.
+> [!IMPORTANT]
+> Each time ngrok is started, it will generate a new dynamic subdomain for the URL. If you have to restart ngrok, you will need to repackage and and update the app in Microsoft Teams to make the installed app aware of the new URL. The optional licensed version of ngrok allows you to define and reuse the same subdomain.
 
-    ![Screenshot of gulp ngrok-serve](../../Linked_Image_Files/Task_Modules/03-yo-teams-02.png)
+   ![Screenshot of gulp ngrok-serve](../../Linked_Image_Files/Task_Modules/03-yo-teams-02.png)
 
 1. Open a browser and navigate to the ngrok URL displayed in the console:
 
-    ![Screenshot of the local web app hosting the Teams tab project with the homepage loaded](../../Linked_Image_Files/Task_Modules/03-yo-teams-03.png)
+   ![Screenshot of the local web app hosting the Teams tab project with the homepage loaded](../../Linked_Image_Files/Task_Modules/03-yo-teams-03.png)
 
 1. Update the URL in the browser to load the tab created by the scaffolding process. Here you can see the page can determine that it isn't running within the Microsoft Teams client.
 
-    ![Screenshot of the local web app hosting the Teams tab project with the tab loaded](../../Linked_Image_Files/Task_Modules/03-yo-teams-04.png)
+   ![Screenshot of the local web app hosting the Teams tab project with the tab loaded](../../Linked_Image_Files/Task_Modules/03-yo-teams-04.png)
 
 1. Now let's load the tab in Microsoft Teams. In the browser, navigate to **https://teams.microsoft.com** and sign in with the credentials of a Work and School account.
 
-    > [!NOTE]
-    > Microsoft Teams is available for use as a web client, desktop client and a mobile client. In this module, we will use the web client but any of the clients can be used.
+> [!NOTE]
+> Microsoft Teams is available for use as a web client, desktop client and a mobile client. In this module, we will use the web client but any of the clients can be used.
 
 1. Using the app bar navigation menu, select the **More added apps** button. Then select **More apps**.
 
-    ![Screenshot of More added apps dialog in Microsoft Teams](../../Linked_Image_Files/Task_Modules/03-yo-teams-05.png)
+   ![Screenshot of More added apps dialog in Microsoft Teams](../../Linked_Image_Files/Task_Modules/03-yo-teams-05.png)
 
 1. On the **Browse available apps and services** page, select **Upload a custom app** > **Upload for me or my teams**.
 
@@ -86,19 +86,19 @@ The other task module is implemented using React, the same way custom tabs are i
 
 1. Once the package is uploaded, Microsoft Teams will display a summary of the app. Here you can see some "todo" items to address. *None of these "todo" items are important to this exercise, so you will leave them as is.*
 
-    ![Screenshot of Microsoft Teams app](../../Linked_Image_Files/Task_Modules/03-yo-teams-06.png)
+   ![Screenshot of Microsoft Teams app](../../Linked_Image_Files/Task_Modules/03-yo-teams-06.png)
 
 1. Select the **Add** button to install the app, adding a new personal tab to your **More added apps** dialog:
 
-    ![Screenshot of the installed Microsoft Teams app in the More added apps dialog](../../Linked_Image_Files/Task_Modules/03-yo-teams-07.png)
+   ![Screenshot of the installed Microsoft Teams app in the More added apps dialog](../../Linked_Image_Files/Task_Modules/03-yo-teams-07.png)
 
 1. Select the app to navigate to the new tab:
 
-    ![Screenshot of the installed Microsoft Teams app personal tab](../../Linked_Image_Files/Task_Modules/03-yo-teams-08.png)
+   ![Screenshot of the installed Microsoft Teams app personal tab](../../Linked_Image_Files/Task_Modules/03-yo-teams-08.png)
 
-    Notice that when the content page is loaded in a tab within the Microsoft Teams client, it's displaying the value of the `entityId` property of the tab, not the message "This isn't hosted in Microsoft Teams" as you saw when viewing the content page in the browser. The tab can detect if it's loaded within the Microsoft Teams client using the Microsoft Teams JavaScript SDK.
+Notice that when the content page is loaded in a tab within the Microsoft Teams client, it's displaying the value of the `entityId` property of the tab, not the message "This isn't hosted in Microsoft Teams" as you saw when viewing the content page in the browser. The tab can detect if it's loaded within the Microsoft Teams client using the Microsoft Teams JavaScript SDK.
 
-    The next step is to make some changes to the project.
+The next step is to make some changes to the project.
 
 1. Next, stop the local web server by pressing <kbd>CTRL</kbd>+<kbd>C</kbd> in the console to stop the running process.
 
@@ -138,7 +138,7 @@ Now you can implement the user interface for the tab. The simple tab will have a
 
 1. Locate the `return` statement and update to the following code. The component will now display state with a brief copyright statement:
 
-    ```tsx
+    ```typescript
     return (
       <Provider theme={theme}>
         <Flex fill={true} column styles={{
@@ -187,9 +187,9 @@ At this point, our Microsoft Teams app, implemented as a custom person tab is se
 
 1. In the browser, navigate back to the tab and notice the new UI you've implemented for the tab:
 
-    ![Screenshot of the updated YouTube Player tab](../../Linked_Image_Files/Task_Modules/03-yo-teams-09.png)
+   ![Screenshot of the updated YouTube Player tab](../../Linked_Image_Files/Task_Modules/03-yo-teams-09.png)
 
-    Now you can update the project and add task modules to the custom Microsoft Teams app.
+Now you can update the project and add task modules to the custom Microsoft Teams app.
 
 1. Stop the local web server by pressing <kbd>CTRL</kbd>+<kbd>C</kbd> in the console to stop the running process.
 
@@ -228,7 +228,7 @@ At this point, our Microsoft Teams app, implemented as a custom person tab is se
     </html>
     ```
 
-    The video player task module will use the YouTube embedded player to show the specified video. The video will be defined in the query string when the **player.html** file is loaded.
+The video player task module will use the YouTube embedded player to show the specified video. The video will be defined in the query string when the **player.html** file is loaded.
 
 1. Implement the `<iframe>` embedded video player by adding the following JavaScript before the closing `</body>` tag in the **player.html** file:
 
@@ -299,7 +299,7 @@ At this point, our Microsoft Teams app, implemented as a custom person tab is se
 
 1. In the browser, navigate back to the tab in the Microsoft Teams interface. Select the **Show video** button. Microsoft Teams will load the video player task module with the specified video loaded in the embedded player:
 
-    ![Screenshot of the YouTube Player task module with a video loaded in the web page](../../Linked_Image_Files/Task_Modules/03-yo-teams-10.png)
+   ![Screenshot of the YouTube Player task module with a video loaded in the web page](../../Linked_Image_Files/Task_Modules/03-yo-teams-10.png)
 
 1. Stop the local web server by pressing <kbd>CTRL</kbd>+<kbd>C</kbd> in the console to stop the running process.
 
@@ -413,7 +413,7 @@ With the selector's page created and registered, the next step is to implement t
 
 1. Implement the user interface of the task module by adding the following code to the `return()` statement:
 
-    ```tsx
+    ```typescript
     <Provider theme={theme}>
       <Flex column gap="gap.smaller">
         <Text size="medium">
@@ -437,7 +437,7 @@ With the selector's page created and registered, the next step is to implement t
     };
     ```
 
-    The `handleOnChanged()` method updates the state with the value specified in the input control, while the `handleOnClick()` method uses the Microsoft Teams SDK to pass the ID of the video back to the personal tab.
+   The `handleOnChanged()` method updates the state with the value specified in the input control, while the `handleOnClick()` method uses the Microsoft Teams SDK to pass the ID of the video back to the personal tab.
 
 1. Make this React class available to the rest of the application by adding the following line to the **./src/client/client.ts** file:
 
@@ -463,7 +463,7 @@ With the selector's page created and registered, the next step is to implement t
     microsoftTeams.tasks.startTask(taskModuleInfo, submitHandler);
     ```
 
-    This code will first create the `taskInfo` object that defines the task module. It also creates a callback that will take the result from the task module and use it to update the state of the React app.
+   This code will first create the `taskInfo` object that defines the task module. It also creates a callback that will take the result from the task module and use it to update the state of the React app.
 
 ### Test the video selector task module
 
@@ -481,11 +481,11 @@ With the selector's page created and registered, the next step is to implement t
 
 1. Select the **Change Video ID** button. Microsoft Teams will load the video selector task module with the ID of the currently selected video in the text control.
 
-    ![Screenshot of the YouTube Selector task module](../../Linked_Image_Files/Task_Modules/03-yo-teams-11.png)
+   ![Screenshot of the YouTube Selector task module](../../Linked_Image_Files/Task_Modules/03-yo-teams-11.png)
 
 1. Enter the ID of another YouTube video and select the **Update** button. Notice the ID of the video has changed. Now when you select the **Show video** button, the player task module loads with the new video.
 
-    ![Screenshot of the YouTube Player task module](../../Linked_Image_Files/Task_Modules/03-yo-teams-12.png)
+   ![Screenshot of the YouTube Player task module](../../Linked_Image_Files/Task_Modules/03-yo-teams-12.png)
 
 1. Stop the local web server by pressing <kbd>CTRL</kbd>+<kbd>C</kbd> in the console to stop the running process.
 

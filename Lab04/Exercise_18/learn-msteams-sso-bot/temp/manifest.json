@@ -1,0 +1,78 @@
+{
+  "$schema": "https://developer.microsoft.com/en-us/json-schemas/teams/v1.9/MicrosoftTeams.schema.json",
+  "manifestVersion": "1.9",
+  "id": "1c2523d0-2102-11ec-b268-6960961adb1f",
+  "version": "0.0.1",
+  "packageName": "learnmsteamsssobot",
+  "developer": {
+    "name": "AdrianArenilla",
+    "websiteUrl": "https://cd23-83-51-149-162.ngrok.io",
+    "privacyUrl": "https://cd23-83-51-149-162.ngrok.io/privacy.html",
+    "termsOfUseUrl": "https://cd23-83-51-149-162.ngrok.io/tou.html"
+  },
+  "name": {
+    "short": "SSO Teams Bot",
+    "full": "SSO Teams Bot"
+  },
+  "description": {
+    "short": "TODO: add short description here",
+    "full": "TODO: add full description here"
+  },
+  "icons": {
+    "outline": "icon-outline.png",
+    "color": "icon-color.png"
+  },
+  "accentColor": "#D85028",
+  "configurableTabs": [],
+  "staticTabs": [
+    {
+      "entityId": "3b28bee0-2102-11ec-b268-6960961adb1f",
+      "name": "SSO Bot",
+      "contentUrl": "https://cd23-83-51-149-162.ngrok.io/Bot/ssoBot.html",
+      "scopes": [
+        "personal"
+      ]
+    }
+  ],
+  "bots": [
+    {
+      "botId": "0c8da1cd-f686-43ce-8555-3adba13255f9",
+      "needsChannelSelector": true,
+      "isNotificationOnly": false,
+      "scopes": [
+        "team",
+        "personal",
+        "groupchat"
+      ],
+      "commandLists": [
+        {
+          "scopes": [
+            "team",
+            "personal"
+          ],
+          "commands": [
+            {
+              "title": "Help",
+              "description": "Shows help information"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "connectors": [],
+  "composeExtensions": [],
+  "permissions": [
+    "identity",
+    "messageTeamMembers"
+  ],
+  "validDomains": [
+    "token.botframework.com",
+    "cd23-83-51-149-162.ngrok.io"
+  ],
+  "webApplicationInfo": {
+    "id": "0c8da1cd-f686-43ce-8555-3adba13255f9",
+    "resource": "api://botid-0c8da1cd-f686-43ce-8555-3adba13255f9"
+  },
+  "showLoadingIndicator": false
+}

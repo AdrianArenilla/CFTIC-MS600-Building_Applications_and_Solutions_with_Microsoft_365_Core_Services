@@ -1,0 +1,57 @@
+{
+  "$schema": "https://developer.microsoft.com/en-us/json-schemas/teams/v1.9/MicrosoftTeams.schema.json",
+  "manifestVersion": "1.9",
+  "id": "61fd1d6e-5fa3-4d89-b76d-55567b513486",
+  "version": "1.0.0",
+  "packageName": "messagingext",
+  "developer": {
+    "name": "AdrianArenilla",
+    "websiteUrl": "https://98e1-83-51-149-162.ngrok.io",
+    "privacyUrl": "https://98e1-83-51-149-162.ngrok.io/privacy.html",
+    "termsOfUseUrl": "https://98e1-83-51-149-162.ngrok.io/tou.html"
+  },
+  "name": {
+    "short": "Planet Messaging",
+    "full": "Planet Messaging"
+  },
+  "description": {
+    "short": "TODO: add short description here",
+    "full": "TODO: add full description here"
+  },
+  "icons": {
+    "outline": "icon-outline.png",
+    "color": "icon-color.png"
+  },
+  "accentColor": "#D85028",
+  "configurableTabs": [],
+  "staticTabs": [],
+  "bots": [],
+  "connectors": [],
+  "composeExtensions": [
+    {
+      "botId": "61fd1d6e-5fa3-4d89-b76d-55567b513486",
+      "canUpdateConfiguration": false,
+      "commands": [
+        {
+          "id": "planetExpanderAction",
+          "type": "action",
+          "title": "Planet Expander",
+          "description": "Lookup the details of a planet.",
+          "context": [
+            "compose",
+            "message"
+          ],
+          "fetchTask": true
+        }
+      ]
+    }
+  ],
+  "permissions": [
+    "identity",
+    "messageTeamMembers"
+  ],
+  "validDomains": [
+    "98e1-83-51-149-162.ngrok.io"
+  ],
+  "showLoadingIndicator": false
+}

@@ -123,7 +123,7 @@ The configuration page displays a drop-down list of four math operators to selec
 
 1. Locate the `return` statement. Replace it with the following code, which adds a drop-down list for the user to select the operator they want to use:
 
-    ```tsx
+    ```typescript
     return (
       <Provider theme={theme}>
         <Flex gap="gap.smaller" style={{ height: "300px" }}>

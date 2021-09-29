@@ -254,7 +254,7 @@ The last step before you can test bot is to add it to the Microsoft Teams app ma
     - **Help text**: Sends message with @mention of the sender
     - **Scope**: Personal
 
-    ![Screenshot of the new bot](../../Linked_Image_Files/Bots/03-app-studio-06.png)
+   ![Screenshot of the new bot](../../Linked_Image_Files/Bots/03-app-studio-06.png)
 
 1. With the bot added to the Teams app, you need to update the manifest in your project. From the **(3) Finish** > **Test and distribute** section, select the **Download** button from the **Download** section.
 
@@ -290,10 +290,10 @@ The last step before you can test bot is to add it to the Microsoft Teams app ma
     ],
     ```
 
-    > [!IMPORTANT]
-    > Notice the `botId` property value. If you see a GUID, the manifest has already been configured with the Bot App ID. If you see `{{MICROSOFT_APP_ID}}`, then this will be replaced with the value listed in the **./.env** file when you build the project.
+> [!IMPORTANT]
+> Notice the `botId` property value. If you see a GUID, the manifest has already been configured with the Bot App ID. If you see `{{MICROSOFT_APP_ID}}`, then this will be replaced with the value listed in the **./.env** file when you build the project.
 
-    At this point, your bot is ready to test!
+At this point, your bot is ready to test!
 
 ## Task 3: Test the conversational bot
 
@@ -324,15 +324,15 @@ The last step before you can test bot is to add it to the Microsoft Teams app ma
 
 1. Finally, save your changes to the bot configuration using the **Save** button at the top of the page.
 
-    > [!IMPORTANT]
-    > The free version of Ngrok will create a new URL each time you restart the web server. Make sure you update the **Messaging endpoint** of your URL each time you restart the web server when you're testing the app.
+> [!IMPORTANT]
+> The free version of Ngrok will create a new URL each time you restart the web server. Make sure you update the **Messaging endpoint** of your URL each time you restart the web server when you're testing the app.
 
 ### Install the custom app in Microsoft Teams
 
 1. Now let's install the app in Microsoft Teams. In the browser, navigate to **https://teams.microsoft.com** and sign in with the credentials of a Work and School account.
 
-    > **NOTE:**
-    > Microsoft Teams is available for use as a web client, desktop client and a mobile client. In this module, we will use the web client but any of the clients can be used.
+> **NOTE:**
+> Microsoft Teams is available for use as a web client, desktop client and a mobile client. In this module, we will use the web client but any of the clients can be used.
 
 1. Using the app bar navigation menu, select the **More added apps** button. Then select **Browse all apps** followed by **Upload for me or my teams**.
 
@@ -340,7 +340,7 @@ The last step before you can test bot is to add it to the Microsoft Teams app ma
 
 1. In the file dialog that appears, select the Microsoft Teams package in your project. This app package is a ZIP file that can be found in the project's **./package** folder.
 
-1. Once the package is uploaded, Microsoft Teams will display a summary of the app. Here you can see some "todo" items to address. _None of these "todo" items are important to this exercise, so you'll leave them as is._
+1. Once the package is uploaded, Microsoft Teams will display a summary of the app. Here you can see some "todo" items to address. _None of these "todo" items are important to this exercise, so you'll leave them as is.
 
     ![Screenshot of Microsoft Teams app](../../Linked_Image_Files/Bots/03-test-03.png)
 
@@ -360,7 +360,7 @@ The last step before you can test bot is to add it to the Microsoft Teams app ma
 
     ![Screenshot of the working Microsoft Teams app](../../Linked_Image_Files/Bots/03-test-06.png)
 
-    At this point, we have a working bot that is responding when it's mentioned.
+At this point, we have a working bot that is responding when it's mentioned.
 
 ## Summary
 

@@ -13,18 +13,18 @@ In this section, you'll create an Adaptive Card that mirrors the functionality o
 
 1. Select the **More added apps** menu item from the left-hand navigation and select the **App Studio** app:
 
-    ![Screenshot of the App Studio app listed in the More Added Apps dialog](../../Linked_Image_Files/Task_Modules/05-app-studio-01.png)
+   ![Screenshot of the App Studio app listed in the More Added Apps dialog](../../Linked_Image_Files/Task_Modules/05-app-studio-01.png)
 
-    > [!TIP]
-    > If App Studio is not listed in the **More added apps** dialog as shown above, select **More apps** at the bottom of the dialog.
-    >
-    > Search for **App Studio** and select it from the search results to install it:
-    >
-    > ![Screenshot of installing App Studio from the available apps](../../Linked_Image_Files/Task_Modules/05-app-studio-02.png)
+> [!TIP]
+> If App Studio is not listed in the **More added apps** dialog as shown above, select **More apps** at the bottom of the dialog.
+>
+> Search for **App Studio** and select it from the search results to install it:
+>
+> ![Screenshot of installing App Studio from the available apps](../../Linked_Image_Files/Task_Modules/05-app-studio-02.png)
 
 1. In App Studio, select the **Card editor** tab and then select the **Create a new card** button.
 
-    ![Screenshot of the Card editor initial experience](../../Linked_Image_Files/Task_Modules/05-app-studio-03.png)
+   ![Screenshot of the Card editor initial experience](../../Linked_Image_Files/Task_Modules/05-app-studio-03.png)
 
 1. Select the **Create** button for an **Adaptive Card** in the list of card types you can create in the **Create a new card** dialog.
 
@@ -74,7 +74,7 @@ In this section, you'll create an Adaptive Card that mirrors the functionality o
     }
     ```
 
-    ![Screenshot of the YouTube Video Selector card](../../Linked_Image_Files/Task_Modules/05-app-studio-04.png)
+   ![Screenshot of the YouTube Video Selector card](../../Linked_Image_Files/Task_Modules/05-app-studio-04.png)
 
     This JSON code instructs Microsoft Teams to render a textbox and button. When the button is selected, it will submit the card.
 
@@ -88,7 +88,7 @@ After creating the Adaptive Card, the next step is to create a task module that 
 
 1. Locate the `return` statement and add the following code to add a button after one of the existing buttons:
 
-    ```tsx
+    ```typescript
     <Button content="Change Video ID (AdaptiveCard)" onClick={() => onChangeVideoAdaptiveCard()}></Button>
     ```
 
@@ -160,7 +160,7 @@ After creating the Adaptive Card, the next step is to create a task module that 
 
 1. In the browser, navigate back to the tab in the Microsoft Teams interface and select the new button **Change Video ID (AdaptiveCard)**. Microsoft Teams will open a task module with the rendered Adaptive Card:
 
-    ![Screenshot of the Adaptive Card rendered in a task module](../../Linked_Image_Files/Task_Modules/05-test-01.png)
+   ![Screenshot of the Adaptive Card rendered in a task module](../../Linked_Image_Files/Task_Modules/05-test-01.png)
 
 1. Replace the video ID in the input box and select **Update**. Notice the video ID displayed in the tab is updated to reflect this new value.
 
@@ -190,13 +190,13 @@ https://teams.microsoft.com/l/task/3386faf0-109f-11ea-9799-77a28170bd5d?url=http
 
 1. In Microsoft Teams, go to a channel, select the **Conversations** tab, and select the **Format** button in the message dialog:
 
-    ![Screenshot of the message dialog](../../Linked_Image_Files/Task_Modules/05-test-02.png)
+   ![Screenshot of the message dialog](../../Linked_Image_Files/Task_Modules/05-test-02.png)
 
 1. Enter a message to post to the channel. Select some of the text and use the **Link** feature to add the deep link to the message:
 
-    ![Screenshot of the new message experience in a Conversations tab - adding a link](../../Linked_Image_Files/Task_Modules/05-test-03.png)
+   ![Screenshot of the new message experience in a Conversations tab - adding a link](../../Linked_Image_Files/Task_Modules/05-test-03.png)
 
-    ![Screenshot of the new message experience in a Conversations tab](../../Linked_Image_Files/Task_Modules/05-test-04.png)
+   ![Screenshot of the new message experience in a Conversations tab](../../Linked_Image_Files/Task_Modules/05-test-04.png)
 
 1. Now, select the link to see the task module open without having to trigger it from the custom tab.
 

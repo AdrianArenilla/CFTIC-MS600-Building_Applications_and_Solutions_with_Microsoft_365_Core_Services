@@ -39,11 +39,11 @@ The next step is to update an Azure AD app you created in a previous exercise of
     api://botid-023adcaa-4fef-4a4d-a94a-0cde3a0c5b31
     ```
 
-    Notice that the values of the **Scopes defined by this API** and **Authorized client applications** will now reflect this change as well:
+   Notice that the values of the **Scopes defined by this API** and **Authorized client applications** will now reflect this change as well:
 
-    ![Screenshot of updated expose API settings](../../Linked_Image_Files/07-azure-ad-app-expose-api-01.png)
+   ![Screenshot of updated expose API settings](../../Linked_Image_Files/07-azure-ad-app-expose-api-01.png)
 
-    With the Azure AD app configuration updated, the next step is to register the bot with Azure Bot Framework.
+   With the Azure AD app configuration updated, the next step is to register the bot with Azure Bot Framework.
 
 ## Task 2: Register the bot with the Microsoft Azure Bot Framework
 
@@ -91,11 +91,11 @@ For now, we'll assume the subdomain is `REPLACE.ngrok.io`.
     - **Pricing tier**: *Select a preferred pricing tier; the F0 tier is free*
     - **Messaging endpoint**: `https://REPLACE.ngrok.io/api/messages`
 
-      > The bot registration needs to know the endpoint of the web service where the bot is implemented. This will change each time you start the ngrok utility used in previous exercises.
+> The bot registration needs to know the endpoint of the web service where the bot is implemented. This will change each time you start the ngrok utility used in previous exercises.
 
-    - **Application Insights**: Off
+- **Application Insights**: Off
 
-    ![Screenshot of the created bot channels registration resource form](../../Linked_Image_Files/07-azure-bot-registration-03.png)
+   ![Screenshot of the created bot channels registration resource form](../../Linked_Image_Files/07-azure-bot-registration-03.png)
 
 1. Select the **Microsoft App ID and password** option to change it from its default setting. By default, the registration process will register a new Azure AD app. We want to use the Azure AD app created in a previous exercise and updated in this exercise.
 
@@ -134,7 +134,7 @@ For now, we'll assume the subdomain is `REPLACE.ngrok.io`.
     - **Scopes**: Mail.Read openid profile User.Read
       - *This is a space-delimited list of all permissions the bot needs that have also been added to the Azure AD app you previously. The list contains a subset of the permissions listed in the Azure AD app from the exercises in this module that the bot will use.*
 
-    ![Screenshot of the connection setting form](../../Linked_Image_Files/07-azure-bot-registration-06.png)
+   ![Screenshot of the connection setting form](../../Linked_Image_Files/07-azure-bot-registration-06.png)
 
 ### Enable the Microsoft Teams channel for the bot
 
@@ -178,10 +178,10 @@ In order for the bot to interact with Microsoft Teams, you must enable the Teams
     - **Do you want to support file upload to the bot?** No
     - **Do you want to include bot calling support?** No
 
-    > [!IMPORTANT]
-    > At the time of writing this exercise, the Yeoman Generator for Microsoft Teams doesn't contain a project template for a bot that supports SSO. That's why you selected *An already existing and running bot* in the options above. In the next step, you'll manually add the bot to the project.
+> [!IMPORTANT]
+> At the time of writing this exercise, the Yeoman Generator for Microsoft Teams doesn't contain a project template for a bot that supports SSO. That's why you selected *An already existing and running bot* in the options above. In the next step, you'll manually add the bot to the project.
 
-    After answering the generator's questions, the generator will create the scaffolding for the project and then execute `npm install` that downloads all the dependencies required by the project.
+After answering the generator's questions, the generator will create the scaffolding for the project and then execute `npm install` that downloads all the dependencies required by the project.
 
 ### Add more dependencies to the project
 
@@ -206,8 +206,8 @@ The **./.env** file within the project's root folder contains environment variab
     MICROSOFT_APP_PASSWORD=-fcY3P_1UoDV441_k58a37ylT9U_q6a-UD
     ```
 
-    > [!NOTE]
-    > The client secret listed above is only included as an example. Make sure you enter the secret you obtains when you registered the Azure AD app. If you don't have it, you can create another one and enter it here.
+> [!NOTE]
+> The client secret listed above is only included as an example. Make sure you enter the secret you obtains when you registered the Azure AD app. If you don't have it, you can create another one and enter it here.
 
 1. Add a new variable immediately after the `MICROSOFT_APP_PASSWORD`. Set the value of this variable to the name of the Bot's OAuth connection setting that you created previously in this exercise:
 
@@ -257,7 +257,7 @@ The **./.env** file within the project's root folder contains environment variab
     },
     ```
 
-  At this point, the project is configured and you can now start coding the bot.
+    At this point, the project is configured and you can now start coding the bot.
 
 ## Task 4: Code the bot
 
@@ -450,7 +450,7 @@ Our project will contain two helper classes used to simplify signing the user in
     - The `SsoOauthPrompt` dialog that adds extra logic to implement SSO to the `OAuthPrompt` included in the Bot Framework.
     - The `WaterfallDialog` dialog that adds a series of dialogs and steps to implement the user experience once the user has completed the SSO process by signing into the bot.
 
-1. Add the following code to the **MainDialog.ts** file:
+1. Add the following code to the **mainDialog.ts** file:
 
     ```typescript
     import {
@@ -646,7 +646,7 @@ Our project will contain two helper classes used to simplify signing the user in
     }
     ```
 
-  The last step in creating our bot is to implement the bot itself.
+    The last step in creating our bot is to implement the bot itself.
 
 ### Add the bot to the project
 
@@ -781,10 +781,10 @@ The last step is to add the bot to the web server when it starts.
 
     This gulp task will run many other tasks all displayed within the command-line console. The **ngrok-serve** task builds your project and starts a local web server (http://localhost:3007). It then starts ngrok with a random subdomain that creates a secure URL to your local webserver.
 
-    > [!NOTE]
-    > Microsoft Teams requires all content displayed within a tab be loaded from an HTTPS request. In development, can be done using the tool [ngrok](https://www.ngrok.com) that creates a secure rotatable URL to your local HTTP webserver. Ngrok is included as a dependency within the project so there is nothing to setup or configure.
+  > [!NOTE]
+  > Microsoft Teams requires all content displayed within a tab be loaded from an HTTPS request. In development, can be done using the tool [ngrok](https://www.ngrok.com) that creates a secure rotatable URL to your local HTTP webserver. Ngrok is included as a dependency within the project so there is nothing to setup or configure.
 
-    ![Screenshot of gulp ngrok-serve](../../Linked_Image_Files/07-test-01.png)
+   ![Screenshot of gulp ngrok-serve](../../Linked_Image_Files/07-test-01.png)
 
 1. Note the URL of the ngrok URL displayed in the console. In the previous screenshot, ngrok has created the temporary URL `5f1f02998d18.ngrok.io` that will map to our locally running web server. In order for the Bot Framework to route messages from Microsoft Teams to our locally running bot, you need to the bot's **messaging endpoint** URL in the bot's registration. This property can be found on the **Configuration** screen:
 
@@ -794,8 +794,8 @@ The last step is to add the bot to the web server when it starts.
 
 1. Now let's install the app in Microsoft Teams. In the browser, navigate to **https://teams.microsoft.com** and sign in with the credentials of a Work and School account.
 
-    > [!NOTE]
-    > Microsoft Teams is available for use as a web client, desktop client and a mobile client. In this module, we will use the web client but any of the clients can be used.
+> [!NOTE]
+> Microsoft Teams is available for use as a web client, desktop client and a mobile client. In this module, we will use the web client but any of the clients can be used.
 
 1. Using the app bar navigation menu, select the **More added apps** button. Then select **Browse all apps** followed by **Upload for me or my teams**.
 

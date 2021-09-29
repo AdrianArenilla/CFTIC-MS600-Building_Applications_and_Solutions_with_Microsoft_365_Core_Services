@@ -1,0 +1,51 @@
+{
+  "$schema": "https://developer.microsoft.com/en-us/json-schemas/teams/v1.9/MicrosoftTeams.schema.json",
+  "manifestVersion": "1.9",
+  "id": "73f6d550-20f7-11ec-a523-63d6f9ce3adb",
+  "version": "0.0.1",
+  "packageName": "learnmsteamsssotab",
+  "developer": {
+    "name": "AdrianArenilla",
+    "websiteUrl": "https://fa6a-83-51-149-162.ngrok.io",
+    "privacyUrl": "https://fa6a-83-51-149-162.ngrok.io/privacy.html",
+    "termsOfUseUrl": "https://fa6a-83-51-149-162.ngrok.io/tou.html"
+  },
+  "name": {
+    "short": "SSO Teams Tab",
+    "full": "SSO Teams Tab"
+  },
+  "description": {
+    "short": "TODO: add short description here",
+    "full": "TODO: add full description here"
+  },
+  "icons": {
+    "outline": "icon-outline.png",
+    "color": "icon-color.png"
+  },
+  "accentColor": "#D85028",
+  "configurableTabs": [
+    {
+      "configurationUrl": "https://fa6a-83-51-149-162.ngrok.io/ssoTab/config.html?name={loginHint}&tenant={tid}&group={groupId}&theme={theme}",
+      "canUpdateConfiguration": true,
+      "scopes": [
+        "team"
+      ]
+    }
+  ],
+  "staticTabs": [],
+  "bots": [],
+  "connectors": [],
+  "composeExtensions": [],
+  "permissions": [
+    "identity",
+    "messageTeamMembers"
+  ],
+  "validDomains": [
+    "fa6a-83-51-149-162.ngrok.io"
+  ],
+  "showLoadingIndicator": false,
+  "webApplicationInfo": {
+    "id": "0c8da1cd-f686-43ce-8555-3adba13255f9",
+    "resource": "api://fa6a-83-51-149-162.ngrok.io/0c8da1cd-f686-43ce-8555-3adba13255f9"
+  }
+}

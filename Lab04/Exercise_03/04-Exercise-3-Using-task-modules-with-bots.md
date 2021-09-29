@@ -56,10 +56,10 @@ The first step is to create a new Microsoft Teams bot. Adding a bot to the Teams
     - **Pricing tier**: *Select a preferred pricing tier; the F0 tier is free*
     - **Messaging endpoint**: https://REPLACE_THIS.ngrok.io/api/messages
 
-        > The bot registration needs to know the endpoint of the web service where the bot is implemented. This will change each time you start the ngrok utility used in previous exercises.
+> The bot registration needs to know the endpoint of the web service where the bot is implemented. This will change each time you start the ngrok utility used in previous exercises.
 
-    - **Application Insights**: Off
-    - **Microsoft App ID and password**: Auto create App ID and password
+- **Application Insights**: Off
+- **Microsoft App ID and password**: Auto create App ID and password
 
 1. Azure will start to provision the new resource. This will take a moment or two. Once it's finished, navigate to the bot resource in the resource group.
 
@@ -103,9 +103,9 @@ In order for your code to connect to the bot framework service, it will sign in 
 
 1. The **Certificate & Secrets** page will display the new secret. 
 
-    >**NOTE:** It's important you copy this value as it's only shown this one time; if you leave the page and come back, it will only show as a masked value.
+> **NOTE:** It's important you copy this value as it's only shown this one time; if you leave the page and come back, it will only show as a masked value.
 
-    ![Screenshot showing the new secret](../../Linked_Image_Files/Task_Modules/07-azure-bot-registration-08.png)
+   ![Screenshot showing the new secret](../../Linked_Image_Files/Task_Modules/07-azure-bot-registration-08.png)
 
 1. Copy the value of the secret as you'll need it later.
 
@@ -243,8 +243,8 @@ The next step is to add the code to implement the bot.
 
 1. Now you're ready to add the bot to Microsoft Teams. In the browser, navigate to **https://teams.microsoft.com** and sign in with the credentials of a Work and School account.
 
-    > [!NOTE]
-    > Microsoft Teams is available for use as a web client, desktop client and a mobile client. In this module, we will use the web client but any of the clients can be used.
+> [!NOTE]
+> Microsoft Teams is available for use as a web client, desktop client and a mobile client. In this module, we will use the web client but any of the clients can be used.
 
 1. Using the app bar navigation menu, select the **More added apps** button. Then select **Browse all apps** followed by **Upload for me or my teams**.
 
@@ -306,9 +306,9 @@ In this task, you'll add a task module to the bot. First, let's update the Hero 
 
 1. The bot framework is looking for messages of type `invoke` with their `value.type` property set to `task/fetch`. For each one it finds, it passes it into a handler `handleTeamsTaskModuleFetch()`. To handle what happens when you select the action, implement the method.
 
-    Add the following code to the `LearningTeamsBot` class:
+Add the following code to the `LearningTeamsBot` class:
 
-    ```typescript
+   ```typescript
     protected handleTeamsTaskModuleFetch(context: TurnContext, request: TaskModuleRequest): Promise<TaskModuleResponse> {
       let response: TaskModuleResponse;
 
@@ -344,13 +344,13 @@ In this task, you'll add a task module to the bot. First, let's update the Hero 
       console.log("handleTeamsTaskModuleFetch() response", response);
       return Promise.resolve(response);
     }
-    ```
+   ```
 
 ### Test the video player task module
 
 1. After saving the page, let the project rebuild itself and restart the web server. 
 
-1. Once that's happened, select the **Watch `Overview of Microsoft Teams`** button in the Hero card. Notice the task module from the previous exercise is displayed:
+1. Once that's happened, select the **`Watch Overview of Microsoft Teams`** button in the Hero card. Notice the task module from the previous exercise is displayed:
 
     ![Screenshot of the player task module](../../Linked_Image_Files/Task_Modules/07-task-module-02.png)
 
@@ -376,7 +376,7 @@ In this task, you'll add a task module to the bot. First, let's update the Hero 
     ]);
     ```
 
-    ![Screenshot of additional actions](../../Linked_Image_Files/Task_Modules/07-task-module-03.png)
+   ![Screenshot of additional actions](../../Linked_Image_Files/Task_Modules/07-task-module-03.png)
 
 The next step is to add a task module that submits data.
 
@@ -398,9 +398,9 @@ In this section, you'll add an action to the Hero card that displays a task modu
 
 1. You'll chain two task modules together. The first will display the Adaptive Card selector. 
 
-    Within the `handleTeamsTaskModuleFetch()` method, add the following `case` statement to the existing `switch` statement:
+Within the `handleTeamsTaskModuleFetch()` method, add the following `case` statement to the existing `switch` statement:
 
-    ```typescript
+   ```typescript
     case "selector":
       response = ({
         task: {
@@ -414,7 +414,7 @@ In this section, you'll add an action to the Hero card that displays a task modu
         }
       } as TaskModuleResponse);
       break;
-    ```
+   ```
 
 1. Add the following method to the `LearningTeamsBot` class. This will create an Adaptive Card with an input control. This is the programmatic way of creating the same adaptive card from a previous exercise.
 
@@ -463,9 +463,9 @@ In this section, you'll add an action to the Hero card that displays a task modu
 
 1. Next, add the handler for the Adaptive Card handler method. Similar to the `task/fetch`, we need to handle a submit, or `task/submit`. 
 
-    Do this by adding the following method to the `LearningTeamsBot` class:
+Do this by adding the following method to the `LearningTeamsBot` class:
 
-    ```typescript
+   ```typescript
     protected handleTeamsTaskModuleSubmit(context: TurnContext, request: TaskModuleRequest): Promise<TaskModuleResponse> {
       const response: TaskModuleResponse = {
         task: {
@@ -480,9 +480,9 @@ In this section, you'll add an action to the Hero card that displays a task modu
       } as TaskModuleResponse;
       return Promise.resolve(response);
     }
-    ```
+   ```
 
-    This handler will fetch the submitted video ID from the Adaptive Card and use it to present the player task module.
+This handler will fetch the submitted video ID from the Adaptive Card and use it to present the player task module.
 
 ### Test the video selector Adaptive Card task module
 

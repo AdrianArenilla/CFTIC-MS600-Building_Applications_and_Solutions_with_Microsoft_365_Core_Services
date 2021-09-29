@@ -14,20 +14,20 @@ In this exercise, you’ll learn how to create a project using the Yeoman Genera
 
     - **Name**: My Teams SSO App
     - **Supported account types**: Accounts in any organizational directory (Any Azure AD directory - Multitenant)
-    - **Redirect URI**: Web & `https://REPLACE.ngrok.io`
+    - **Redirect URI**: Web & `https://REPLACE.ngrok.io/auth-end`
 
-    ![Screenshot of the Register an application page](../../Linked_Image_Files/03-azure-ad-app-registration-02.png)
+   ![Screenshot of the Register an application page](../../Linked_Image_Files/03-azure-ad-app-registration-02.png)
 
-    > [!NOTE]
-    > The **Redirect URL** will need to be updated once you know the dynamic subdomain of the proxy URL created by ngrok, a tool you'll use to simplify testing and debugging your Microsoft Teams app.
-    >
-    > In fact, you'll need to come back and update the Azure AD app registration in a few places where you'll enter the **REPLACE.ngrok.io** domain.
-    >
-    > For now, we'll just use this temporary domain.
+> [!NOTE]
+> The **Redirect URL** will need to be updated once you know the dynamic subdomain of the proxy URL created by ngrok, a tool you'll use to simplify testing and debugging your Microsoft Teams app.
+>
+> In fact, you'll need to come back and update the Azure AD app registration in a few places where you'll enter the **REPLACE.ngrok.io** domain.
+>
+> For now, we'll just use this temporary domain.
 
 1. On the **My Teams SSO App** page, copy the value of the **Application (client) ID**; you'll need this later when you create the Microsoft Teams app in a future exercise.
 
-    ![Screenshot of the application ID of the new app registration](../../Linked_Image_Files/03-azure-ad-app-registration-03.png)
+     ![Screenshot of the application ID of the new app registration](../../Linked_Image_Files/03-azure-ad-app-registration-03.png)
 
 ### Configure authentication
 
@@ -35,7 +35,7 @@ In this exercise, you’ll learn how to create a project using the Yeoman Genera
 
 1. In the **Implicit grant and hybrid flows** section, select both of the following options, and then select **Save** at the top of the screen:
 
-    ![Screenshot of the app's authentication settings](../../Linked_Image_Files/03-azure-ad-app-registration-04.png)
+     ![Screenshot of the app's authentication settings](../../Linked_Image_Files/03-azure-ad-app-registration-04.png)
 
 ### Create a client secret
 
@@ -60,7 +60,7 @@ In this exercise, you’ll learn how to create a project using the Yeoman Genera
       - openid
       - profile
 
-    ![Screenshot adding permissions to the app](../../Linked_Image_Files/03-azure-ad-app-registration-05.png)
+   ![Screenshot adding permissions to the app](../../Linked_Image_Files/03-azure-ad-app-registration-05.png)
 
 1. Once you've added the permissions, select the **Grant admin consent for ...** to consent these permissions for all users in the tenant.
 
@@ -72,7 +72,7 @@ In this exercise, you’ll learn how to create a project using the Yeoman Genera
 
 1. On the **Expose an API** page, select the **Set** link next to the **Application ID URI**. This will default the app's ID to `api://<app-id>`. This needs to include the domain where the Microsoft Teams app will be hosted. Add `REPLACE.ngrok.io/` to the start of the address after the protocol and select **Save**
 
-    ![Screencast of the app ID URI](../../Linked_Image_Files/03-azure-ad-app-registration-07.png)
+    ![Screenshot of the app ID URI](../../Linked_Image_Files/03-azure-ad-app-registration-07.png)
 
 1. Next, select **Add a scope** to add a new permission for the app. Create a new scope using the following settings and then select **Add scope**:
 
@@ -84,7 +84,7 @@ In this exercise, you’ll learn how to create a project using the Yeoman Genera
     - **User consent description:** Teams can call this app’s APIs with the same rights as the user.
     - **State**: Enabled
 
-    ![Screenshot of the add scope page](../../Linked_Image_Files/03-azure-ad-app-registration-08.png)
+   ![Screenshot of the add scope page](../../Linked_Image_Files/03-azure-ad-app-registration-08.png)
 
 1. The last step is to preauthorize the Microsoft Teams clients that the app's API will trust. This means users won't be asked to consent to specific permissions, or scopes, exposed by the API.
 
@@ -123,10 +123,10 @@ In this exercise, you’ll learn how to create a project using the Yeoman Genera
     - **What is the Application ID to associate with the SSO Tab?**: *Enter the **Application (Client) ID** for the Azure AD application you registered above*
     - **What is the Application ID URI to associate with the SSO Tab?**: *Enter the **Application ID URI** for the Azure AD application you registered above*
 
-    > [!NOTE]
-    > Most of the answers to these questions can be changed after creating the project. For example, the URL where the project will be hosted and Application ID URI must be changed when you start debugging your project using the ngrok utility.
+> [!NOTE]
+> Most of the answers to these questions can be changed after creating the project. For example, the URL where the project will be hosted and Application ID URI must be changed when you start debugging your project using the ngrok utility.
 
-    After answering the generator's questions, the generator will create the scaffolding for the project and then execute `npm install` that downloads all the dependencies required by the project.
+After answering the generator's questions, the generator will create the scaffolding for the project and then execute `npm install` that downloads all the dependencies required by the project.
 
 ### Build and test the application
 
@@ -138,21 +138,21 @@ In this exercise, you’ll learn how to create a project using the Yeoman Genera
     gulp ngrok-serve
     ```
 
-    This gulp task will run many other tasks all displayed within the command-line console. The **ngrok-serve** task builds your project and starts a local web server (http://localhost:3007). It then starts ngrok with a random subdomain that creates a secure URL to your local webserver.
+This gulp task will run many other tasks all displayed within the command-line console. The **ngrok-serve** task builds your project and starts a local web server (http://localhost:3007). It then starts ngrok with a random subdomain that creates a secure URL to your local webserver.
 
-    > [!NOTE]
-    > Microsoft Teams requires all content displayed within a tab be loaded from an HTTPS request. In development, can be done using the tool [ngrok](https://www.ngrok.com) that creates a secure rotatable URL to your local HTTP webserver. Ngrok is included as a dependency within the project so there is nothing to setup or configure.
+> [!NOTE]
+> Microsoft Teams requires all content displayed within a tab be loaded from an HTTPS request. In development, can be done using the tool [ngrok](https://www.ngrok.com) that creates a secure rotatable URL to your local HTTP webserver. Ngrok is included as a dependency within the project so there is nothing to setup or configure.
 
-    > [!IMPORTANT]
-    > Each time ngrok starts, it generates a new dynamic subdomain for the URL. If you have to restart ngrok, you will need to repackage and and update the app in Microsoft Teams to make the installed app aware of the new URL. The optional licensed version of ngrok allows you to define and reuse the same subdomain.
+> [!IMPORTANT]
+> Each time ngrok starts, it generates a new dynamic subdomain for the URL. If you have to restart ngrok, you will need to repackage and and update the app in Microsoft Teams to make the installed app aware of the new URL. The optional licensed version of ngrok allows you to define and reuse the same subdomain.
 
-    ![Screenshot of gulp ngrok-serve](../../Linked_Image_Files/03-ngrok-dynamic-url.png)
+   ![Screenshot of gulp ngrok-serve](../../Linked_Image_Files/03-ngrok-dynamic-url.png)
 
 1. Before testing the Microsoft Teams app, you need to update all locations where you entered the URL `REPLACE.ngrok.io` in both your project and the Azure AD app you registered. For example:
 
     - **Visual Studio Code project**
       - Locate and open the **./.env** file
-      - Find & replace all instances of `REPLACe.ngrok.io`
+      - Find & replace all instances of `REPLACE.ngrok.io`
     - **Azure AD Application > Authentication > Redirect URIs**
     - **Azure AD Application > Expose an API > Application ID URI**
 
@@ -190,10 +190,10 @@ In this exercise, you’ll learn how to create a project using the Yeoman Genera
 
 1. The tab is implemented as a React app with React Hooks. Locate the following `useEffect()` hook:
 
-    > [!NOTE]
-    > Some code in the following snippet has been omitted for brevity.
+> [!NOTE]
+> Some code in the following snippet has been omitted for brevity.
 
-    ```tsx
+   ```typescript
     useEffect(() => {
       if (inTeams === true) {
         microsoftTeams.authentication.getAuthToken({
@@ -209,16 +209,16 @@ In this exercise, you’ll learn how to create a project using the Yeoman Genera
         setEntityId("Not in Microsoft Teams");
       }
     }, [inTeams]);
-    ```
+   ```
 
-    This hook will run when the component loads. If the page is loaded in a Microsoft Teams client, as it is when it's in a tab, it calls the `getAuthToken()` method on the Microsoft Teams JavaScript SDK. When successful, it extracts the ID token Microsoft Teams received from Azure AD and provided to the tab to retrieve the currently signed in user's display name. The user's name is then set, using the `setName()` method, to the React state `name` property.
+This hook will run when the component loads. If the page is loaded in a Microsoft Teams client, as it is when it's in a tab, it calls the `getAuthToken()` method on the Microsoft Teams JavaScript SDK. When successful, it extracts the ID token Microsoft Teams received from Azure AD and provided to the tab to retrieve the currently signed in user's display name. The user's name is then set, using the `setName()` method, to the React state `name` property.
 
-    Changing the state triggers React to rerender the component. The code in the `return` statement within the React component will render the updated user experience that includes the user's name from the React state property as shown in the following code.
+Changing the state triggers React to rerender the component. The code in the `return` statement within the React component will render the updated user experience that includes the user's name from the React state property as shown in the following code.
 
-    > [!NOTE]
-    > Some code in the following snippet has been omitted for brevity.
+   > [!NOTE]
+   > Some code in the following snippet has been omitted for brevity.
 
-    ```tsx
+   ```typescript
     return (
       <Provider theme={theme}>
         <Flex fill={true} column>
@@ -232,9 +232,9 @@ In this exercise, you’ll learn how to create a project using the Yeoman Genera
         </Flex>
       </Provider>
     );
-    ```
+   ```
 
-    At this point, the tab is successfully using Microsoft Teams' support for SSO, but it's limited to using the ID token.
+   At this point, the tab is successfully using Microsoft Teams' support for SSO, but it's limited to using the ID token.
 
 ## Task 3: Add support to submit requests to Microsoft Graph
 
@@ -273,7 +273,7 @@ For an app to authenticate with Azure AD, it needs both the client ID and a clie
       - openid
       - profile
 
-    ![Screenshot configuring permissions to the app](../../Linked_Image_Files/03-azure-ad-api-permissions-01.png)
+   ![Screenshot configuring permissions to the app](../../Linked_Image_Files/03-azure-ad-api-permissions-01.png)
 
 1. Once you've added the permissions, select the **Grant admin consent for ...** to consent these permissions for all users in the tenant.
 
@@ -296,7 +296,7 @@ For an app to authenticate with Azure AD, it needs both the client ID and a clie
     MSGRAPHTEAMWORK_APP_SCOPES=https://graph.microsoft.com/User.Read email openid profile offline_access
     ```
 
-    The next step is to update the server-side API to add support for using the ID token, obtained by Microsoft Teams, for an OBO access token that can be used to submit requests to Microsoft Graph.
+   The next step is to update the server-side API to add support for using the ID token, obtained by Microsoft Teams, for an OBO access token that can be used to submit requests to Microsoft Graph.
 
 1. First, install a new dependencies into the project. This is used to submit an HTTP request (*Axios*):
 
@@ -322,7 +322,7 @@ For an app to authenticate with Azure AD, it needs both the client ID and a clie
     express.set("port", port);
     ```
 
-1. Add the following code before the lines you just found that set the listening port on the solution. The comments within the code explain the relevant parts
+1. Add the following code before the lines you just found that set the listening port on the solution. The comments within the code explain the relevant parts.
 
     ```typescript
     express.get("/exchangeSsoTokenForOboToken", async (req, res) => {
@@ -453,9 +453,9 @@ With the server-side API updated, we can now update the SSO tab to request and d
 
 1. At this point, the tab has an access token that will authenticate requests to Microsoft Graph, so the next step is to request the current user's profile photo and display it.
 
-    Start by adding another `useCallback()` hook to implement the Microsoft Graph request for the user's profile photo. Add the following code to the component, just after the `useEffect()` hook you just added:
+   Start by adding another `useCallback()` hook to implement the Microsoft Graph request for the user's profile photo. Add the following code to the component, just after the `useEffect()` hook you just added:
 
-    ```typescript
+   ```typescript
     const getProfilePhoto = useCallback(async () => {
       if (!msGraphOboToken) { return; }
       const endpoint = "https://graph.microsoft.com/v1.0/me/photo/$value";
@@ -471,7 +471,7 @@ With the server-side API updated, we can now update the SSO tab to request and d
         setPhoto(URL.createObjectURL(await response.blob()));
       }
     }, [msGraphOboToken]);
-    ```
+   ```
 
 1. This code will set the profile photo, once received from the request to Microsoft Graph, on the React component's `photo` state property. Instruct the React component to initiate this hook when the access token is received by adding the following react hook:
 
@@ -483,7 +483,7 @@ With the server-side API updated, we can now update the SSO tab to request and d
 
 1. Now that our component has the photo, the last step is to display it! Within the component's `return` statement, locate the following code that displays the current user's name:
 
-    ```tsx
+    ```typescript
     <div>
       <Text content={`Hello ${name}`} />
     </div>
@@ -491,7 +491,7 @@ With the server-side API updated, we can now update the SSO tab to request and d
 
 1. Immediately following the closing `</div>` element, add the following code that will render the `<Avatar>` control if the `photo` state property has been set:
 
-    ```tsx
+    ```typescript
     {photo && <div><Avatar image={photo} size='largest' /></div>}
     ```
 
@@ -499,16 +499,16 @@ With the server-side API updated, we can now update the SSO tab to request and d
 
 1. Go back to the browser and navigate back to the tab you added earlier in this exercise. Notice it's now displaying the current user's profile photo:
 
-  ![Screenshot of the tab displaying the user's profile photo from Microsoft Graph](../../Linked_Image_Files/03-test-user-profile-photo.png)
+   ![Screenshot of the tab displaying the user's profile photo from Microsoft Graph](../../Linked_Image_Files/03-test-user-profile-photo.png)
 
   > [!IMPORTANT]
-  > If the **ngrok-serve** stopped for any reason, remember when you start/restart the **gulp ngrok-serve** task, the dynamic ngrok URL will change.
-  >
-  > You'll need to update all the locations where you set the URL in your project as well as in the Azure AD app registration as previously explained.
-  >
-  > In addition, you'll need to reinstall your app package because the Microsoft Teams app manifest contains the URL. To do this, you'll first need to increment the `version` property in the app's **./manifest/manifest.json** file. This value is dynamically set using the `version` property from the **./package.json** file. When you repeat the installation process of the app, it will update the existing installation.
+   > If the **ngrok-serve** stopped for any reason, remember when you start/restart the **gulp ngrok-serve** task, the dynamic ngrok URL will change.
+   >
+   > You'll need to update all the locations where you set the URL in your project as well as in the Azure AD app registration as previously explained.
+   >
+   > In addition, you'll need to reinstall your app package because the Microsoft Teams app manifest contains the URL. To do this, you'll first need to increment the `version` property in the app's **./manifest/manifest.json** file. This value is dynamically set using the `version` property from the **./package.json** file. When you repeat the installation process of the app, it will update the existing installation.
 
-  With everything working, let's update the tab and Azure AD application to display a list of all teams the current user as joined.
+   With everything working, let's update the tab and Azure AD application to display a list of all teams the current user as joined.
 
 ## Task 4: Display the teams the current user has joined
 
@@ -532,7 +532,7 @@ Before you do this, your Azure AD application registration needs a new permissio
 
 1. Search for, and select the permission **Team.ReadBasic.All**, then select the **Add permissions** button:
 
-  ![Screenshot adding a new permission to the app](../../Linked_Image_Files/03-azure-ad-add-api-permissions.png)
+   ![Screenshot adding a new permission to the app](../../Linked_Image_Files/03-azure-ad-add-api-permissions.png)
 
 1. To simplify the testing process, select **Grant admin consent for Contoso** to consent this new permission for all users in your tenant.
 
@@ -548,8 +548,8 @@ With the permission added to the Azure AD app, you now need to update the list o
 
 1. In order for this to get picked up and included in the environment variables, you'll need to stop the **gulp ngrok-serve** task by pressing <kbd>CTRL</kbd>+<kbd>C</kbd> and restart it.
 
-    > [!IMPORTANT]
-    > When you restart ngrok, remember the dynamic subdomain will change. Therefore, you'll need to not only update all the places where you've entered the ngrok URL in your project and registered Azure AD app, but also reinstall the Microsoft Teams app package as well.
+ > [!IMPORTANT]
+ > When you restart ngrok, remember the dynamic subdomain will change. Therefore, you'll need to not only update all the places where you've entered the ngrok URL in your project and registered Azure AD app, but also reinstall the Microsoft Teams app package as well.
 
 1. Locate and open the file **./src/client/msGraphTeamworkTab/MsGraphTeamworkTab.tsx**.
 
@@ -593,7 +593,7 @@ With the permission added to the Azure AD app, you now need to update the list o
 
 1. We want to get the list of teams the user is a member of once we have an access token that can be used to authenticate with Microsoft Graph. Because we've already added that code, we just need to update the `useEffect()` hook that runs when the `msGraphOboToken` state property is updated.
 
-    Locate the existing `useEffect()` hook:
+   Locate the existing `useEffect()` hook:
 
     ```typescript
     useEffect(() => {
@@ -601,7 +601,7 @@ With the permission added to the Azure AD app, you now need to update the list o
     }, [msGraphOboToken]);
     ```
 
-    Update this code to include another call to the `getJoinTeams` you just added to the component:
+   Update this code to include another call to the `getJoinTeams` you just added to the component:
 
     ```typescript
     useEffect(() => {
@@ -612,7 +612,7 @@ With the permission added to the Azure AD app, you now need to update the list o
 
 1. The last step is to update the rendering in the component's `return` statement to include the list of teams if they've been set. Locate the code you added to display the profile photo and add the following code immediately after it:
 
-    ```tsx
+    ```typescript
     {joinedTeams && <div><h3>You belong to the following teams:</h3><List items={joinedTeams} /></div>}
     ```
 

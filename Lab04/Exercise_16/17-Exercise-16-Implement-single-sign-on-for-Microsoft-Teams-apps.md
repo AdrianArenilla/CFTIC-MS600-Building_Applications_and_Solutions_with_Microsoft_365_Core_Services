@@ -18,14 +18,14 @@ In this exercise, you'll learn how to manually register and configure the Azure 
     - **Supported account types**: Accounts in any organizational directory (Any Azure AD directory - Multitenant)
     - **Redirect URI**: Web & `https://REPLACE.ngrok.io/auth-end`
 
-    ![Screenshot of the Register an application page](../../Linked_Image_Files/03-azure-ad-app-registration-02.png)
+   ![Screenshot of the Register an application page](../../Linked_Image_Files/03-azure-ad-app-registration-02.png)
 
-    > [!NOTE]
-    > The **Redirect URL** will need to be updated once you know the dynamic subdomain of the proxy URL created by ngrok, a tool you'll use to simplify testing and debugging your Microsoft Teams app.
-    >
-    > In fact, you'll need to come back and update the Azure AD app registration in a few places where you'll enter the **REPLACE.ngrok.io** domain.
-    >
-    > For now, we'll just use this temporary domain.
+> [!NOTE]
+> The **Redirect URL** will need to be updated once you know the dynamic subdomain of the proxy URL created by ngrok, a tool you'll use to simplify testing and debugging your Microsoft Teams app.
+>
+> In fact, you'll need to come back and update the Azure AD app registration in a few places where you'll enter the **REPLACE.ngrok.io** domain.
+>
+> For now, we'll just use this temporary domain.
 
 1. On the **My Teams SSO App** page, copy the value of the **Application (client) ID**; you'll need this later when you create the Microsoft Teams app in a future exercise.
 
@@ -47,7 +47,7 @@ For an app to authenticate with Azure AD, it needs both the client ID and a clie
 
 1. In the **Client Secrets** section, select **New client secret**. Add a description and select an expiration duration, then select **Add**.
 
-  When the secret is created, it will be shown one time so make sure you copy this for use in a later exercise. If you don't copy this value, you'll have to create a new secret as you can't ever view a previously created secret.
+When the secret is created, it will be shown one time so make sure you copy this for use in a later exercise. If you don't copy this value, you'll have to create a new secret as you can't ever view a previously created secret.
 
 ### Configure API permissions
 
@@ -62,7 +62,7 @@ For an app to authenticate with Azure AD, it needs both the client ID and a clie
       - openid
       - profile
 
-    ![Screenshot adding permissions to the app](../../Linked_Image_Files/03-azure-ad-app-registration-05.png)
+   ![Screenshot adding permissions to the app](../../Linked_Image_Files/03-azure-ad-app-registration-05.png)
 
 1. Once you've added the permissions, select the **Grant admin consent for ...** to consent these permissions for all users in the tenant.
 
@@ -86,7 +86,7 @@ For an app to authenticate with Azure AD, it needs both the client ID and a clie
     - **User consent description:** Teams can call this app’s APIs with the same rights as the user.
     - **State**: Enabled
 
-    ![Screenshot of the add scope page](../../Linked_Image_Files/03-azure-ad-app-registration-08.png)
+   ![Screenshot of the add scope page](../../Linked_Image_Files/03-azure-ad-app-registration-08.png)
 
 1. The last step is to preauthorize the Microsoft Teams clients that the app's API will trust. This means users won't be asked to consent to specific permissions, or scopes, exposed by the API.
 

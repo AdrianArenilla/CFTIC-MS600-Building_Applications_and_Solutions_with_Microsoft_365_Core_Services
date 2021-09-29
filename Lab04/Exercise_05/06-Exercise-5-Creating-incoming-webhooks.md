@@ -96,8 +96,8 @@ Now let's add an incoming webhook to a team in Microsoft Teams.
 
         ![Screenshot of the Body tab in Postman](../../Linked_Image_Files/Webhooks/05-test-08.png)
 
-        > **IMPORTANT:**
-        > If you include a card in a message sent to an incoming webhook, it must be an Office 365 Connector Cards; adaptive cards aren't supported when sending messages to incoming webhooks.
+> **IMPORTANT:**
+> If you include a card in a message sent to an incoming webhook, it must be an Office 365 Connector Cards; adaptive cards aren't supported when sending messages to incoming webhooks.
 
 1. Send the card to Microsoft Teams by selecting the **Send** button.
 

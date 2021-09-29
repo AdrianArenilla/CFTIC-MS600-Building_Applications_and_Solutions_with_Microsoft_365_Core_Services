@@ -1,0 +1,9 @@
+{
+  "generator-teams": {
+    "promptValues": {
+      "developer": "AdrianArenilla"
+    },
+    "libraryName": "learnMsteamsSsoTab",
+    "generator-version": "3.2.0"
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "generator-teams": {
+    "promptValues": {
+      "developer": "AdrianArenilla"
+    },
+    "libraryName": "conversationalBot",
+    "generator-version": "3.2.0"
+  }
+}

@@ -128,7 +128,7 @@ Now you can implement the user interface for the tab. The simple tab has a basic
 
 1. Locate the `return` statement, and update it to the following code. The component now displays the list of items in our state with a brief copyright statement.
 
-    ```tsx
+    ```typescript
     return (
       <Provider theme={theme}>
         <Flex column gap="gap.smaller">
@@ -177,7 +177,7 @@ Now you can implement the user interface for the tab. The simple tab has a basic
 
 1. Finally, locate the string `TODO: add new list item form here` in the `render()` method, and replace it with the following code. This code displays a form that the user can use to add items to the list.
 
-    ```tsx
+    ```typescript
     <Flex gap="gap.medium">
       <Flex.Item grow>
         <Flex>

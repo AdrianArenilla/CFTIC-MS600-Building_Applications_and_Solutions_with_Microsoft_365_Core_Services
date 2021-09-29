@@ -51,13 +51,13 @@ Activity feed notifications can't be sent from a user to themselves. So for this
 
     Copy the user's **Object ID** value as you'll need this when you update the tab's code.
 
-    ![Screenshot of selecting the user's Object ID](../../Linked_Image_Files/07-azure-ad-users-02.png)
+   ![Screenshot of selecting the user's Object ID](../../Linked_Image_Files/07-azure-ad-users-02.png)
 
 ## Task 3: Update the Microsoft Teams app manifest
 
 1. Now, let's update the app's manifest to register support for an activity.
 
-1. Locate and open the **./appPackage/manifest.json** file.
+1. Locate and open the **.src/manifest/manifest.json** file.
 
 1. At the end of this file, find the `webApplicationInfo` element. Immediately after the `webApplicationInfo` element, add the following JSON. This adds a new activity type `userMention` to the app's registration with Microsoft Teams:
 
@@ -143,12 +143,12 @@ Now let's test the new functionality added in this exercise.
     gulp ngrok-serve
     ```
 
-    > [!IMPORTANT]
-    > If the **ngrok-serve** stopped for any reason, remember when you start/restart the **gulp ngrok-serve** task, the dynamic ngrok URL will change.
-    >
-    > You'll need to update all the locations where you set the URL in your project as well as in the Azure AD app registration as previously explained.
-    >
-    > In addition, you'll need to reinstall your app package because the Microsoft Teams app manifest contains the URL. To do this, you'll first need to increment the `version` property in the app's **./manifest/manifest.json** file. This value is dynamically set using the `version` property from the **./package.json** file. When you repeat the installation process of the app, it will update the existing installation.
+> [!IMPORTANT]
+> If the **ngrok-serve** stopped for any reason, remember when you start/restart the **gulp ngrok-serve** task, the dynamic ngrok URL will change.
+>
+> You'll need to update all the locations where you set the URL in your project as well as in the Azure AD app registration as previously explained.
+>
+> In addition, you'll need to reinstall your app package because the Microsoft Teams app manifest contains the URL. To do this, you'll first need to increment the `version` property in the app's **./manifest/manifest.json** file. This value is dynamically set using the `version` property from the **./package.json** file. When you repeat the installation process of the app, it will update the existing installation.
 
   Once the app starts, go back to the browser and navigate back to your tab that you previously installed.
 
@@ -176,7 +176,7 @@ Activity feed notifications can't be sent from a user to themselves, so for this
 
     You'll notice after a moment, a notification will appear for Alex from the team owner (Megan):
 
-    ![Screenshots of the notification to Alex](../../Linked_Image_Files/07-test-03.png)
+   ![Screenshots of the notification to Alex](../../Linked_Image_Files/07-test-03.png)
 
 1. Next, select the **Activity feed** from the activity bar to see the entry listed in Alex's Activity feed:
 

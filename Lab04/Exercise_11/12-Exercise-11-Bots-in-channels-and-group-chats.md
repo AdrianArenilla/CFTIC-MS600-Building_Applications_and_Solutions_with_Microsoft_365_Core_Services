@@ -91,10 +91,10 @@ While there are multiple ways to address this, let's check the type of conversat
     gulp ngrok-serve
     ```
 
-    > [!IMPORTANT]
-    > Recall from a previous exercise, Ngrok will create a new subdomain. You need to update your bot registration's **Messaging endpoint** in the Azure portal (*shown in a previous exercise*) with this new domain before testing it.
+> [!IMPORTANT]
+> Recall from a previous exercise, Ngrok will create a new subdomain. You need to update your bot registration's **Messaging endpoint** in the Azure portal (*shown in a previous exercise*) with this new domain before testing it.
 
-    Next, you need to update the existing installed version of the bot.
+Next, you need to update the existing installed version of the bot.
 
 1. In the browser, navigate to **https://teams.microsoft.com** and sign in with the credentials of a Work and School account.
 
@@ -368,8 +368,8 @@ In this section, you'll update the bot to respond to unknown messages using an A
     gulp ngrok-serve
     ```
 
-    > [!IMPORTANT]
-    > Recall from a previous exercise, Ngrok will create a new subdomain. You need to update your bot registration's **Messaging endpoint** in the Azure portal (*shown in a previous exercise*) with this new domain before testing it.
+> [!IMPORTANT]
+> Recall from a previous exercise, Ngrok will create a new subdomain. You need to update your bot registration's **Messaging endpoint** in the Azure portal (*shown in a previous exercise*) with this new domain before testing it.
 
 1. In the Microsoft Teams client, go to the channel you installed the bot in the previous section. 
 
@@ -377,7 +377,7 @@ In this section, you'll update the bot to respond to unknown messages using an A
 
     The bot will reply to the message with a card:
 
-    ![Screenshot of a message from the bot using cards](../../Linked_Image_Files/Bots/05-test-04.png)
+   ![Screenshot of a message from the bot using cards](../../Linked_Image_Files/Bots/05-test-04.png)
 
 1. Select the button **Update card**. After a few seconds, the card should be updated with a new card containing an incremented counter value and a new button:
 
@@ -415,8 +415,8 @@ In this section, you'll update the bot to respond when someone likes a message f
     gulp ngrok-serve
     ```
 
-    > [!IMPORTANT]
-    > Recall from a previous exercise, Ngrok will create a new subdomain. You need to update your bot registration's **Messaging endpoint** in the Azure portal (*shown in a previous exercise*) with this new domain before testing it.
+> [!IMPORTANT]
+> Recall from a previous exercise, Ngrok will create a new subdomain. You need to update your bot registration's **Messaging endpoint** in the Azure portal (*shown in a previous exercise*) with this new domain before testing it.
 
 1. In the Microsoft Teams client, go to the channel you installed the bot in the previous section. 
 
@@ -424,9 +424,9 @@ In this section, you'll update the bot to respond when someone likes a message f
 
     ![Screenshot of a user reacting to a bot's message](../../Linked_Image_Files/Bots/05-test-06.png)
 
-    After a few seconds, the bot will reply with a message, thanking them for liking the reaction:
+   After a few seconds, the bot will reply with a message, thanking them for liking the reaction:
 
-    ![Screenshot of a bot replying to a reaction](../../Linked_Image_Files/Bots/05-test-07.png)
+   ![Screenshot of a bot replying to a reaction](../../Linked_Image_Files/Bots/05-test-07.png)
 
 ## Summary
 

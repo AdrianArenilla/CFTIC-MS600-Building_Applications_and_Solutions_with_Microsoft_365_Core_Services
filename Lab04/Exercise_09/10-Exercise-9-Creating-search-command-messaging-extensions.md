@@ -103,7 +103,7 @@ The next step is to update the bot's code.
 
     - **inner**: this will return all the planets inside the asteroid belt (*Mercury to Mars*)
     - **outer**: this will return all planets outside the asteroid belt (*Jupiter to Neptune*)
-    - *keyword*: this will retrieve the specific planet entered
+    - **keyword**: this will retrieve the specific planet entered
 
     It will then take the query results, convert them to cards and add them to the `MessagingExtensionResponse` returned to the Bot Framework and ultimately to Microsoft Teams.
 
