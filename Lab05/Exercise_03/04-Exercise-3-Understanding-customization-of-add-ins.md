@@ -2,6 +2,13 @@
 
 ## Task 1: Insert Excel charts using Microsoft Graph in a PowerPoint add-in
 
+> [!IMPORTANT]
+> **This exercise is outdated and lacks some libraries for its proper functioning.**
+>
+> **The new exercise can be found at the following link (generated with Visual Studio):**
+>
+> [Build your first PowerPoint task pane add-in](https://docs.microsoft.com/en-us/office/dev/add-ins/quickstarts/powerpoint-quickstart?tabs=visualstudio&source=docs)
+
 ### Download zip file
 
 Download the zip file from [https://github.com/OfficeDev/PowerPoint-Add-in-Microsoft-Graph-ASPNET-InsertChart/releases/download/88256/Insert_Excel_charts_using_Microsoft_Graph_in_a_PowerPoint_Add_in.zip](https://github.com/OfficeDev/PowerPoint-Add-in-Microsoft-Graph-ASPNET-InsertChart/releases/download/88256/Insert_Excel_charts_using_Microsoft_Graph_in_a_PowerPoint_Add_in.zip).

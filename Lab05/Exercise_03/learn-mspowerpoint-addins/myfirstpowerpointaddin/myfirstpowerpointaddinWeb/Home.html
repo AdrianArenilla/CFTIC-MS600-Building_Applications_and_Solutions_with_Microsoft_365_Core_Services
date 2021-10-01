@@ -1,0 +1,48 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+
+    <script src="Scripts/jquery-3.5.0.js" type="text/javascript"></script>
+    <script src="Scripts/MessageBanner.js" type="text/javascript"></script>
+    <script src="https://appsforoffice.microsoft.com/lib/1/hosted/office.js" type="text/javascript"></script>
+
+    <!-- Para habilitar la depuración sin conexión mediante una referencia local a Office.js, use:  -->
+    <!-- <script src="Scripts/Office/MicrosoftAjax.js" type="text/javascript"></script>  -->
+    <!-- <script src="Scripts/Office/1/office.js" type="text/javascript"></script>  -->
+
+    <script src="Home.js" type="text/javascript"></script>
+    <link href="Home.css" rel="stylesheet" type="text/css" />
+    <link href="../Content/Button.css" rel="stylesheet" type="text/css" />
+    <link href="../Content/MessageBanner.css" rel="stylesheet" type="text/css" />
+
+
+    <!-- Para Office UI Fabric Core, vaya a https://aka.ms/office-ui-fabric para obtener más información. -->
+    <link rel="stylesheet" href="https://static2.sharepointonline.com/files/fabric/office-ui-fabric-core/9.6.0/css/fabric.min.css">
+
+    <!-- Para habilitar el uso sin conexión de Office UI Fabric Core, use: -->
+    <!-- link rel="stylesheet" href="Content/fabric.min.css" -->
+</head>
+
+<!-- Office UI Fabric JS y sus componentes ya no reciben soporte de forma activa. Consulte https://aka.ms/PnP-OfficeFabricReact para obtener los patrones y prácticas recomendadas -->
+<!-- <link rel="stylesheet" href="https://appsforoffice.microsoft.com/fabric/2.1.0/fabric.components.min.css"> -->
+
+<body class="ms-font-m ms-welcome">
+    <div id="content-header">
+        <div class="padding">
+            <h1>Welcome</h1>
+        </div>
+    </div>
+    <div id="content-main">
+        <div class="padding">
+            <p>Select a slide and then choose the buttons to below to add content to it.</p>
+            <br />
+            <h3>Try it out</h3>
+            <button class="ms-Button" id="insert-image">Insert Image</button>
+            <br /><br />
+            <button class="ms-Button" id="insert-text">Insert Text</button>
+        </div>
+    </div>
+</body>
+</html>

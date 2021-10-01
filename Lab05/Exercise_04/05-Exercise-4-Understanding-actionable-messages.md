@@ -220,7 +220,7 @@ Because the card JSON must be wrapped in a `<script>` tag, the body of the actio
 
 For examples of sending messages, see the following.
 
-[Send Actionable Message via [Microsoft Graph](https://docs.microsoft.com/en-us/graph/overview)](https://github.com/jasonjoh/send-actionable-message): A sample console app written in C# that sends an actionable message using Microsoft Graph.
+[Send Actionable Message via Microsoft Graph](https://docs.microsoft.com/en-us/graph/overview) & [Github project](https://github.com/jasonjoh/send-actionable-message): A sample console app written in C# that sends an actionable message using Microsoft Graph.
 [Send Actionable Message via SMTP](https://github.com/tony-zhu/SendActionableMessage): A sample Python script that sends an actionable message using the Office 365 SMTP server. It also includes a sample HTML payload for the actionable message email body.
 ### Performing actions
 

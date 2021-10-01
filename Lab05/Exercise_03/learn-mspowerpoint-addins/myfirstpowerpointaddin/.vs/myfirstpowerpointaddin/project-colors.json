@@ -1,0 +1,16 @@
+{
+  "Version": 1,
+  "ProjectMap": {
+    "6eb15abd-420b-4dca-915e-748eb588b004": {
+      "ProjectGuid": "6eb15abd-420b-4dca-915e-748eb588b004",
+      "DisplayName": "myfirstpowerpointaddinWeb",
+      "ColorIndex": 0
+    },
+    "f653269c-37af-46fc-a0f5-b2e78c655ce9": {
+      "ProjectGuid": "f653269c-37af-46fc-a0f5-b2e78c655ce9",
+      "DisplayName": "myfirstpowerpointaddin",
+      "ColorIndex": 1
+    }
+  },
+  "NextColorIndex": 2
+}

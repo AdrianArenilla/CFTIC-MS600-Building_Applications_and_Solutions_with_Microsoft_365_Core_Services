@@ -189,7 +189,11 @@ The `applyValuesFilter` method is one of several filtering methods on the Filter
 
 1. Open the file **./src/taskpane/taskpane.js**.
 
-1. Within the `Office.onReady` method call, locate the line that assigns a click handler to the filter-table button, and add the following code after that line: `document.getElementById("sort-table").onclick = sortTable;`
+1. Within the `Office.onReady` method call, locate the line that assigns a click handler to the filter-table button, and add the following code after that line: 
+
+    ```javascript
+    document.getElementById("sort-table").onclick = sortTable;
+    ```
 
 1. Add the following function to the end of the file:
 
